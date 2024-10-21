@@ -1,17 +1,16 @@
-// import logo from './logo.svg';
-// import './App.css';
-import ButtonAppBar from './component/navbar/navbar';
-import NewsCard from './component/card/card'
+import ButtonAppBar from './components/navbar/navbar';
+import NewsCard from './components/card/card'
+import Container from '@mui/material/Container';
 
 function App() {
   return (
-    <div className="App">
+    <Container className="App">
       <ButtonAppBar/>
       <NewsCard/>
       <NewsCard/>
       <NewsCard/>
       <NewsCard/>
-    </div>
+    </Container>
   );
 }
 
