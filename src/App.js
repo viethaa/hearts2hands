@@ -10,6 +10,7 @@ function App() {
       <NewsCard/>
       <NewsCard/>
       <NewsCard/>
+      <NewsCard/>
     </div>
   );
 }
