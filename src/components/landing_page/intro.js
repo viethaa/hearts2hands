@@ -1,10 +1,9 @@
 import React from 'react'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import MediaRatio from '../card/join_card'
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import AspectRatio from '@mui/joy/AspectRatio';
 
 
 const Intro = () => {
@@ -12,7 +11,13 @@ const Intro = () => {
         <Container maxWidth="xl">
             <Grid container style={{ height: "500px" }}>
                 <Grid item xs={6} style={{ height: "100%" }}>
-                    <MediaRatio />
+                    <AspectRatio sx={{ width: '100%', borderRadius: 'xl'}}>
+                        <img
+                            src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800"
+                            srcSet="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800&dpr=2 2x"
+                            alt="A beautiful landscape."
+                        />
+                    </AspectRatio>
                 </Grid>
                 <Grid item xs={6} style={{ padding: "30px", height: "100%" }}>
                     <Grid container sx={{ height: "100%", justifyContent: 'space-around' }}>
