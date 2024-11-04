@@ -4,17 +4,16 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import AspectRatio from '@mui/joy/AspectRatio';
-
+import './intro.css'
 
 const Intro = () => {
     return (
         <Container maxWidth="xl">
-            <Grid container style={{ height: "500px" }}>
+            <Grid container style={{ height: "350px" }}>
                 <Grid item xs={6} style={{ height: "100%" }}>
-                    <AspectRatio sx={{ width: '100%', borderRadius: 'xl'}}>
+                    <AspectRatio sx={{ height: '100%', borderRadius: 'xl'}} objectFit = 'cover' >
                         <img
-                            src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800"
-                            srcSet="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800&dpr=2 2x"
+                            src="/assets/images/hearts2hands_pic.jpg"
                             alt="A beautiful landscape."
                         />
                     </AspectRatio>
@@ -26,7 +25,7 @@ const Intro = () => {
                             <Typography variant='p'>Hearts2Hands is a student-led committee dedicated to empowering Vietnamese young people through impactful campaigns. Join us in making a difference!</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Button variant="contained">JOIN NOW</Button>
+                            <Button className = "joinBtn" variant="contained">JOIN NOW</Button>
                         </Grid>
                     </Grid>
                 </Grid>

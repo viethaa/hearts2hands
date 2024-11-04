@@ -4,16 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
+import './card.css'
 
 export default function NewsCard({ imageLink, title, description }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+    <Card className="news-card">
+      <CardActionArea className="card-action">
         <CardMedia
           component="img"
-          height="140"
+          sx = {{height: "50%"}}
           image={imageLink}
-          alt="failed to load"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

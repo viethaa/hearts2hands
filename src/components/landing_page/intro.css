@@ -1,0 +1,25 @@
+.joinBtn {
+    background-color: antiquewhite !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 12px 30px !important;         /* Increases height a bit and makes it wider */
+    width: 200px !important;                 /* Sets the button to cover 80% of the container's width */
+    height: 50px !important;
+    max-width: 100% !important;
+    border: 2px solid black !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s !important;
+    text-align: center !important;         /* Centers text within the button */
+}
+
+/* Hover effect */
+.joinBtn:hover {
+    background-color: black !important;
+    color: antiquewhite !important;
+}
+
+/* Focus effect for accessibility */
+.joinBtn:focus {
+    outline: 3px solid darkgray !important;
+}
