@@ -1,3 +1,7 @@
+* {
+    padding-top: 50px;
+}
+
 .joinBtn {
     background-color: antiquewhite !important;
     color: black !important;

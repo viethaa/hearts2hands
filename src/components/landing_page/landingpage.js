@@ -5,7 +5,9 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Intro from './intro';
 import ColorInversionMarketing from '../aboutus/aboutus';
+import ColorInversionAnyParent from '../footer/footer';
 import { Box, Typography } from '@mui/material';
+import './landingpage.css'
 
 const LandingPage = () => {
     const myCardInfo = [
@@ -28,8 +30,21 @@ const LandingPage = () => {
 
     return (
         <React.Fragment>
-            <ButtonAppBar />
+            
+            <div class="banner">
+                <div class="banner-content">
+                    <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
+                        EMPOWERING<br />YOUNG PEOPLE
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <div class="banner-buttons">
+                        <a href="#" class="button">About Us</a>
+                        <a href="#" class="button">Join Now</a>
+                    </div>
+                </div>
+            </div>
             <Intro />
+            <ColorInversionMarketing />
             <Container maxWidth="xl" sx={{ my: 4 }}>
                 <Typography variant="h3" align="center" gutterBottom>
                     Welcome to Hearts2Hands
@@ -40,19 +55,7 @@ const LandingPage = () => {
                 <Grid container spacing={4} justifyContent="center">
                     {myCardInfo.map((data, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Box
-                                sx={{
-                                    borderRadius: 2,
-                                    boxShadow: 3,
-                                    overflow: 'hidden',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    transition: 'transform 0.3s',
-                                    '&:hover': {
-                                        transform: 'scale(1.05)',
-                                    },
-                                }}
-                            >
+                            <Box className = "box-card">
                                 <NewsCard
                                     imageLink={data.imageURL}
                                     title={data.title}
@@ -63,7 +66,8 @@ const LandingPage = () => {
                     ))}
                 </Grid>
             </Container>
-            <ColorInversionMarketing />
+
+            <ColorInversionAnyParent></ColorInversionAnyParent>
         </React.Fragment>
     );
 };

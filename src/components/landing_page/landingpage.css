@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Full-screen banner container */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url('/Users/bobha/Documents/Coding/hearts2hands/Hearts2Hands/public/assets/images/Hearts to Hands Collage (1).png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%; /* Adds space from the left */
+    color: #f0f4f8;
+    text-align: left;
+}
+
+/* Dark overlay for the banner */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1; 
+}
+
+/* Adjust banner content to sit above the overlay */
+.banner-content {
+    position: relative;
+    z-index: 2; /* This positions the text above the overlay */
+}
+
+
+.banner h1 {
+    font-size: 4.5em; /* Increase font size */
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif; /* Specify font-family */
+    font-weight: 800; /* Very bold weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: text shadow for better readability */
+}
+
+.banner p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.banner-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    padding: 12px 30px; /* Adjust padding for better touch targets */
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+    text-decoration: none;
+}
+
+/* Button 1 - About Us */
+.button:nth-child(1) {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Black border */
+}
+
+.button:nth-child(1):hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Button 2 - Join Now */
+.button:nth-child(2) {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: 2px solid white; /* White border */
+}
+
+.button:nth-child(2):hover {
+    background-color: #333; /* Slightly darker on hover */
+}
+
+.box-card {
+    border-radius: 12px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.box-card:hover {
+    transform: scale(1.05);
+}

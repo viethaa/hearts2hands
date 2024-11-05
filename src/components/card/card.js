@@ -12,10 +12,10 @@ export default function NewsCard({ imageLink, title, description }) {
       <CardActionArea className="card-action">
         <CardMedia
           component="img"
-          sx = {{height: "50%"}}
+          sx = {{height: "65%"}}
           image={imageLink}
         />
-        <CardContent>
+        <CardContent sx = {{height: "35%"}}>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
