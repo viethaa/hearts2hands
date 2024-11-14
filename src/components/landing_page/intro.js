@@ -7,15 +7,13 @@ import AspectRatio from '@mui/joy/AspectRatio';
 
 const Intro = () => {
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{ margin: "40px 0" }}>
             <Grid container style={{ height: "350px" }}>
                 <Grid item xs={6} style={{ height: "100%" }}>
-                    <AspectRatio sx={{ height: '100%', borderRadius: 'xl'}} objectFit = 'cover' >
-                        <img
-                            src="/assets/images/hearts2hands_pic.jpg"
-                            alt="A beautiful landscape."
-                        />
-                    </AspectRatio>
+                    <img style={{ borderRadius: "12px", width: "100%", height: "100%", objectFit: "cover" }}
+                        src="/assets/images/hearts2hands_pic.jpg"
+                        alt="A beautiful landscape."
+                    />
                 </Grid>
                 <Grid item xs={6} style={{ padding: "30px", height: "100%" }}>
                     <Grid container sx={{ height: "100%", justifyContent: 'space-around' }}>
@@ -24,7 +22,6 @@ const Intro = () => {
                             <Typography variant='p'>Hearts2Hands is a student-led committee dedicated to empowering Vietnamese young people through impactful campaigns. Join us in making a difference!</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Button className = "joinBtn" variant="contained">JOIN NOW</Button>
                         </Grid>
                     </Grid>
                 </Grid>

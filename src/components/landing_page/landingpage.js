@@ -1,15 +1,49 @@
 import React from 'react';
-import ButtonAppBar from '../navbar/navbar';
 import NewsCard from '../card/card';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Intro from './intro';
 import ColorInversionMarketing from '../aboutus/aboutus';
 import ColorInversionAnyParent from '../footer/footer';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+import Box from '@mui/joy/Box';
+import Button from '@mui/joy/Button';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useTheme } from '@mui/joy/styles';
 import './landingpage.css'
 
 const LandingPage = () => {
+    const buttonStylesReadMore = {
+        width: "150px",
+        height: "50px",
+        borderRadius: 99,
+        '&:hover': {
+            '& .MuiButton-endDecorator': { transform: 'translate(4px, 0px)' },
+            backgroundColor: "#555E68",
+        },
+        '& span': { transition: '0.15s' },
+    };
+
+    const buttonStylesJoinUs = {
+        borderRadius: 99,
+        '&:hover': {
+            '& .MuiButton-endDecorator': { transform: 'translate(4px, 0px)' },
+        },
+        '& span': { transition: '0.15s' },
+    };
+
+    const buttonStylesJoinUsNow = {
+        borderRadius: 99,
+        '&:hover': {
+            '& .MuiButton-endDecorator': { transform: 'translate(4px, 0px)' },
+        },
+        '& span': { transition: '0.15s' },
+    };
+
+    const theme = useTheme();
+    const shade = (x) => theme.vars.palette['neutral'][x];
+
+
     const myCardInfo = [
         {
             title: "Service Fair",
@@ -30,20 +64,47 @@ const LandingPage = () => {
 
     return (
         <React.Fragment>
-            
+
             <div class="banner">
                 <div class="banner-content">
-                    <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 900 }}>
-                        EMPOWERING<br />YOUNG PEOPLE
+                    <h1>
+                        EMPOWERING<br />VIETNAM'S YOUTH
                     </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                    <div class="banner-buttons">
-                        <a href="#" class="button">About Us</a>
-                        <a href="#" class="button">Join Now</a>
+                    <div>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                            <Button
+                                endDecorator={<ArrowForwardIcon fontSize="md" />}
+                                sx={[
+                                    { ...buttonStylesReadMore },
+                                    { backgroundColor: "#32383E" },
+                                    { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
+                                ]}
+                            >
+                                Read more
+                            </Button>
+                            <Button
+                                variant="plain"
+                                endDecorator={<ArrowForwardIcon fontSize="md" />}
+                                sx={{ color: shade(700), ...buttonStylesJoinUs, backgroundColor: "white" }}
+                            >
+                                Join Us Now
+                            </Button>
+                        </Box>
                     </div>
                 </div>
             </div>
             <Intro />
+            <Button
+                endDecorator={<ArrowForwardIcon fontSize="md" />}
+                sx={[
+                    { ...buttonStylesReadMore },
+                    { backgroundColor: "#32383E" },
+                    { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
+                ]}
+            >
+                Join Us Now
+            </Button>
             <ColorInversionMarketing />
             <Container maxWidth="xl" sx={{ my: 4 }}>
                 <Typography variant="h3" align="center" gutterBottom>
@@ -55,7 +116,7 @@ const LandingPage = () => {
                 <Grid container spacing={4} justifyContent="center">
                     {myCardInfo.map((data, index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Box className = "box-card">
+                            <Box className="box-card">
                                 <NewsCard
                                     imageLink={data.imageURL}
                                     title={data.title}

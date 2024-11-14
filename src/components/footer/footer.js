@@ -42,10 +42,9 @@ export default function ColorInversionAnyParent() {
     >
       <div>
         <Typography sx={{ mb: 2 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+          The youth are the driving force that transforms the world for the better. Fueled with passion and resilience, we drive transformation, and lay foundation for the future with hope and possibilities
         </Typography>
-        <Button variant="soft">Learn more</Button>
+        <Button variant="soft">Support the youth</Button>
       </div>
       <Box
         sx={{
@@ -57,10 +56,10 @@ export default function ColorInversionAnyParent() {
           gap: 3,
         }}
       >
-        <Stat value="4M" description="Weekly downloads" />
-        <Stat value="87k" description="Stars on GitHub" />
-        <Stat value="2.7k" description="Open source contributors" />
-        <Stat value="18.4k" description="Followers on X" />
+        <Stat value="29.7M" description="VND raised" />
+        <Stat value="14" description="Members recruited" />
+        <Stat value="1.2K" description="Dollars raised" />
+        <Stat value="1" description="Mission accomplished" />
       </Box>
     </Box>
   );
