@@ -1,0 +1,32 @@
+.footer-ig-logo {
+    height: 30px !important; 
+    width: auto;
+    margin: -48px 0px 0px 175px;
+    transition: transform 0.3s ease; 
+}
+
+.footer-ig-logo:hover {
+    transform: scale(1.2);
+}
+
+.footer-fb-logo {
+    height: 30px !important; 
+    width: auto;
+    margin: -31px 0px 0px 217px;
+    transition: transform 0.3s ease; 
+}
+
+.footer-fb-logo:hover {
+    transform: scale(1.2);
+}
+
+.footer-tt-logo {
+    height: 38px !important; 
+    width: auto;
+    margin: -33px 0px 0px 257px;
+    transition: transform 0.3s ease; 
+}
+
+.footer-tt-logo:hover {
+    transform: scale(1.2);
+}

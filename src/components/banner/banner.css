@@ -1,0 +1,41 @@
+.search-container {
+    position: relative;
+    /* For positioning the icon */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 40px 0px;
+    width: 100%;
+}
+
+.search-bar {
+    width: 85%;
+    padding: 10px 40px 10px 58px;
+    /* Add padding for the icon */
+    border: 2px solid #ccc;
+    /* Bolder border */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: all 0.3s ease;
+    /* Smooth interaction */
+}
+
+.search-bar:focus {
+    border-color: #b3b3b3;
+    /* Slightly darker gray border color */
+    box-shadow: 0 4px 8px rgba(179, 179, 179, 0.5);
+    /* Slightly darker gray shadow */
+}
+
+.search-icon {
+    position: absolute; /* Ensure it's positioned relative to the parent */
+    left: 111px; /* Move it to the left */
+    top: 29%;
+    width: 1.3rem;
+    height: 1.3rem;
+    right: 10px;
+    color: #aaa;
+}

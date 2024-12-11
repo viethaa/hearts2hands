@@ -1,0 +1,17 @@
+#appbar {
+    background: linear-gradient(45deg, #171A1C, #555E68);
+    opacity: 0.9;
+    margin-top: -63px;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: 50px !important;
+    mix-blend-mode: screen;
+    margin: 0px 5px 10px 0px;
+}
+
+.hamburger {
+    height: 1.4rem;
+    width: 1.4rem;
+}

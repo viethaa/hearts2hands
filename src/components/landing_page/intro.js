@@ -1,33 +1,53 @@
-import React from 'react'
+import React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import AspectRatio from '@mui/joy/AspectRatio';
+import Box from '@mui/material/Box';
 
 const Intro = () => {
     return (
-        <Container maxWidth="xl" sx={{ margin: "40px 0" }}>
-            <Grid container style={{ height: "350px" }}>
-                <Grid item xs={6} style={{ height: "100%" }}>
-                    <img style={{ borderRadius: "12px", width: "100%", height: "100%", objectFit: "cover" }}
+        <Container maxWidth="xl" sx={{ marginY: 4 }}>
+            <Grid container spacing={4} alignItems="center">
+                {/* Left Image Section */}
+                <Grid item xs={12} md={6}>
+                    <Box
+                        component="img"
                         src="/assets/images/hearts2hands_pic.jpg"
-                        alt="A beautiful landscape."
+                        alt="A beautiful landscape"
+                        sx={{
+                            borderRadius: 2,
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            boxShadow: 3,
+                        }}
                     />
                 </Grid>
-                <Grid item xs={6} style={{ padding: "30px", height: "100%" }}>
-                    <Grid container sx={{ height: "100%", justifyContent: 'space-around' }}>
-                        <Grid item xs={12}>
-                            <Typography variant='h4' style={{ marginBottom: "10px" }}>Student-Led Committee</Typography>
-                            <Typography variant='p'>Hearts2Hands is a student-led committee dedicated to empowering Vietnamese young people through impactful campaigns. Join us in making a difference!</Typography>
-                        </Grid>
-                        <Grid item xs={12}>
-                        </Grid>
-                    </Grid>
+
+                {/* Right Content Section */}
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            height: '100%',
+                        }}
+                    >
+                        <Typography variant="h4" gutterBottom>
+                            Student-Led Committee
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            Hearts2Hands is a student-led committee dedicated to empowering
+                            Vietnamese young people through impactful campaigns. Join us in
+                            making a difference!
+                        </Typography>
+                    </Box>
                 </Grid>
             </Grid>
         </Container>
-    )
-}
+    );
+};
 
-export default Intro
+export default Intro;

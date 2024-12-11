@@ -11,6 +11,12 @@ import Button from '@mui/joy/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useTheme } from '@mui/joy/styles';
 import './landingpage.css'
+import UserReview from '../quote/quote'
+import ResponsiveAppBar from '../navbar/navbar';
+import { Fade } from "react-awesome-reveal";
+
+
+
 
 const LandingPage = () => {
     const buttonStylesReadMore = {
@@ -43,6 +49,24 @@ const LandingPage = () => {
     const theme = useTheme();
     const shade = (x) => theme.vars.palette['neutral'][x];
 
+    const myCardEventInfo = [
+        {
+            title: "Christmas Fair",
+            description: "We will be hosting booths at various international schools across Hanoi. At these booths, we will be offering a selection of delicious food and beautifully designed shirts, with all proceeds going towards Vietnamese youth!",
+            imageURL: "assets/images/cish_xmas.jpg",
+        },
+        {
+            title: "Fall BBQ",
+            description: "The Fall BBQ is a highly anticipated annual event hosted by Concordia International School Hanoi every November. This cherished tradition serves as a wonderful opportunity to bring together the families of Concordia students in a warm and welcoming environment.",
+            imageURL: "assets/images/fallbbq.jpg",
+        },
+        {
+            title: "Bake Sale",
+            description: "The Bake Sale is a special initiative organized by the fifth graders at Concordia International School Hanoi, aimed at raising awareness and support men's health issues through its signature mustache movement.",
+            imageURL: "assets/images/bakesalereal.jpg",
+        }
+    ];
+
 
     const myCardInfo = [
         {
@@ -64,13 +88,13 @@ const LandingPage = () => {
 
     return (
         <React.Fragment>
-
+            <ResponsiveAppBar />
             <div class="banner">
                 <div class="banner-content">
                     <h1>
                         EMPOWERING<br />VIETNAM'S YOUTH
                     </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br /> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <p>"We can change the world and make it a better place.<br />It is in our hands to make a difference" — Nelson Mandela</p>
                     <div>
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                             <Button
@@ -94,41 +118,44 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
-            <Intro />
-            <Button
-                endDecorator={<ArrowForwardIcon fontSize="md" />}
-                sx={[
-                    { ...buttonStylesReadMore },
-                    { backgroundColor: "#32383E" },
-                    { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
-                ]}
-            >
-                Join Us Now
-            </Button>
-            <ColorInversionMarketing />
-            <Container maxWidth="xl" sx={{ my: 4 }}>
-                <Typography variant="h3" align="center" gutterBottom>
-                    Welcome to Hearts2Hands
-                </Typography>
-                <Typography variant="h6" align="center" gutterBottom>
-                    Join us in making a difference!
-                </Typography>
-                <Grid container spacing={4} justifyContent="center">
-                    {myCardInfo.map((data, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Box className="box-card">
-                                <NewsCard
-                                    imageLink={data.imageURL}
-                                    title={data.title}
-                                    description={data.description}
-                                />
-                            </Box>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>
-
-            <ColorInversionAnyParent></ColorInversionAnyParent>
+            <Fade delay={1e2}>
+                <UserReview></UserReview>
+                <Container className="events-container" maxWidth="lg" sx={{ my: 4 }}>
+                    <p className="latest-news-p">Events</p>
+                    <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    <Grid container spacing={4} justifyContent="center">
+                        {myCardEventInfo.map((data, index) => (
+                            <Grid item xs={12} sm={6} md={4} key={index}>
+                                <Box className="box-card">
+                                    <NewsCard
+                                        imageLink={data.imageURL}
+                                        title={data.title}
+                                        description={data.description}
+                                    />
+                                </Box>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Container>
+                <Container maxWidth="lg" sx={{ my: 4 }}>
+                    <p className="latest-news-p">Latest News</p>
+                    <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    <Grid container spacing={4} justifyContent="center">
+                        {myCardInfo.map((data, index) => (
+                            <Grid item xs={12} sm={6} md={4} key={index}>
+                                <Box className="box-card">
+                                    <NewsCard
+                                        imageLink={data.imageURL}
+                                        title={data.title}
+                                        description={data.description}
+                                    />
+                                </Box>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Container>
+                <ColorInversionAnyParent></ColorInversionAnyParent>
+            </Fade>
         </React.Fragment>
     );
 };

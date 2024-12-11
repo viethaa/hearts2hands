@@ -54,7 +54,7 @@ body {
     margin-bottom: 10px;
     line-height: 1.2;
     font-family: "Passion One", sans-serif;
-    font-weight: 400;  
+    font-weight: 400;
     font-size: 6rem;
     font-style: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -125,4 +125,37 @@ body {
 
 .box-card:hover {
     transform: scale(1.05);
+}
+
+.latest-news-p {
+    font-size: 2rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0px 0px 10px 4px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
+}
+
+.latest-news-icon {
+    width: 24px;
+    height: 24px;
+    margin: -45px 0px 20px 190px;
+    transition: transform 0.3s ease; 
+}
+
+.latest-news-icon:hover {
+    transform: scale(1.2);
+}
+
+.events-icon {
+    width: 24px;
+    height: 24px;
+    margin: -45px 0px 20px 108px;
+    transition: transform 0.3s ease; 
+}
+
+.events-icon:hover {
+    transform: scale(1.2);
 }
