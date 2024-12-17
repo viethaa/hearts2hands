@@ -19,20 +19,16 @@ const pages = [];
 const settings = ['Home 🏠', 'Timeline 🕒', 'Photo Gallery 📷'];
 const settings2 = [
   {
-    "title": "Home 🏠",
+    "title": "Home",
     "link": "/",
   },
   {
-    "title": "Timeline 🕒",
+    "title": "Timeline",
     "link": "/timeline",
   },
   {
-    "title": "Photo Gallery 📷",
+    "title": "Photo Gallery",
     "link": "/photogallery",
-  },
-  {
-    "title": "News Page 📷",
-    "link": "/newspage",
   },
 ]
 

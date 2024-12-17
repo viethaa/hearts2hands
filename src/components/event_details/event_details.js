@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 import Container from '@mui/material/Container';
 import ColorInversionAnyParent from '../footer/footer';
 import ResponsiveAppBar from '../navbar/navbar';
+import Box from '@mui/joy/Box';
 import { Link } from "react-router";
 import './event_details.css'
 
@@ -22,8 +23,13 @@ export default function EventDetails({
                     </Typography>
                 </div>
                 <div>
-                    <img className="news-img" src={imgURL}
-
+                    <Box className="news-img"
+                        component="img"
+                        src={imgURL}
+                        sx={{
+                            height: { xs: "25rem", md: "55rem" },
+                            width: "100%",
+                        }}
                     />
                 </div>
             </Container>
