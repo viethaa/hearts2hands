@@ -2,20 +2,17 @@ import React from 'react';
 import NewsCard from '../card/card';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Intro from './intro';
-import ColorInversionMarketing from '../aboutus/aboutus';
 import ColorInversionAnyParent from '../footer/footer';
+import ResponsiveAppBar from '../navbar/navbar';
 import { Typography } from '@mui/material';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useTheme } from '@mui/joy/styles';
-import './landingpage.css'
 import UserReview from '../quote/quote'
-import ResponsiveAppBar from '../navbar/navbar';
-import MasonryImageList from '../image_list/img_list'
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router";
+import './landingpage.css'
 
 
 
@@ -75,16 +72,19 @@ const LandingPage = () => {
             title: "Mission II",
             description: "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage focuses on meeting the children’s essential needs and spreading joy through thoughtful gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season.",
             imageURL: "assets/images/mission2.jpg",
+            "path": "mission2",
         },
         {
             title: "Mission I",
             description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here!",
             imageURL: "assets/images/h2hkidsbanner.JPG",
+            "path": "mission1",
         },
         {
             title: "SDG 10",
             description: "Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities,… for underprivileged young people from different communities.",
             imageURL: "assets/images/sdg10.jpg",
+            "path": "sdg10",
         }
     ];
 
@@ -145,7 +145,7 @@ const LandingPage = () => {
                         {myCardEventInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
                                 <Box className="box-card">
-                                    <Link to="/timeline">
+                                    <Link to={data.path}>
                                         <NewsCard
                                             imageLink={data.imageURL}
                                             title={data.title}
@@ -166,7 +166,7 @@ const LandingPage = () => {
                         {myCardInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
                                 <Box className="box-card" id="push">
-                                    <Link to="/timeline">
+                                    <Link to={data.path}>
                                         <NewsCard
                                             imageLink={data.imageURL}
                                             title={data.title}

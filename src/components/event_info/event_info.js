@@ -4,47 +4,48 @@ import Grid from '@mui/material/Grid';
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router";
 import Box from '@mui/joy/Box';
+import { Typography } from '@mui/material';
 import './event_info.css'
 
 export default function EventInfo() {
     const eventInfo = [{
-        "imglink": "assets/images/cish_xmas.jpg",
+        "imglink": "assets/images/mission2.jpg",
         "date": {
-            "day": "02",
+            "day": "16",
             "month": "DEC",
         },
 
-        "subtitle": "Christmas Fair",
-        "description": "We are excited to announce that we will be hosting vibrant booths at various international schools across Hanoi! These booths will feature delicious food, as well as beautifully designed shirts. Every purchase made will directly contribute to supporting Vietnamese youth, as all of the proceeds will go towards initiatives that empower Vietnamese youth",
-        "hashtag1": "#fundraise",
-        "hashtag2": "#xmas",
-        "hashtag3": "#festive",
+        "subtitle": "Mission II: Joy For Young Hearts",
+        "description": "We had a great time vistiting Mái Ấm Thánh Tâm orphanage! Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage highlights providing the children’s essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth",
+        "hashtag1": "#mission",
+        "hashtag2": "#joy",
+        "hashtag3": "#gifts",
     },
     {
-        "imglink": "assets/images/fallbbq.jpg",
+        "imglink": "assets/images/visit.jpg",
         "date": {
-            "day": "30",
-            "month": "NOV",
+            "day": "14",
+            "month": "DEC",
         },
 
-        "subtitle": "Fall BBQ",
-        "description": "A highly anticipated annual event hosted by Concordia International School Hanoi every November. The Fall BBQ cherished tradition serves as a wonderful opportunity to bring together the families of Concordia students in a warm and welcoming environment. We hope to see you there!",
-        "hashtag1": "#family",
-        "hashtag2": "#gathering",
-        "hashtag3": "#bbq",
+        "subtitle": "Mái Ấm Thánh Tâm Visit",
+        "description": "To prepare for Mission II, We visited the orphanage Mái Ấm Thánh Tâm, where we spent time with the children and residents. This visit allowed us to better understand their needs and challenges, as we work towards creating a positive impact and supporting the community in meaningful ways.",
+        "hashtag1": "#visit",
+        "hashtag2": "#scouting",
+        "hashtag3": "#orphange",
     },
     {
-        "imglink": "assets/images/bakesalereal.jpg",
+        "imglink": "assets/images/santa.png",
         "date": {
-            "day": "18",
-            "month": "OCT",
+            "day": "12",
+            "month": "DEC",
         },
 
-        "subtitle": "BakeSale",
-        "description": "The Bake Sale is a meaningful and heartfelt initiative organized by the dedicated fifth graders at Concordia International School Hanoi. This special event is designed not only to showcase their baking skills but also to raise awareness and generate support for mens health issues",
-        "hashtag1": "#movember",
-        "hashtag2": "#mustache",
-        "hashtag3": "#sale",
+        "subtitle": "BVIS Christmas Fair",
+        "description": "Hearts2Hands took part in a service introduction at the British Vietnamese International School Hanoi Christmas fair. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
+        "hashtag1": "#bvis-xmas",
+        "hashtag2": "#festive",
+        "hashtag3": "#awareness",
     },
     {
         "imglink": "assets/images/serv_fair.png",
@@ -55,8 +56,8 @@ export default function EventInfo() {
 
         "subtitle": "Service Fair",
         "description": "We recently had the privilege of presenting at an introductory event at Concordia Hanoi, where we spoke directly to the high school students about our club’s mission and vision. We also participated in the Service Fair, hosting our own booth to share our goals and initiatives with the broader community",
-        "hashtag1": "#service-fair",
-        "hashtag2": "#concordia",
+        "hashtag1": "#concordia",
+        "hashtag2": "#xmas-fair",
         "hashtag3": "#introductory",
     },
     {
@@ -66,24 +67,24 @@ export default function EventInfo() {
             "month": "OCT",
         },
 
-        "subtitle": "Mission I",
+        "subtitle": "Mission I: Education for Young People",
         "description": "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! We are committed to continuing our mission and expanding our impact",
         "hashtag1": "#mission",
-        "hashtag2": "#community",
+        "hashtag2": "#education",
         "hashtag3": "#donation",
     },
     {
         "imglink": "assets/images/h2hpackage.JPG",
         "date": {
-            "day": "05",
+            "day": "20",
             "month": "AUG",
         },
 
         "subtitle": "Hearts2Hands Foundation",
-        "description": "Hearts2Hands is a student-led committee dedicated to empowering Vietnamese youth through meaningful campaigns. Founded on the belief that collective action creates change, we focus on leadership, creativity, and social responsibility. Join us to make a difference and help shape a brighter future!",
+        "description": "Hearts2Hands was founded with the goal of supporting Vietnamese young people, aligning with the objectives of SDG 10. Founded on the belief that collective action creates change, we focus on leadership, creativity, and social responsibility. Join us to make a difference and help shape a brighter future!",
         "hashtag1": "#foundation",
-        "hashtag2": "#service",
-        "hashtag3": "#project",
+        "hashtag2": "#youth-equity",
+        "hashtag3": "#sdg10",
     },
     ]
     return (
@@ -100,7 +101,7 @@ export default function EventInfo() {
                                 sx={{
                                     "height": "36rem",
                                     "width": "100%",
-                                    maxHeight: { "xs": "20rem", "md": "40rem"},
+                                    maxHeight: { "xs": "20rem", "md": "40rem" },
                                     maxWidth: { "xs": "100%", "md": "100%" },
                                 }}
                             />
@@ -123,12 +124,12 @@ export default function EventInfo() {
                         </Fade>
                     </div>)
             })}
-            <Link to="/">
-                <div className="b2h">
+            <div className="b2h">
+                <Link to="/">
                     <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
                     <p className="back-home-p">Back to Homepage</p>
-                </div>
-            </Link>
+                </Link>
+            </div>
         </Container >
     )
 }

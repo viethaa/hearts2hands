@@ -30,6 +30,10 @@ const settings2 = [
     "title": "Photo Gallery 📷",
     "link": "/photogallery",
   },
+  {
+    "title": "News Page 📷",
+    "link": "/newspage",
+  },
 ]
 
 function ResponsiveAppBar() {
