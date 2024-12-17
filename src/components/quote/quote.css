@@ -24,9 +24,9 @@
 }
 
 .quote {
-    line-height: 2;
-    font-size: 1.4rem;
+    line-height: 2 !important;
 }
+
 
 .avatar {
     margin-top: 30px;
@@ -37,11 +37,11 @@
     height: 48px !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     float: right;
+    transition: transform 0.3s ease-in-out;
 }
 
 .quote-avatar:hover {
     transform: scale(1.05); /* Slight zoom effect */
-    transition: transform 0.3s ease-in-out;
 }
 
 .avatar-name {
@@ -57,13 +57,12 @@
 .display-img1 {
     width: 100%; /* Ensure it stretches horizontally */
     height: 100%; /* Ensure it stretches vertically */
-    object-fit: cover; /* Prevent distortion */
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: -7px 0px 0px 30px;
+    transition: transform 0.4s ease-in-out;
 }
 
 .display-img1:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    transition: transform 0.3s ease-in-out;
+    transform: scale(1.03);
 }

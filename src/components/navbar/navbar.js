@@ -13,9 +13,24 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CardMedia from '@mui/material/CardMedia';
 import './navbar.css'
+import { Link } from "react-router";
 
 const pages = [];
 const settings = ['Home 🏠', 'Timeline 🕒', 'Photo Gallery 📷'];
+const settings2 = [
+  {
+    "title": "Home 🏠",
+    "link": "/",
+  },
+  {
+    "title": "Timeline 🕒",
+    "link": "/timeline",
+  },
+  {
+    "title": "Photo Gallery 📷",
+    "link": "/photogallery",
+  },
+]
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,28 +55,32 @@ function ResponsiveAppBar() {
     <AppBar id="appbar" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <CardMedia
-            className="navbar-logo"
-            component="img"
-            sx={{ objectFit: "contain", display: { xs: 'none', md: 'flex' } }}
-            image="assets/images/h2h_logo_no_bg.png"
-          />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Heart2Hands
-          </Typography>
+          <Link to="/">
+            <CardMedia
+              className="navbar-logo"
+              component="img"
+              sx={{ objectFit: "contain", display: { xs: 'none', md: 'flex' } }}
+              image="assets/images/h2h_logo_no_bg.png"
+            />
+          </Link>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              Hearts2Hands
+            </Typography>
+          </Link>
           <CardMedia
             className="navbar-logo"
             component="img"
@@ -84,7 +103,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            Heart2Hands
+            Hearts2Hands
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -119,10 +138,12 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
-                </MenuItem>
+              {settings2.map((setting) => (
+                <Link to={setting.link}>
+                  <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
+                    <Typography sx={{ textAlign: 'center' }}>{setting.title}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import './quote.css'
@@ -7,24 +7,48 @@ import './quote.css'
 export default function UserReview() {
     return (
         <Container className="quote-container">
-            <Grid container spacing={2}>
-                <Grid className="quote-grid" item xs={5} sx={{"height": "480px"}}>
+            <Grid container spacing={0} sx={{
+                "height": {
+                    "xs": "1000px",
+                    "md": "500px"
+                }
+            }}>
+                <Grid className="quote-grid" item xs={12} md={5} sx={{
+                    "height": {
+                        "xs": "50%",
+                        "md": "100%"
+                    }
+                }}>
                     <div>
                         <img className="quote-img" src="assets/images/Quote Icon.png"></img>
-                        <p className="quote">The primary purpose of the foundation for Heart2Hands is to support and adress the needs of Vietnamese youth. This project holds significant meaning for me, as it creates a positive impact on the community</p>
+                        <Typography sx={{
+                            "fontSize": {
+                                "xs": "1.1rem",
+                                "md": "1.3rem"
+                            }
+                        }} className="quote">The primary purpose of the foundation for Heart2Hands is to support and adress the needs of Vietnamese youth. This project holds significant meaning for me, as it creates a positive impact on the community.</Typography>
                     </div>
-                    <Grid container className="avatar" spacing={2}>
+                    <Grid container className="avatar" spacing={2} sx={{ "margin-top": { "xs": "12px" } }}>
                         <Grid item xs={2}>
-                            <Avatar className="quote-avatar" alt="Remy Sharp" src="assets/images/pa.jpg"/>
+                            <Avatar className="quote-avatar" alt="Remy Sharp" src="assets/images/pa.jpg" />
                         </Grid>
                         <Grid item xs={10}>
-                            <p className="avatar-name">
+                            <Typography className="avatar-name">
                                 <span className="bold-name">Phan Anh Tran</span>, founding president of the Heart2Hands committee
-                            </p>
+                            </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={7} sx={{"height": "480px"}}>
+                <Grid item md={0.5}></Grid>
+                <Grid item xs={12} md={6.5} sx={{
+                    "height": {
+                        "xs": "50%",
+                        "md": "100%"
+                    }, "marginTop": {
+                        "xs": "15px",
+                        "md": "0px"
+                    }
+                }}>
                     <img className="display-img1" src="assets/images/school.jpg"></img>
                 </Grid>
             </Grid>

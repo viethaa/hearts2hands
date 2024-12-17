@@ -61,14 +61,14 @@ export default function ColorInversionAnyParent() {
             maxWidth: '80ch',
           }}
         >
-          Heart2Hands is a student-led organization for Vietnam's youth.
+          Heart2Hands is a student-led organization for youth equality in Vietnam.
           Our mission is to empower young individuals by nurturing their talents
           and fostering a sense of community and resilience.
         </Typography>
       </div>
       <Box
         sx={{
-          display: 'grid',
+          display: { xs: 'none', md: 'grid' },
           gridTemplateColumns: {
             xs: 'repeat(auto-fill, minmax(min(100%, 180px), 1fr))',
             sm: '1fr 1fr',
@@ -76,31 +76,29 @@ export default function ColorInversionAnyParent() {
           gap: 3,
         }}
       >
-        <Stat value="29.7M" description="VND raised" />
-        <Stat value="138" description="Followers on socials" />
-        <Stat value="27.4M" description="VND donated" />
-        <Stat value="14" description="Members recruited" />
+        <Stat value="52.4M" description="VND raised" />
+        <Stat value="52.4M" description="VND Khuyên Góp" />
+        <Stat value="2.06K" description="Dollars raised" />
+        <Stat value="2.06K" description="USD Khuyên Góp" />
       </Box>
       <div>
         <Typography
           level="body1"
           sx={{
             mb: 2,
-            color: 'text.primary',
+            color: 'text.secondary',
             maxWidth: '60ch',
             lineHeight: 1.6,
             marginTop: 2,
           }}
         >
-          The youth are the driving force that transforms the world for the better.
-          Fueled with passion and resilience, we drive transformation and lay
-          the foundation for the future with hope and possibilities.
+          Heart2Hands là một tổ chức do học sinh tạo lập, hướng đến sự bình đẳng của người trẻ tại Việt Nam. Sứ mệnh của Hearts2Hands là giúp đỡ các bạn trẻ bằng cách nuôi dưỡng tài năng qua những hoạt động và chiến dịch đầy ý nghĩa.
         </Typography>
         <Button variant="soft" color="primary">Follow Our Socials:</Button>
       </div>
       <Box
         sx={{
-          display: 'grid',
+          display: { xs: 'none', md: 'grid' },
           gridTemplateColumns: {
             xs: 'repeat(auto-fill, minmax(min(100%, 180px), 1fr))',
             sm: '1fr 1fr',
@@ -108,10 +106,10 @@ export default function ColorInversionAnyParent() {
           gap: 3,
         }}
       >
-        <Stat value="1.2K" description="Dollar raised" />
-        <Stat value="2" description="Missions ongoing" />
-        <Stat value="1.1k" description="Dollars donated" />
-        <Stat value="1" description="Mission accomplished" />
+        <Stat value="15" description="Members recruited" />
+        <Stat value="15" description="Thành Viên" />
+        <Stat value="2" description="Missions accomplished" />
+        <Stat value="2" description="Chiến Dịch Thành Công" />
       </Box>
       <div>
         <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">

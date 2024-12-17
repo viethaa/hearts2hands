@@ -5,7 +5,7 @@ import './banner.css';
 
 export default function Banner() {
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="lg"  sx={{display: { xs: 'none', md: 'grid' }}} >
             <div className="search-container">
                 <input type="text" className="search-bar" placeholder="Search..." />
                 <img className="search-icon" src="assets/images/Search Icon.png"/>

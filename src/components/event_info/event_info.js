@@ -2,6 +2,8 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router";
+import Box from '@mui/joy/Box';
 import './event_info.css'
 
 export default function EventInfo() {
@@ -58,7 +60,7 @@ export default function EventInfo() {
         "hashtag3": "#introductory",
     },
     {
-        "imglink": "assets/images/school.jpg",
+        "imglink": "assets/images/h2hkidsbanner.JPG",
         "date": {
             "day": "12",
             "month": "OCT",
@@ -71,7 +73,7 @@ export default function EventInfo() {
         "hashtag3": "#donation",
     },
     {
-        "imglink": "assets/images/postcard.jpg",
+        "imglink": "assets/images/h2hpackage.JPG",
         "date": {
             "day": "05",
             "month": "AUG",
@@ -87,30 +89,46 @@ export default function EventInfo() {
     return (
         <Container maxWidth="lg">
             {eventInfo.map((info) => {
-                return (<div>
-                    <Fade delay={1e1}>
-                        <div>
-                            <img className="event-img" src={info.imglink}></img>
-                        </div>
-                        <Grid className="event-container" container spacing={1}>
-                            <Grid item xs={0} sm={2.4} sx={{display: { xs: 'none', md: 'block' }}}>
-                                <h1 className="date">{info.date.day}</h1>
-                                <p className="month">{info.date.month}</p>
+                return (
+                    <div>
+                        <Fade delay={1e0}>
+                            <Box
+                                component="img"
+                                className="event-img"
+                                src={info.imglink}
+                                alt="Event"
+                                sx={{
+                                    "height": "36rem",
+                                    "width": "100%",
+                                    maxHeight: { "xs": "20rem", "md": "40rem"},
+                                    maxWidth: { "xs": "100%", "md": "100%" },
+                                }}
+                            />
+                            <Grid className="event-container" container spacing={1}>
+                                <Grid item xs={0} sm={2.4} sx={{ display: { xs: 'none', md: 'block' } }}>
+                                    <h1 className="date">{info.date.day}</h1>
+                                    <p className="month">{info.date.month}</p>
+                                </Grid>
+                                <Grid className="event-info" item xs={12} sm={9.6}>
+                                    <h1 className="sub-title">{info.subtitle}</h1>
+                                    <p className="text">
+                                        {info.description} </p>
+                                    <div className="hashtags">
+                                        <p>{info.hashtag1}</p>
+                                        <p>{info.hashtag2}</p>
+                                        <p>{info.hashtag3}</p>
+                                    </div>
+                                </Grid>
                             </Grid>
-                            <Grid className="event-info" item xs={12} sm={9.6}>
-                                <h1 className="sub-title">{info.subtitle}</h1>
-                                <p className="text">
-                                    {info.description} </p>
-                                <div className="hashtags">
-                                    <p>{info.hashtag1}</p>
-                                    <p>{info.hashtag2}</p>
-                                    <p>{info.hashtag3}</p>
-                                </div>
-                            </Grid>
-                        </Grid>
-                    </Fade>
-                </div>)
+                        </Fade>
+                    </div>)
             })}
+            <Link to="/">
+                <div className="b2h">
+                    <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
+                    <p className="back-home-p">Back to Homepage</p>
+                </div>
+            </Link>
         </Container >
     )
 }

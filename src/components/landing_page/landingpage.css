@@ -8,6 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #FFFAF0, #FFF5E1);
 }
 
 
@@ -49,16 +50,12 @@ body {
 
 
 .banner h1 {
-    font-size: 4.5em;
-    /* Increase font size */
     margin-bottom: 10px;
     line-height: 1.2;
     font-family: "Passion One", sans-serif;
     font-weight: 400;
-    font-size: 6rem;
     font-style: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Optional: text shadow for better readability */
 }
 
 .banner p {
@@ -121,6 +118,11 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+#push {
+    margin-bottom: 40px;
 }
 
 .box-card:hover {

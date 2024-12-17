@@ -13,7 +13,9 @@ import { useTheme } from '@mui/joy/styles';
 import './landingpage.css'
 import UserReview from '../quote/quote'
 import ResponsiveAppBar from '../navbar/navbar';
+import MasonryImageList from '../image_list/img_list'
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-router";
 
 
 
@@ -51,38 +53,38 @@ const LandingPage = () => {
 
     const myCardEventInfo = [
         {
-            title: "Christmas Fair",
-            description: "We will be hosting booths at various international schools across Hanoi. At these booths, we will be offering a selection of delicious food and beautifully designed shirts, with all proceeds going towards Vietnamese youth!",
-            imageURL: "assets/images/cish_xmas.jpg",
+            title: "BVIS Christmas Fair",
+            description: "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, and group’s mission as a way to raise awareness of the various problems in Vietnamese youth equity.",
+            imageURL: "assets/images/santa.png",
         },
         {
-            title: "Fall BBQ",
-            description: "The Fall BBQ is a highly anticipated annual event hosted by Concordia International School Hanoi every November. This cherished tradition serves as a wonderful opportunity to bring together the families of Concordia students in a warm and welcoming environment.",
-            imageURL: "assets/images/fallbbq.jpg",
+            title: "Service Fair",
+            description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. Lately, we participated in the Service Fair with our own booth, where we shared our club’s mission, perspective, and goals. It was a fantastic experience",
+            imageURL: "assets/images/cishservfair.jpg",
         },
         {
             title: "Bake Sale",
             description: "The Bake Sale is a special initiative organized by the fifth graders at Concordia International School Hanoi, aimed at raising awareness and support men's health issues through its signature mustache movement.",
-            imageURL: "assets/images/bakesalereal.jpg",
+            imageURL: "assets/images/cookies.jpg",
         }
     ];
 
 
     const myCardInfo = [
         {
-            title: "Service Fair",
-            description: "We recently took part in an introductory event at Concordia Hanoi. Yesterday, we participated in the Service Fair with our own booth, where we shared our club’s mission. We had a fantastic experience!",
-            imageURL: "/assets/images/serv_fair.png",
+            title: "Mission II",
+            description: "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage focuses on meeting the children’s essential needs and spreading joy through thoughtful gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season.",
+            imageURL: "assets/images/mission2.jpg",
         },
         {
             title: "Mission I",
-            description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! Join us in making a difference!",
-            imageURL: "/assets/images/school.jpg",
+            description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here!",
+            imageURL: "assets/images/h2hkidsbanner.JPG",
         },
         {
-            title: "This Is Hearts2Hands",
-            description: "Hearts2Hands is a student-led committee dedicated to empowering Vietnamese young people through impactful campaigns. Join us in making a difference!",
-            imageURL: "/assets/images/postcard.jpg",
+            title: "SDG 10",
+            description: "Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities,… for underprivileged young people from different communities.",
+            imageURL: "assets/images/sdg10.jpg",
         }
     ];
 
@@ -91,26 +93,40 @@ const LandingPage = () => {
             <ResponsiveAppBar />
             <div class="banner">
                 <div class="banner-content">
-                    <h1>
+                    <Typography className="banner-name" variant="h1" sx={{
+                        "fontSize":
+                        {
+                            "md": "6rem",
+                            "xs": "4rem"
+                        }
+                    }}>
                         EMPOWERING<br />VIETNAM'S YOUTH
-                    </h1>
-                    <p>"We can change the world and make it a better place.<br />It is in our hands to make a difference" — Nelson Mandela</p>
+                    </Typography>
+                    <Typography>"We can change the world and make it a better place. <Box sx={{ "display": { "md": "block", "xs": "inline" } }}>It is in our hands to make a difference" — Nelson Mandela</Box></Typography>
                     <div>
-                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                            <Button
-                                endDecorator={<ArrowForwardIcon fontSize="md" />}
-                                sx={[
-                                    { ...buttonStylesReadMore },
-                                    { backgroundColor: "#32383E" },
-                                    { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
-                                ]}
-                            >
-                                Read more
-                            </Button>
+                        <Box sx={{
+                            display: 'flex', flexWrap: 'wrap', gap: 1, "marginTop": {
+                                "xs": "40px",
+                                "md": "3.5rem",
+                            }
+                        }}>
+                            <Link to="/timeline">
+                                <Button
+                                    endDecorator={<ArrowForwardIcon fontSize="md" />}
+                                    sx={[
+                                        { ...buttonStylesReadMore },
+                                        { backgroundColor: "#32383E" },
+                                        { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
+                                    ]}
+                                >
+                                    Timeline
+                                </Button>
+                            </Link>
                             <Button
                                 variant="plain"
                                 endDecorator={<ArrowForwardIcon fontSize="md" />}
                                 sx={{ color: shade(700), ...buttonStylesJoinUs, backgroundColor: "white" }}
+                                onClick={() => window.open('https://forms.gle/3smohGKzZZAU6tJb7', '_blank')}
                             >
                                 Join Us Now
                             </Button>
@@ -118,37 +134,45 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
-            <Fade delay={1e2}>
+            <Fade delay={1e1}>
                 <UserReview></UserReview>
-                <Container className="events-container" maxWidth="lg" sx={{ my: 4 }}>
-                    <p className="latest-news-p">Events</p>
-                    <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
+                <Container className="events-container" maxWidth="lg">
+                    <Link to="/timeline">
+                        <p className="latest-news-p">Events</p>
+                        <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    </Link>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardEventInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
                                 <Box className="box-card">
-                                    <NewsCard
-                                        imageLink={data.imageURL}
-                                        title={data.title}
-                                        description={data.description}
-                                    />
+                                    <Link to="/timeline">
+                                        <NewsCard
+                                            imageLink={data.imageURL}
+                                            title={data.title}
+                                            description={data.description}
+                                        />
+                                    </Link>
                                 </Box>
                             </Grid>
                         ))}
                     </Grid>
                 </Container>
                 <Container maxWidth="lg" sx={{ my: 4 }}>
-                    <p className="latest-news-p">Latest News</p>
-                    <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    <Link to="/timeline">
+                        <p className="latest-news-p">Latest News</p>
+                        <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    </Link>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
-                                <Box className="box-card">
-                                    <NewsCard
-                                        imageLink={data.imageURL}
-                                        title={data.title}
-                                        description={data.description}
-                                    />
+                                <Box className="box-card" id="push">
+                                    <Link to="/timeline">
+                                        <NewsCard
+                                            imageLink={data.imageURL}
+                                            title={data.title}
+                                            description={data.description}
+                                        />
+                                    </Link>
                                 </Box>
                             </Grid>
                         ))}
@@ -156,7 +180,7 @@ const LandingPage = () => {
                 </Container>
                 <ColorInversionAnyParent></ColorInversionAnyParent>
             </Fade>
-        </React.Fragment>
+        </React.Fragment >
     );
 };
 
