@@ -28,7 +28,7 @@
     font-size: 18px;
     font-weight: normal;
     font-family: "Fira Sans", sans-serif;
-    margin: -10px 40px 0px 108px;
+    margin: -10px 40px 0px 87px;
 }
 
 .sub-title {
@@ -50,24 +50,60 @@
     margin-top: 14px;
 }
 
-.b2h {
-    width: 225px;
-    margin-bottom: 1.5rem;
+/* Wrapper for the arrow and text */
+.link-arrows {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping of the components */
+    margin: 8rem 0rem 10rem 0rem;
+    width: 100%; /* Ensures the container spans the full width */
 }
 
-.back-home {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+/* Back to Homepage and To PhotoGallery */
+.b2h,
+.to-photoGallery {
+    display: flex !important;
+    align-items: center !important; /* Aligns text and arrow vertically */
+    margin: 0 !important;
+    white-space: nowrap; /* Prevents the text from wrapping */
 }
 
-.back-home-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: justify;
-    letter-spacing: 0.5px;
-    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1);
+/* Back to Homepage - Normal order */
+.b2h {
+    justify-content: flex-start; /* Aligns the "Back to Homepage" text and arrow to the left */
+}
+
+.b2h img {
+    margin-right: 10px; /* Space between arrow and text */
+}
+
+/* To Photo Gallery - Reverse order to move the arrow to the right */
+.to-photoGallery {
+    flex-direction: row-reverse; /* Reverses the order of text and arrow */
+    justify-content: flex-start; /* Ensures the "To Photo Gallery" section is left-aligned with the arrow to the right */
+    width: 100%; /* Ensures it spans the remaining space */
+}
+
+.to-photoGallery img {
+    margin-left: 10px; /* Space between text and arrow */
+}
+
+/* Arrow image styling */
+.back-home,
+.to-photoGallery-arrow {
+    width: 24px !important;
+    height: 24px !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Text styling for both Back to Homepage and To Photo Gallery */
+.back-home-p,
+.to-photoGallery-p {
+    line-height: 1.6 !important;
+    text-align: center !important; /* Center the text horizontally */
+    letter-spacing: 0.5px !important;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1) !important;
+    white-space: nowrap; /* Ensures the text stays on one line */
+    margin: 0; /* Removes any default margin */
 }

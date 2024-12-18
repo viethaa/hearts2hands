@@ -10,9 +10,10 @@ import './event_info.css'
 export default function EventInfo() {
     const eventInfo = [{
         "imglink": "assets/images/mission2.jpg",
+        "objectFit": "fill",
         "date": {
             "day": "16",
-            "month": "DEC",
+            "month": "DEC 2024",
         },
 
         "subtitle": "Mission II: Joy For Young Hearts",
@@ -23,9 +24,10 @@ export default function EventInfo() {
     },
     {
         "imglink": "assets/images/visit.jpg",
+        "objectFit": "cover",
         "date": {
             "day": "14",
-            "month": "DEC",
+            "month": "DEC 2024",
         },
 
         "subtitle": "Mái Ấm Thánh Tâm Visit",
@@ -36,9 +38,10 @@ export default function EventInfo() {
     },
     {
         "imglink": "assets/images/santa.png",
+        "objectFit": "fill",
         "date": {
             "day": "12",
-            "month": "DEC",
+            "month": "DEC 2024",
         },
 
         "subtitle": "BVIS Christmas Fair",
@@ -48,10 +51,11 @@ export default function EventInfo() {
         "hashtag3": "#awareness",
     },
     {
-        "imglink": "assets/images/serv_fair.png",
+        "imglink": "assets/images/cishservfair.jpg",
+        "objectFit": "cover",
         "date": {
             "day": "16",
-            "month": "OCT",
+            "month": "OCT 2024",
         },
 
         "subtitle": "Service Fair",
@@ -62,9 +66,10 @@ export default function EventInfo() {
     },
     {
         "imglink": "assets/images/h2hkidsbanner.JPG",
+        "objectFit": "fill",
         "date": {
             "day": "12",
-            "month": "OCT",
+            "month": "OCT 2024",
         },
 
         "subtitle": "Mission I: Education for Young People",
@@ -74,13 +79,14 @@ export default function EventInfo() {
         "hashtag3": "#donation",
     },
     {
-        "imglink": "assets/images/h2hpackage.JPG",
+        "imglink": "assets/images/h2hfoundation.jpg",
         "date": {
             "day": "20",
-            "month": "AUG",
+            "month": "AUG 2024",
         },
 
         "subtitle": "Hearts2Hands Foundation",
+        "objectFit": "fill",
         "description": "Hearts2Hands was founded with the goal of supporting Vietnamese young people, aligning with the objectives of SDG 10. Founded on the belief that collective action creates change, we focus on leadership, creativity, and social responsibility. Join us to make a difference and help shape a brighter future!",
         "hashtag1": "#foundation",
         "hashtag2": "#youth-equity",
@@ -103,6 +109,7 @@ export default function EventInfo() {
                                     "width": "100%",
                                     maxHeight: { "xs": "20rem", "md": "40rem" },
                                     maxWidth: { "xs": "100%", "md": "100%" },
+                                    objectFit: info.objectFit || "cover",
                                 }}
                             />
                             <Grid className="event-container" container spacing={1}>
@@ -124,11 +131,19 @@ export default function EventInfo() {
                         </Fade>
                     </div>)
             })}
-            <div className="b2h">
-                <Link to="/">
+            <div className="link-arrows">
+                <div className="b2h">
                     <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
-                    <p className="back-home-p">Back to Homepage</p>
-                </Link>
+                    <Typography className="back-home-p" sx={{
+                        "fontSize": { xs: "14px", md: "1.2rem" },
+                    }}>Back to Homepage</Typography>
+                </div>
+                <div className="to-photoGallery">
+                    <img className="to-photoGallery-arrow" src="/assets/images/Right Arrow Icon.png"></img>
+                    <Typography className="to-photoGallery-p" sx={{
+                        "fontSize": { xs: "14px", md: "1.2rem" },
+                    }}>View Photo Gallery</Typography>
+                </div>
             </div>
         </Container >
     )

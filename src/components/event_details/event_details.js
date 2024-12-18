@@ -48,11 +48,19 @@ export default function EventDetails({
                         </Typography>
                     ))}
                 </div>
-                <div className="b2h">
-                    <Link to="/">
+                <div className="link-arrows">
+                    <div className="b2h">
                         <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
-                        <p className="back-home-p">Back to Homepage</p>
-                    </Link>
+                        <Typography className="back-home-p" sx={{
+                            "fontSize": {xs: "14px", md: "1.2rem"},
+                        }}>Back to Homepage</Typography>
+                    </div>
+                    <div className="to-timeline">
+                        <img className="to-timeline-arrow" src="/assets/images/Right Arrow Icon.png"></img>
+                        <Typography className="to-timeline-p" sx={{
+                            "fontSize": { xs: "14px", md: "1.2rem" },
+                        }}>View Our Timeline</Typography>
+                    </div>
                 </div>
             </Container>
             <ColorInversionAnyParent />

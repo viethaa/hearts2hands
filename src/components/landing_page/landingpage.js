@@ -137,10 +137,8 @@ const LandingPage = () => {
             <Fade delay={1e1}>
                 <UserReview></UserReview>
                 <Container className="events-container" maxWidth="lg">
-                    <Link to="/timeline">
-                        <p className="latest-news-p">Events</p>
-                        <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
-                    </Link>
+                    <p className="latest-news-p">Events</p>
+                    <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardEventInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
@@ -158,10 +156,8 @@ const LandingPage = () => {
                     </Grid>
                 </Container>
                 <Container maxWidth="lg" sx={{ my: 4 }}>
-                    <Link to="/timeline">
-                        <p className="latest-news-p">Latest News</p>
-                        <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
-                    </Link>
+                    <p className="latest-news-p">Latest News</p>
+                    <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
