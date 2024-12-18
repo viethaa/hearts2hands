@@ -1,74 +1,132 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-export default function MasonryImageList() {
+export default function StandardImageList() {
   return (
-    <Box sx={{ "width": "100%", "height": "100%", overflowY: 'scroll' }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
-    </Box>
+    <ImageList sx={{ width: '100%', height: 'auto' }} cols={3} rowHeight={480}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }} // Added to ensure consistency
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
   );
 }
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1549388604-817d15aa0110',
-    title: 'Bed',
+    img: 'assets/images/photo_gallery/1.jpg',
+    title: 'Breakfast',
   },
   {
-    img: 'https://images.unsplash.com/photo-1525097487452-6278ff080c31',
-    title: 'Books',
+    img: 'assets/images/photo_gallery/2.jpg',
+    title: 'Burger',
   },
   {
-    img: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6',
-    title: 'Sink',
+    img: 'assets/images/photo_gallery/3.jpg',
+    title: 'Camera',
   },
   {
-    img: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3',
-    title: 'Kitchen',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1588436706487-9d55d73a39e3',
-    title: 'Blinds',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1574180045827-681f8a1a9622',
-    title: 'Chairs',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1530731141654-5993c3016c77',
-    title: 'Laptop',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1481277542470-605612bd2d61',
-    title: 'Doors',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7',
+    img: 'assets/images/photo_gallery/4.jpg',
     title: 'Coffee',
   },
   {
-    img: 'https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee',
-    title: 'Storage',
+    img: 'assets/images/photo_gallery/5.jpg',
+    title: 'Hats',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62',
-    title: 'Candle',
+    img: 'assets/images/photo_gallery/6.jpg',
+    title: 'Honey',
   },
   {
-    img: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4',
-    title: 'Coffee table',
+    img: 'assets/images/photo_gallery/7.jpg',
+    title: 'Basketball',
+  },
+  {
+    img: 'assets/images/photo_gallery/8.jpg',
+    title: 'Fern',
+  },
+  {
+    img: 'assets/images/photo_gallery/9.jpg',
+    title: 'Mushrooms',
+  },
+  {
+    img: 'assets/images/photo_gallery/10.jpg',
+    title: 'Tomato basil',
+  },
+  {
+    img: 'assets/images/photo_gallery/11.jpg',
+    title: 'Sea star',
+  },
+  {
+    img: 'assets/images/photo_gallery/12.jpg',
+    title: 'Bike',
+  },
+  {
+    img: 'assets/images/photo_gallery/13.jpg',
+    title: 'Breakfast',
+  },
+  {
+    img: 'assets/images/photo_gallery/14.jpg',
+    title: 'Burger',
+  },
+  {
+    img: 'assets/images/photo_gallery/15.jpg',
+    title: 'Camera',
+  },
+  {
+    img: 'assets/images/photo_gallery/16.jpg',
+    title: 'Coffee',
+  },
+  {
+    img: 'assets/images/photo_gallery/17.jpg',
+    title: 'Hats',
+  },
+  {
+    img: 'assets/images/photo_gallery/18.jpg',
+    title: 'Honey',
+  },
+  {
+    img: 'assets/images/photo_gallery/19.jpg',
+    title: 'Basketball',
+  },
+  {
+    img: 'assets/images/photo_gallery/20.jpg',
+    title: 'Fern',
+  },
+  {
+    img: 'assets/images/photo_gallery/21.jpg',
+    title: 'Mushrooms',
+  },
+  {
+    img: 'assets/images/photo_gallery/22.jpg',
+    title: 'Tomato basil',
+  },
+  {
+    img: 'assets/images/photo_gallery/23.jpg',
+    title: 'Sea star',
+  },
+  {
+    img: 'assets/images/photo_gallery/24.jpg',
+    title: 'Bike',
+  },
+  {
+    img: 'assets/images/photo_gallery/25.jpg',
+    title: 'Tomato basil',
+  },
+  {
+    img: 'assets/images/photo_gallery/26.jpg',
+    title: 'Sea star',
+  },
+  {
+    img: 'assets/images/photo_gallery/27.jpg',
+    title: 'Bike',
   },
 ];

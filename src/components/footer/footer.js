@@ -26,7 +26,7 @@ Stat.propTypes = {
 
 export default function ColorInversionAnyParent() {
   return (
-    <Box
+    <Box className="footer-container"
       sx={[
         (theme) => ({
           display: 'grid',

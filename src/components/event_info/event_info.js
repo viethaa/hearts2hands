@@ -17,7 +17,7 @@ export default function EventInfo() {
         },
 
         "subtitle": "Mission II: Joy For Young Hearts",
-        "description": "We had a great time vistiting Mái Ấm Thánh Tâm orphanage! Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage highlights providing the children’s essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth",
+        "description": "December 16th, 2024, we had a great time vistiting Mái Ấm Thánh Tâm orphanage! Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage highlights providing the children’s essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth",
         "hashtag1": "#mission",
         "hashtag2": "#joy",
         "hashtag3": "#gifts",
@@ -31,7 +31,7 @@ export default function EventInfo() {
         },
 
         "subtitle": "Mái Ấm Thánh Tâm Visit",
-        "description": "To prepare for Mission II, We visited the orphanage Mái Ấm Thánh Tâm, where we spent time with the children and residents. This visit allowed us to better understand their needs and challenges, as we work towards creating a positive impact and supporting the community in meaningful ways.",
+        "description": "December 14th, 2024, to prepare for Mission II, we visited the orphanage Mái Ấm Thánh Tâm; where we spent time with the children and residents. This visit allowed us to better understand their needs and challenges, as we work towards creating a positive impact and supporting the community in meaningful ways.",
         "hashtag1": "#visit",
         "hashtag2": "#scouting",
         "hashtag3": "#orphange",
@@ -45,7 +45,7 @@ export default function EventInfo() {
         },
 
         "subtitle": "BVIS Christmas Fair",
-        "description": "Hearts2Hands took part in a service introduction at the British Vietnamese International School Hanoi Christmas fair. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
+        "description": "December 12th, 2024, Hearts2Hands took part in a service introduction at the British Vietnamese International School Hanoi Christmas fair. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
         "hashtag1": "#bvis-xmas",
         "hashtag2": "#festive",
         "hashtag3": "#awareness",
@@ -59,7 +59,7 @@ export default function EventInfo() {
         },
 
         "subtitle": "Service Fair",
-        "description": "We recently had the privilege of presenting at an introductory event at Concordia Hanoi, where we spoke directly to the high school students about our club’s mission and vision. We also participated in the Service Fair, hosting our own booth to share our goals and initiatives with the broader community",
+        "description": "October 16th, 2024, We recently had the privilege of presenting at an introductory event at Concordia Hanoi, where we spoke directly to the high school students about our club’s mission and vision. We also participated in the Service Fair, hosting our own booth to share our goals and initiatives with the broader community",
         "hashtag1": "#concordia",
         "hashtag2": "#xmas-fair",
         "hashtag3": "#introductory",
@@ -73,7 +73,7 @@ export default function EventInfo() {
         },
 
         "subtitle": "Mission I: Education for Young People",
-        "description": "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! We are committed to continuing our mission and expanding our impact",
+        "description": "October 12th, 2024, Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! We are committed to continuing our mission and expanding our impact",
         "hashtag1": "#mission",
         "hashtag2": "#education",
         "hashtag3": "#donation",
@@ -87,7 +87,7 @@ export default function EventInfo() {
 
         "subtitle": "Hearts2Hands Foundation",
         "objectFit": "fill",
-        "description": "Hearts2Hands was founded with the goal of supporting Vietnamese young people, aligning with the objectives of SDG 10. Founded on the belief that collective action creates change, we focus on leadership, creativity, and social responsibility. Join us to make a difference and help shape a brighter future!",
+        "description": "August 20th, 2024, Hearts2Hands was founded with the goal of supporting Vietnamese young people, aligning with the objectives of SDG 10. Founded on the belief that collective action creates change, we focus on leadership, creativity, and social responsibility. Join us to make a difference and help shape a brighter future!",
         "hashtag1": "#foundation",
         "hashtag2": "#youth-equity",
         "hashtag3": "#sdg10",

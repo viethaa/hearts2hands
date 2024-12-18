@@ -1,3 +1,10 @@
+.footer-container {
+    border-top: 6px solid rgba(0, 0, 0, 1);  /* Only top border */
+    border-left: none;  /* No left border */
+    border-right: none; /* No right border */
+    border-bottom: none; /* No bottom border */
+}
+
 .footer-ig-logo {
     height: 30px !important; 
     width: auto;

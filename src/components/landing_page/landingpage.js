@@ -117,6 +117,7 @@ const LandingPage = () => {
                                         { ...buttonStylesReadMore },
                                         { backgroundColor: "#32383E" },
                                         { '&:active': { bgcolor: shade(700), backgroundColor: "#555E68" } },
+                                        { border: '3px solid rgba(0, 0, 0, 1)', }
                                     ]}
                                 >
                                     Timeline
@@ -125,7 +126,7 @@ const LandingPage = () => {
                             <Button
                                 variant="plain"
                                 endDecorator={<ArrowForwardIcon fontSize="md" />}
-                                sx={{ color: shade(700), ...buttonStylesJoinUs, backgroundColor: "white" }}
+                                sx={{ color: shade(700), ...buttonStylesJoinUs, backgroundColor: "white", border: '3px solid rgba(0, 0, 0, 1)', }}
                                 onClick={() => window.open('https://forms.gle/3smohGKzZZAU6tJb7', '_blank')}
                             >
                                 Join Us Now
@@ -145,6 +146,8 @@ const LandingPage = () => {
                                 <Box className="box-card">
                                     <Link to={data.path}>
                                         <NewsCard
+                                            className="news-card-content"
+                                            style={{ fontFamily: 'Fira Sans, sans-serif' }}
                                             imageLink={data.imageURL}
                                             title={data.title}
                                             description={data.description}
@@ -164,6 +167,7 @@ const LandingPage = () => {
                                 <Box className="box-card" id="push">
                                     <Link to={data.path}>
                                         <NewsCard
+                                            className="news-card-content"
                                             imageLink={data.imageURL}
                                             title={data.title}
                                             description={data.description}
