@@ -13,7 +13,7 @@ const Intro = () => {
                 <Grid item xs={12} md={6}>
                     <Box
                         component="img"
-                        src="/assets/images/hearts2hands_pic.jpg"
+                        src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/hearts2hands_pic.jpg"
                         alt="A beautiful landscape"
                         sx={{
                             borderRadius: 2,
