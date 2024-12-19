@@ -53,11 +53,13 @@ const LandingPage = () => {
             title: "BVIS Christmas Fair",
             description: "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, and group’s mission as a way to raise awareness of the various problems in Vietnamese youth equity.",
             imageURL: "assets/images/santa.png",
+            "path": "bvis-xmas-fair"
         },
         {
-            title: "Service Fair",
+            title: "CISH Service Fair",
             description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. Lately, we participated in the Service Fair with our own booth, where we shared our club’s mission, perspective, and goals. It was a fantastic experience",
             imageURL: "assets/images/cishservfair.jpg",
+            "path": "service-fair"
         },
         {
             title: "Bake Sale",

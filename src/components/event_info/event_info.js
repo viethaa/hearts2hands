@@ -46,9 +46,9 @@ export default function EventInfo() {
 
         "subtitle": "BVIS Christmas Fair",
         "description": "December 12th, 2024, Hearts2Hands took part in a service introduction at the British Vietnamese International School Hanoi Christmas fair. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
-        "hashtag1": "#bvis-xmas",
-        "hashtag2": "#festive",
-        "hashtag3": "#awareness",
+        "hashtag1": "#xmas-fair",
+        "hashtag2": "#bvis",
+        "hashtag3": "#festive",
     },
     {
         "imglink": "assets/images/cishservfair.jpg",
@@ -61,7 +61,7 @@ export default function EventInfo() {
         "subtitle": "Service Fair",
         "description": "October 16th, 2024, We recently had the privilege of presenting at an introductory event at Concordia Hanoi, where we spoke directly to the high school students about our club’s mission and vision. We also participated in the Service Fair, hosting our own booth to share our goals and initiatives with the broader community",
         "hashtag1": "#concordia",
-        "hashtag2": "#xmas-fair",
+        "hashtag2": "#service-fair",
         "hashtag3": "#introductory",
     },
     {
