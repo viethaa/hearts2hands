@@ -93,7 +93,9 @@ const LandingPage = () => {
     return (
         <React.Fragment>
             <ResponsiveAppBar />
-            <div class="banner">
+            <div class="banner" style={{
+                "backgroundImage": "url('assets/images/bannerCollege.png')"
+            }}>
                 <div class="banner-content">
                     <Typography className="banner-name" variant="h1" sx={{
                         "fontSize":
