@@ -51,7 +51,7 @@ export default function EventDetails({
                 <div className="link-arrows">
                     <Link to="/">
                         <div className="b2h">
-                            <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
+                            <img className="back-home" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Left+Arrow+Icon.png"></img>
                             <Typography className="back-home-p" sx={{
                                 "fontSize": { xs: "14px", md: "1.2rem" },
                             }}>Back to Homepage</Typography>
@@ -59,7 +59,7 @@ export default function EventDetails({
                     </Link>
                     <Link to="/timeline">
                         <div className="to-timeline">
-                            <img className="to-timeline-arrow" src="/assets/images/Right Arrow Icon.png"></img>
+                            <img className="to-timeline-arrow" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"></img>
                             <Typography className="to-timeline-p" sx={{
                                 "fontSize": { xs: "14px", md: "1.2rem" },
                             }}>View Our Timeline</Typography>

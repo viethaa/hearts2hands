@@ -52,19 +52,19 @@ const LandingPage = () => {
         {
             title: "Christmas Fair @BVIS",
             description: "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, and group’s mission as a way to raise awareness for Vietnamese youth equity.",
-            imageURL: "assets/images/santa.png",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
             "path": "bvis-xmas-fair"
         },
         {
             title: "Service Fair @CISH",
             description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. Lately, we participated in the Service Fair with our own booth, where we shared our club’s mission, perspective, and goals.",
-            imageURL: "assets/images/cishservfair.jpg",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
             "path": "service-fair"
         },
         {
             title: "Bake Sale @BVIS",
             description: "The Bake Sale is a special initiative organized by the fifth graders at Concordia International School Hanoi, aimed at raising awareness and support men's health issues through its signature mustache movement.",
-            imageURL: "assets/images/cookies.jpg",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cookies.jpg",
         }
     ];
 
@@ -73,19 +73,19 @@ const LandingPage = () => {
         {
             title: "Mission II",
             description: "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage focuses on meeting the children’s essential needs and spreading joy through thoughtful gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season.",
-            imageURL: "assets/images/mission2.jpg",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
             "path": "mission2",
         },
         {
             title: "Mission I",
             description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here!",
-            imageURL: "assets/images/h2hkidsbanner.JPG",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
             "path": "mission1",
         },
         {
             title: "SDG 10",
             description: "Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities for underprivileged young Vietnamese children",
-            imageURL: "assets/images/sdg10.jpg",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
             "path": "sdg10",
         }
     ];
@@ -94,7 +94,7 @@ const LandingPage = () => {
         <React.Fragment>
             <ResponsiveAppBar />
             <div class="banner" style={{
-                "backgroundImage": "url('assets/images/bannerCollege.png')"
+                "backgroundImage": "url('https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bannerCollege.png')"
             }}>
                 <div class="banner-content">
                     <Typography className="banner-name" variant="h1" sx={{
@@ -143,7 +143,7 @@ const LandingPage = () => {
                 <UserReview></UserReview>
                 <Container className="events-container" maxWidth="lg">
                     <p className="latest-news-p">Events</p>
-                    <img className="events-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    <img className="events-icon" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"></img>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardEventInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>
@@ -163,7 +163,7 @@ const LandingPage = () => {
                 </Container>
                 <Container maxWidth="lg" sx={{ my: 4 }}>
                     <p className="latest-news-p">Latest News</p>
-                    <img className="latest-news-icon" src="assets/images/Right Arrow Icon.png"></img>
+                    <img className="latest-news-icon" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"></img>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardInfo.map((data, index) => (
                             <Grid item xs={12} sm={6} md={4} key={index}>

@@ -20,7 +20,7 @@ export default function UserReview() {
                     }
                 }}>
                     <div>
-                        <img className="quote-img" src="assets/images/Quote Icon.png"></img>
+                        <img className="quote-img" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Quote+Icon.png"></img>
                         <Typography sx={{
                             "fontSize": {
                                 "xs": "1.1rem",
@@ -30,7 +30,7 @@ export default function UserReview() {
                     </div>
                     <Grid container className="avatar" spacing={2} sx={{ "margin-top": { "xs": "12px" } }}>
                         <Grid item xs={2}>
-                            <Avatar className="quote-avatar" alt="Remy Sharp" src="assets/images/pa.jpg" />
+                            <Avatar className="quote-avatar" alt="Remy Sharp" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/pa.jpg" />
                         </Grid>
                         <Grid item xs={10}>
                             <Typography className="avatar-name">
@@ -49,7 +49,7 @@ export default function UserReview() {
                         "md": "0px"
                     }
                 }}>
-                    <img className="display-img1" src="assets/images/school.jpg"></img>
+                    <img className="display-img1" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/school.jpg"></img>
                 </Grid>
             </Grid>
         </Container>

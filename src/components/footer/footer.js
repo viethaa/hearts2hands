@@ -113,13 +113,13 @@ export default function ColorInversionAnyParent() {
       </Box>
       <div>
         <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">
-          <img className="footer-ig-logo" src="assets/images/ig_logo.png" />
+          <img className="footer-ig-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/ig_logo.png" />
         </a>
         <a href="https://www.facebook.com/profile.php?id=61567384587346" target="_blank">
-          <img className="footer-fb-logo" src="assets/images/fb_logo.png" />
+          <img className="footer-fb-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/fb_logo.png" />
         </a>
         <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">
-          <img className="footer-tt-logo" src="assets/images/tiktok.png" />
+          <img className="footer-tt-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/tiktok.png" />
         </a>
       </div>
     </Box>

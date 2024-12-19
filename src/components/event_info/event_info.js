@@ -9,7 +9,7 @@ import './event_info.css'
 
 export default function EventInfo() {
     const eventInfo = [{
-        "imglink": "assets/images/mission2.jpg",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
         "objectFit": "fill",
         "date": {
             "day": "16",
@@ -23,7 +23,7 @@ export default function EventInfo() {
         "hashtag3": "#gifts",
     },
     {
-        "imglink": "assets/images/visit.jpg",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/visit.jpg",
         "objectFit": "cover",
         "date": {
             "day": "14",
@@ -37,7 +37,7 @@ export default function EventInfo() {
         "hashtag3": "#orphange",
     },
     {
-        "imglink": "assets/images/santa.png",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
         "objectFit": "fill",
         "date": {
             "day": "12",
@@ -51,7 +51,7 @@ export default function EventInfo() {
         "hashtag3": "#festive",
     },
     {
-        "imglink": "assets/images/cishservfair.jpg",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
         "objectFit": "cover",
         "date": {
             "day": "16",
@@ -65,7 +65,7 @@ export default function EventInfo() {
         "hashtag3": "#introductory",
     },
     {
-        "imglink": "assets/images/h2hkidsbanner.JPG",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
         "objectFit": "fill",
         "date": {
             "day": "12",
@@ -79,7 +79,7 @@ export default function EventInfo() {
         "hashtag3": "#donation",
     },
     {
-        "imglink": "assets/images/h2hfoundation.jpg",
+        "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hfoundation.jpg",
         "date": {
             "day": "20",
             "month": "AUG 2024",
@@ -134,7 +134,7 @@ export default function EventInfo() {
             <div className="link-arrows">
                 <Link to="/">
                     <div className="b2h">
-                        <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
+                        <img className="back-home" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Left+Arrow+Icon.png"></img>
                         <Typography className="back-home-p" sx={{
                             "fontSize": { xs: "14px", md: "1.2rem" },
                         }}>Back to Homepage</Typography>
@@ -142,7 +142,7 @@ export default function EventInfo() {
                 </Link>
                 <Link to="/photogallery">
                     <div className="to-photoGallery">
-                        <img className="to-photoGallery-arrow" src="/assets/images/Right Arrow Icon.png"></img>
+                        <img className="to-photoGallery-arrow" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"></img>
                         <Typography className="to-photoGallery-p" sx={{
                             "fontSize": { xs: "14px", md: "1.2rem" },
                         }}>View Photo Gallery</Typography>
