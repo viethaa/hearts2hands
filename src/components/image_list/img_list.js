@@ -1,10 +1,15 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function StandardImageList() {
+  const theme = useTheme();
+  const isSm = useMediaQuery(theme.breakpoints.up('sm'));
+
   return (
-    <ImageList sx={{ width: '100%', height: 'auto'}} cols={3} rowHeight={480}>
+    <ImageList sx={{ width: '100%', height: '100%' }} cols={3} rowHeight={isSm ? 480 : 160}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img

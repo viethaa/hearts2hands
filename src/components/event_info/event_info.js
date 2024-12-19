@@ -132,18 +132,22 @@ export default function EventInfo() {
                     </div>)
             })}
             <div className="link-arrows">
-                <div className="b2h">
-                    <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
-                    <Typography className="back-home-p" sx={{
-                        "fontSize": { xs: "14px", md: "1.2rem" },
-                    }}>Back to Homepage</Typography>
-                </div>
-                <div className="to-photoGallery">
-                    <img className="to-photoGallery-arrow" src="/assets/images/Right Arrow Icon.png"></img>
-                    <Typography className="to-photoGallery-p" sx={{
-                        "fontSize": { xs: "14px", md: "1.2rem" },
-                    }}>View Photo Gallery</Typography>
-                </div>
+                <Link to="/">
+                    <div className="b2h">
+                        <img className="back-home" src="assets/images/Left Arrow Icon.png"></img>
+                        <Typography className="back-home-p" sx={{
+                            "fontSize": { xs: "14px", md: "1.2rem" },
+                        }}>Back to Homepage</Typography>
+                    </div>
+                </Link>
+                <Link to="/photogallery">
+                    <div className="to-photoGallery">
+                        <img className="to-photoGallery-arrow" src="/assets/images/Right Arrow Icon.png"></img>
+                        <Typography className="to-photoGallery-p" sx={{
+                            "fontSize": { xs: "14px", md: "1.2rem" },
+                        }}>View Photo Gallery</Typography>
+                    </div>
+                </Link>
             </div>
         </Container >
     )

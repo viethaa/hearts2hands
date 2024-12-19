@@ -10,16 +10,16 @@ export default function NewsCard({ imageLink, title, description }) {
   return (
     <Card className="news-card">
       <CardActionArea className="card-action">
-        <CardMedia
+        <CardMedia className="card-media"
           component="img"
-          sx = {{height: "65%"}}
+          sx={{ height: "65%" }}
           image={imageLink}
         />
-        <CardContent sx = {{height: "35%"}}>
+        <CardContent className="card-content" sx={{ height: "35%", fontFamily: 'Fira Sans, sans-serif' }}>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          <Typography variant="body2" sx={{ color: 'text.secondary', fontFamily: 'Fira Sans, sans-serif' }}>
             {description}
           </Typography>
         </CardContent>

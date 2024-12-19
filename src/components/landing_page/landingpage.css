@@ -79,16 +79,6 @@ body {
     margin-bottom: 20px;
 }
 
-.news-card-content {
-    font-family: 'Fira Sans', sans-serif !important;
-}
-
-/* Apply Fira Sans to headings and paragraphs inside .news-card-content */
-.news-card-content h2,
-.news-card-content p {
-    font-family: 'Fira Sans', sans-serif !important;
-}
-
 #push {
     margin-bottom: 40px;
 }
