@@ -106,8 +106,8 @@ export default function ColorInversionAnyParent() {
           gap: 3,
         }}
       >
-        <Stat value="15" description="Members recruited" />
-        <Stat value="15" description="Thành Viên" />
+        <Stat value="24" description="Members recruited" />
+        <Stat value="24" description="Thành Viên" />
         <Stat value="2" description="Missions accomplished" />
         <Stat value="2" description="Chiến Dịch Thành Công" />
       </Box>

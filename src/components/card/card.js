@@ -16,7 +16,7 @@ export default function NewsCard({ imageLink, title, description }) {
           image={imageLink}
         />
         <CardContent className="card-content" sx={{ height: "35%", fontFamily: 'Fira Sans, sans-serif' }}>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" className="title">
             {title}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary', fontFamily: 'Fira Sans, sans-serif' }}>

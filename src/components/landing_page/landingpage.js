@@ -50,19 +50,19 @@ const LandingPage = () => {
 
     const myCardEventInfo = [
         {
-            title: "Christmas Fair @BVIS",
+            title: "BVIS Chrismas Fair",
             description: "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, and group’s mission as a way to raise awareness for Vietnamese youth equity.",
             imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
             "path": "bvis-xmas-fair"
         },
         {
-            title: "Service Fair @CISH",
+            title: "Service Fair",
             description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. Lately, we participated in the Service Fair with our own booth, where we shared our club’s mission, perspective, and goals.",
             imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
             "path": "service-fair"
         },
         {
-            title: "Bake Sale @BVIS",
+            title: "Bake Sale",
             description: "The Bake Sale is a special initiative organized by the fifth graders at Concordia International School Hanoi, aimed at raising awareness and support men's health issues through its signature mustache movement.",
             imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cookies.jpg",
         }
@@ -142,7 +142,7 @@ const LandingPage = () => {
             <Fade delay={1e1}>
                 <UserReview></UserReview>
                 <Container className="events-container" maxWidth="lg">
-                    <p className="latest-news-p">Events</p>
+                    <p className="latest-news-p">Latest Events</p>
                     <img className="events-icon" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"></img>
                     <Grid container spacing={4} justifyContent="center">
                         {myCardEventInfo.map((data, index) => (

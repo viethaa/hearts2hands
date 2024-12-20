@@ -101,7 +101,7 @@ body {
 .latest-news-icon {
     width: 24px;
     height: 24px;
-    margin: -45px 0px 20px 190px;
+    margin: -45px 0px 20px 195px;
     transition: transform 0.3s ease;
 }
 
@@ -112,7 +112,7 @@ body {
 .events-icon {
     width: 24px;
     height: 24px;
-    margin: -45px 0px 20px 108px;
+    margin: -45px 0px 20px 210px;
     transition: transform 0.3s ease;
 }
 
