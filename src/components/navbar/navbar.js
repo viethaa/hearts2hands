@@ -60,7 +60,7 @@ function ResponsiveAppBar() {
               className="navbar-logo"
               component="img"
               sx={{ objectFit: "contain", display: { xs: 'none', md: 'flex' } }}
-              image="assets/images/h2h_logo_no_bg.png"
+              image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
             />
           </Link>
           <Link to="/">
@@ -85,7 +85,7 @@ function ResponsiveAppBar() {
             className="navbar-logo"
             component="img"
             sx={{ objectFit: "contain", display: { xs: 'flex', md: 'none' } }}
-            image="assets/images/h2h_logo_no_bg.png"
+            image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
           />
           <Typography
             variant="h5"
@@ -119,7 +119,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img className="hamburger" src="assets/images/Menu Icons.png" />
+                <img className="hamburger" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Menu+Icons.png" />
               </IconButton>
             </Tooltip>
             <Menu
