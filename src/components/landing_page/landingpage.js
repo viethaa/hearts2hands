@@ -63,8 +63,8 @@ const LandingPage = () => {
         },
         {
             title: "Bake Sale",
-            description: "The Bake Sale is a special initiative organized by the fifth graders at Concordia International School Hanoi, aimed at raising awareness and support men's health issues through its signature mustache movement.",
-            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cookies.jpg",
+            description: "Ivan, a member of the Hearts2Hands committee, is hosting an online Bake Sale to showcase her homemade treats. This event aims to raise funds to support our missions in the future! Come support us!",
+            imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
         }
     ];
 
