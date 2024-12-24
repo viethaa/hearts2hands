@@ -94,5 +94,21 @@
             "#introductory"
         ],
         "path": "service-fair"
+    },
+    {
+        "title": "Bake Sale",
+        "date": "DEC 24, 2024",
+        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
+        "content": [
+            "Ivan: “The purpose of our upcoming bake sale is to raise funds for our future missions. Through this effort, we aim to contribute to creating a brighter future where unprivileged young people have access to basic necessities. By addressing their immediate needs, we also hope to lay the foundation for our future missions, which will focus on improving their overall quality of life. Bake sale is our first step in our ongoing commitment to making a meaningful differences”.",
+            "───",
+            "Ivan: “Mục đích của những buổi bake sale sắp tới là gây quỹ cho những chiến dịch tương lai của chúng mình. Thông qua hoạt động này, chúng mình mong muốn góp phần xây dựng một tương lai tươi sáng hơn, nơi những người trẻ có hoàn cảnh khó khăn được tiếp cận với các nhu cầu cơ bản. Bằng cách đáp ứng những nhu cầu cấp thiết của họ, chúng mình hy vọng có thể đặt nền móng cho các chiến dịch trong tương lai, tập trung vào việc nâng cao chất lượng cuộc sống của họ. Những buổi bake sale này sẽ là những bước đầu tiên trong cam kết lâu dài của chúng mình để tạo nên sự khác biệt ý nghĩa của Hearts2Hands”."
+        ],
+        "hashtag": [
+            "#bakesale",
+            "#selling",
+            "#fundraise"
+        ],
+        "path": "bakesale"
     }
 ]
