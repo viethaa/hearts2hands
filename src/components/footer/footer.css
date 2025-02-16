@@ -37,3 +37,7 @@
 .footer-tt-logo:hover {
     transform: scale(1.2);
 }
+
+.watermark {
+    display: flex;
+}

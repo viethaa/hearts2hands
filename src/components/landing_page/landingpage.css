@@ -9,7 +9,9 @@
 
 body {
     font-family: 'Fira Sans', sans-serif;
-    background: linear-gradient(45deg, #FFFAF0, #FFF5E1);
+    /* background: linear-gradient(45deg, #FFFAF0, #FFF5E1); */
+    background: url('https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/triangle_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 
@@ -77,6 +79,7 @@ body {
     transition: transform 0.3s;
     /* Only transition for transform */
     margin-bottom: 20px;
+    opacity: 85%;
 }
 
 #push {

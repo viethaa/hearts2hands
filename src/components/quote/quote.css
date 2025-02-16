@@ -8,6 +8,7 @@
     padding: 35px 50px 35px 50px !important;
     border-radius: 12px;
     background-color: #f9f9f9;
+    opacity: 90%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left; /* Align text to the left */
     display: flex;

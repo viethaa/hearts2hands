@@ -122,6 +122,19 @@ export default function ColorInversionAnyParent() {
           <img className="footer-tt-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/tiktok.png" />
         </a>
       </div>
+      {/* Divider between content and watermark */}
+      <Box
+        sx={{
+          width: '100%',
+          height: '2px',
+          backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          gridColumn: '1 / -1', // Ensures it spans all columns
+          my: 2
+        }}
+      />
+      <div class="watermark">
+        <Typography>© 2024 Ha Bach Viet. All rights reserved.</Typography>
+      </div>
     </Box>
   );
 }
