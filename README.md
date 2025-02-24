@@ -39,9 +39,9 @@ The first official release of **Hearts2Hands**! This version lays the foundation
 #### 🕰 Timeline Page  
 - A dedicated **Timeline Page** displaying all of **Hearts2Hands'** activities from its **foundation until now**.
 
-#
 
 ## Available Scripts  
+In this project directory, you can run:
 
 ### `npm start`
 
