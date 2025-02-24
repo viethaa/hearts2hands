@@ -41,10 +41,7 @@ The first official release of **Hearts2Hands**! This version lays the foundation
 
 #
 
-
-## Available Scripts
-In the project directory, you can run:
-
+## Available Scripts  
 
 ### `npm start`
 
