@@ -2,6 +2,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Change Log  
+### `v1.1.1`  
+
+#### 🔧 Deployment Fixed
+- The website has been migrated to a new hosting enviroment and deployed under a new domain.
+
+Visit now: https://hearts2hands.online
+
+#
+
 ### `v1.1.0`  
 
 #### 🚀 New Features  
