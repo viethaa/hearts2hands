@@ -2,54 +2,30 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CardMedia from '@mui/material/CardMedia';
-import './navbar.css'
+import IconButton from '@mui/material/IconButton';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded'; // NEW clean hamburger
+import './navbar.css';
 import { Link } from "react-router";
 
 const pages = [];
-const settings = ['Home 🏠', 'Timeline 🕒', 'Photo Gallery 📷'];
 const settings2 = [
-  {
-    "title": "Home",
-    "link": "/",
-  },
-  {
-    "title": "Timeline",
-    "link": "/timeline",
-  },
-  {
-    "title": "Photo Gallery",
-    "link": "/photogallery",
-  },
-]
+  { title: "Home", link: "/" },
+  { title: "Timeline", link: "/timeline" },
+  { title: "Photo Gallery", link: "/photogallery" },
+];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const handleOpenUserMenu = (event) => setAnchorElUser(event.currentTarget);
+  const handleCloseUserMenu = () => setAnchorElUser(null);
 
   return (
     <AppBar id="appbar" position="sticky">
@@ -61,14 +37,15 @@ function ResponsiveAppBar() {
               component="img"
               sx={{ objectFit: "contain", display: { xs: 'none', md: 'flex' } }}
               image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
+              alt="Hearts2Hands logo"
             />
           </Link>
+
           <Link to="/">
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+              component="span"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -81,17 +58,19 @@ function ResponsiveAppBar() {
               Hearts2Hands
             </Typography>
           </Link>
+
           <CardMedia
             className="navbar-logo"
             component="img"
             sx={{ objectFit: "contain", display: { xs: 'flex', md: 'none' } }}
             image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
+            alt="Hearts2Hands logo"
           />
+
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component="span"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -105,43 +84,44 @@ function ResponsiveAppBar() {
           >
             Hearts2Hands
           </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
+
+          {/* Clean hamburger + menu */}
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img className="hamburger" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Menu+Icons.png" />
+            <Tooltip title="Open menu">
+              <IconButton onClick={handleOpenUserMenu} className="menu-btn" aria-label="Open navigation">
+                <MenuRoundedIcon className="menu-icon" />
               </IconButton>
             </Tooltip>
+
             <Menu
-              sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
+              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+              keepMounted
+              PaperProps={{
+                className: 'menu-paper',
+                elevation: 0,
+              }}
+              sx={{ mt: '45px' }}
             >
               {settings2.map((setting) => (
-                <Link to={setting.link}>
-                  <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
-                    <Typography sx={{ textAlign: 'center' }}>{setting.title}</Typography>
+                <Link to={setting.link} key={setting.title} className="menu-link">
+                  <MenuItem onClick={handleCloseUserMenu} className="menu-item">
+                    <Typography className="menu-item-text">{setting.title}</Typography>
                   </MenuItem>
                 </Link>
               ))}
@@ -152,4 +132,5 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;
