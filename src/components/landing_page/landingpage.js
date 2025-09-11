@@ -56,9 +56,9 @@ const LandingPage = () => {
   const myCardEventInfo = [
     {
       title: "Mission III",
-      description: "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage focuses on the children’s essential needs and spreading joy through gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
-      path: "mission2",
+      description: "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm’s playground.  Read more...",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission3.jpg",
+      path: "mission3",
     },
     {
       title: "Mission II",

@@ -1,65 +1,18 @@
-/* Keep your original appbar look */
+body {
+  background-color: #0a0a0a; /* very dark base */
+}
+
 #appbar {
-  background: linear-gradient(45deg, #171A1C, #555E68);
-  opacity: 0.9;
-  margin-top: -63px; /* if you want to remove this, just delete it */
+  background-color: rgba(0, 0, 0, 0.7); /* transparent black */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #eaf2ff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-logo {
-  height: 50px;
+  height: 50px !important;
   width: 50px !important;
   object-fit: contain;
-  margin: 0 5px 10px 0;
+  margin: 0 0 10px 0;
 }
-
-/* NEW: clean hamburger icon (Material icon, not an image) */
-.menu-btn {
-  border-radius: 10px;
-  transition: background-color .18s ease, transform .18s ease;
-}
-.menu-btn:hover {
-  background-color: rgba(255,255,255,.08);
-  transform: translateY(-1px);
-}
-.menu-icon {
-  font-size: 26px;              /* slightly larger than default */
-  color: #eaf2ff;               /* readable on your dark gradient */
-  filter: drop-shadow(0 1px 4px rgba(0,0,0,.35));
-}
-
-/* NEW: cleaner dropdown menu (dark + subtle glass) */
-.menu-paper {
-  background: rgba(12, 18, 30, 0.96);         /* transparent dark */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 12px !important;
-  box-shadow: 0 14px 40px rgba(0,0,0,.45);
-  color: #eaf2ff;
-  min-width: 200px;
-  padding: 6px; /* internal padding so items aren't flush with edges */
-}
-
-/* Tidy menu items */
-.menu-item {
-  border-radius: 8px;
-  padding: 8px 12px;
-}
-.menu-item:hover {
-  background: rgba(255,255,255,.08);
-}
-.menu-item-text {
-  font-weight: 600;
-  letter-spacing: .2px;
-}
-
-/* Remove underlines on menu links */
-.menu-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Old image-based hamburger class is no longer used, but safe to keep
-.hamburger { height: 1.4rem; width: 1.4rem; }
-*/
