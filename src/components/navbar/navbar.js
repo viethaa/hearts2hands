@@ -12,6 +12,7 @@ import { Link } from "react-router"; // change to "react-router-dom" if needed
 const navLinks = [
   { label: "Home", href: "/", isScroll: false },
   { label: "Timeline", href: "/timeline", isScroll: false },
+  { label: "News Page", href: "/newspage", isScroll: false },
   { label: "Photo Gallery", href: "/photogallery", isScroll: false },
   // remove or add items here
 ];
@@ -78,7 +79,7 @@ function ResponsiveAppBar() {
       id="appbar"
       position="sticky"
       sx={{ boxShadow: "none" }}
-      /* the look/background comes from your navbar.css (#appbar) */
+    /* the look/background comes from your navbar.css (#appbar) */
     >
       <Container maxWidth="xl">
         <Toolbar
@@ -96,7 +97,7 @@ function ResponsiveAppBar() {
           >
             {/* sliding underline */}
             <span
-              className="pointer-events-none absolute -bottom-2 h-[2px] rounded-full bg-white transition-all duration-300 ease-out"
+              className="nav-slider pointer-events-none absolute -bottom-2 h-[2px] transition-all duration-300 ease-out"
               style={{
                 left: slider.left,
                 width: slider.width,
@@ -110,7 +111,7 @@ function ResponsiveAppBar() {
                   <button
                     key={l.href}
                     onClick={() => scrollToId(l.href)}
-                    className="px-2"
+                    className={`nav-link ${isActive ? 'active' : ''}`}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span
@@ -118,8 +119,8 @@ function ResponsiveAppBar() {
                       className={[
                         "text-sm font-medium tracking-wide transition-colors cursor-pointer",
                         isActive
-                          ? "text-white font-semibold"
-                          : "text-white/80 hover:text-white",
+                          ? "text-white font-bold"
+                          : "text-white/90 hover:text-white",
                       ].join(" ")}
                     >
                       {l.label}
@@ -132,7 +133,7 @@ function ResponsiveAppBar() {
                 <Link
                   key={l.href}
                   to={l.href}
-                  className="px-2"
+                  className={`nav-link ${isActive ? 'active' : ''}`}
                   onClick={() => onNavClick(l.href)}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -140,7 +141,7 @@ function ResponsiveAppBar() {
                     ref={(el) => (itemRefs.current[l.href] = el)}
                     className={[
                       "text-sm font-medium tracking-wide transition-colors",
-                      isActive ? "text-white font-semibold" : "text-white/80 hover:text-white",
+                      isActive ? "text-white font-bold" : "text-white/90 hover:text-white",
                     ].join(" ")}
                   >
                     {l.label}
