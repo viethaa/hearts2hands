@@ -8,22 +8,28 @@ import './card.css'
 
 export default function NewsCard({ imageLink, title, description }) {
   return (
-    <Card className="news-card">
+    <div className="news-card-wrapper">
       <CardActionArea className="card-action">
-        <CardMedia className="card-media"
-          component="img"
-          sx={{ height: "65%" }}
-          image={imageLink}
-        />
-        <CardContent className="card-content" sx={{ height: "35%", fontFamily: 'Fira Sans, sans-serif' }}>
-          <Typography gutterBottom variant="h5" component="div" className="title">
-            {title}
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary', fontFamily: 'Fira Sans, sans-serif' }}>
-            {description}
-          </Typography>
-        </CardContent>
+        <div className="card-image-container">
+          <img className="card-media" src={imageLink} alt={title} />
+          <div className="card-overlay"></div>
+        </div>
+        <div className="card-content-wrapper">
+          <div className="card-meta">
+            <span className="card-date">Recent</span>
+            <span className="card-dot">•</span>
+            <span className="card-read">3 min read</span>
+          </div>
+          <h3 className="card-title">{title}</h3>
+          <p className="card-description">{description}</p>
+          <div className="card-arrow">
+            <span>Read More</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </div>
       </CardActionArea>
-    </Card>
+    </div>
   );
 }

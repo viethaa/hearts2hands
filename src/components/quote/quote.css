@@ -1,71 +1,139 @@
-/* Container */
+/* Wrapper */
+.quote-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.quote-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255,107,107,0.05), transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(114,211,255,0.05), transparent 50%);
+    pointer-events: none;
+}
+
 .quote-container {
-    margin: 50px;
-    padding: 20px;
+    position: relative;
+    z-index: 1;
+    padding: 0 60px;
 }
 
-.quote-grid {
-    padding: 35px 50px 35px 50px !important;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    opacity: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align text to the left */
-    display: flex;
-    flex-direction: column !important; 
-    justify-content: space-between;
-    border: 3px solid rgba(0, 0, 0, 1); /* Solid matte black border */
+/* Image Section */
+.quote-image-section {
+    position: relative;
 }
 
-
-/* Quote Icon */
-.quote-img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 10px;
-}
-
-.quote {
-    line-height: 2 !important;
-}
-
-
-.avatar {
-    margin-top: 30px;
-}
-
-.quote-avatar {
-    width: 48px !important;
-    height: 48px !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    float: right;
-    transition: transform 0.3s ease-in-out;
-}
-
-.quote-avatar:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-}
-
-.avatar-name {
-    font-size: 18px;
-    margin: 0;
-}
-
-.bold-name {
-    font-weight: bold;
-    font-style: italic;
+.image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
 }
 
 .display-img1 {
-    width: 100%; /* Ensure it stretches horizontally */
-    height: 100%; /* Ensure it stretches vertically */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease-in-out;
-    border: 3px solid rgba(0, 0, 0, 1); /* Solid matte black border */
+    transition: transform 0.6s ease;
 }
 
-.display-img1:hover {
-    transform: scale(1.03);
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(114,211,255,0.2));
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.image-frame:hover .display-img1 {
+    transform: scale(1.05);
+}
+
+/* Quote Content */
+.quote-content {
+    padding: 0 40px;
+    color: #ffffff;
+}
+
+.quote-header {
+    margin-bottom: 30px;
+}
+
+.quote-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #72d3ff;
+}
+
+.quote-text {
+    font-size: 1.5rem !important;
+    line-height: 1.8 !important;
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 300 !important;
+    margin-bottom: 50px !important;
+    font-style: italic;
+}
+
+/* Author Section */
+.quote-author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.quote-avatar {
+    width: 64px !important;
+    height: 64px !important;
+    border: 3px solid rgba(255,255,255,0.2) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.author-title {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .quote-wrapper {
+        padding: 80px 0;
+    }
+
+    .image-frame {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+
+    .quote-content {
+        padding: 0 20px;
+    }
+
+    .quote-text {
+        font-size: 1.2rem !important;
+    }
 }

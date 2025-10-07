@@ -46,7 +46,7 @@ body{
   font-family:'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   min-height:100vh;
   color:var(--text);
-  background:linear-gradient(135deg,var(--page-bg-start),var(--page-bg-end));
+  background:#000000;
   background-attachment: fixed;
 }
 
@@ -208,36 +208,19 @@ body{
 
 /* === SECTION HEADERS (Latest Events / News) === */
 .latest-news-p{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  gap:.6rem;
-  font-size:clamp(1.4rem, 2.4vw, 2rem);
-  font-weight:700;
-  letter-spacing:.3px;
-  color:var(--text);
-  margin: 4px 0 10px 4px;
+  font-size:clamp(2rem, 3vw, 2.8rem);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  color:#ffffff;
+  margin: 0 0 50px 0;
+  text-align:center;
 }
 
-.latest-news-p::after{
-  content:"";
-  height:2px;
-  width:min(160px,20vw);
-  margin-left:.6rem;
-  background:linear-gradient(90deg, var(--border-strong), transparent);
-  border-radius:999px;
-}
-
-/* Keep your separate icon images, but align and size responsively */
+/* Remove icon styles */
 .latest-news-icon,
 .events-icon{
-  width:22px; height:22px;
-  margin: -40px 0 20px calc(4px + 10ch);
-  opacity:.8;
-  transition:transform .25s ease, opacity .25s ease;
+  display:none;
 }
-.latest-news-icon:hover,
-.events-icon:hover{ transform:translateX(2px) scale(1.08); opacity:1; }
 
 /* === CARD SHELL === */
 .box-card{
@@ -328,13 +311,14 @@ body{
 
 /* === EVENTS / NEWS CONTAINERS === */
 .events-container,
-.MuiContainer-root{
-  /* subtle spacing rhythm; keep MUI container sizing */
+.news-section{
   scroll-margin-top:80px;
+  padding:100px 0;
 }
+
 .events-container .MuiGrid-container,
-.MuiContainer-root .MuiGrid-container{
-  padding-top:6px;
+.news-section .MuiGrid-container{
+  padding-top:0;
 }
 
 /* === REDUCED MOTION === */

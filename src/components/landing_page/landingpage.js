@@ -139,7 +139,7 @@ const LandingPage = () => {
               mb: 6
             }}
           >
-            <span className="typewriter-text">Hearts<span style={{ color: '#ff6b6b', margin: '0 0.1em' }}>♥</span>Hands</span>
+            <span className="typewriter-text">Hearts<span style={{ color: '#ff6b6b', margin: '0 0.1em', position: 'relative', display: 'inline-block' }}>♥<span style={{ position: 'absolute', top: '53%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '0.25em', color: '#ffffff', fontWeight: 900 }}>2</span></span>Hands</span>
           </Typography>
 
           <Box
@@ -176,53 +176,43 @@ const LandingPage = () => {
       <Fade delay={1e1}>
         <UserReview />
 
-        <Container className="events-container" maxWidth="lg">
-          <p className="latest-news-p">Latest Events</p>
-          <img
-            className="events-icon"
-            src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"
-          />
-          <Grid container spacing={4} justifyContent="center">
-            {myCardEventInfo.map((data, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
-                <Box className="box-card">
-                  <Link to={data.path}>
+        <div className="events-container">
+          <Container maxWidth="lg">
+            <h2 className="latest-news-p">Latest Events</h2>
+            <Grid container spacing={4} justifyContent="center">
+              {myCardEventInfo.map((data, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Link to={data.path} style={{ textDecoration: 'none' }}>
                     <NewsCard
-                      className="news-card-content"
                       imageLink={data.imageURL}
                       title={data.title}
                       description={data.description}
                     />
                   </Link>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </div>
 
-        <Container maxWidth="lg" sx={{ my: 4 }}>
-          <p className="latest-news-p">Latest News</p>
-          <img
-            className="latest-news-icon"
-            src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/Right+Arrow+Icon.png"
-          />
-          <Grid container spacing={4} justifyContent="center">
-            {myCardInfo.map((data, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
-                <Box className="box-card" id="push">
-                  <Link to={data.path}>
+        <div className="news-section">
+          <Container maxWidth="lg">
+            <h2 className="latest-news-p">Latest News</h2>
+            <Grid container spacing={4} justifyContent="center">
+              {myCardInfo.map((data, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Link to={data.path} style={{ textDecoration: 'none' }}>
                     <NewsCard
-                      className="news-card-content"
                       imageLink={data.imageURL}
                       title={data.title}
                       description={data.description}
                     />
                   </Link>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </div>
 
         <ColorInversionAnyParent />
       </Fade>
