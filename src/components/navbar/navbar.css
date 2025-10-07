@@ -3,44 +3,51 @@ body {
 }
 
 #appbar {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.95) 100%);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+    rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
   color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #appbar:hover {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 30, 0.98) 100%);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.9), 0 2px 5px rgba(0, 0, 0, 0.7);
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-logo {
-  height: 50px !important;
-  width: 50px !important;
+  height: 45px !important;
+  width: 45px !important;
   object-fit: contain;
-  margin: 0 0 10px 0;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  margin: 0;
+  filter: brightness(1) contrast(1.1);
+  transition: all 0.3s ease;
 }
 
 .navbar-logo:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 /* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
   #appbar {
-    background: rgba(0, 0, 0, 1); /* Full black on mobile */
-    backdrop-filter: blur(10px);
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.2)),
+      rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(200%);
   }
-  
+
   .navbar-logo {
-    height: 30px !important;
-    width: 30px !important;
+    height: 32px !important;
+    width: 32px !important;
   }
 }
 
@@ -60,11 +67,4 @@ body {
 .nav-link.active {
   background: rgba(255, 255, 255, 0.15);
   font-weight: 600;
-}
-
-/* Sliding underline enhancement */
-.nav-slider {
-  background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 100%);
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
 }

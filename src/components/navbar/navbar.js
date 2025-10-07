@@ -18,34 +18,10 @@ const navLinks = [
 ];
 
 function ResponsiveAppBar() {
-  // slider / nav state
-  const containerRef = React.useRef(null);
-  const itemRefs = React.useRef({});
+  // nav state
   const [activeHref, setActiveHref] = React.useState(
     typeof window !== "undefined" ? window.location.pathname : "/"
   );
-  const [slider, setSlider] = React.useState({ left: 0, width: 0 });
-
-  const updateSlider = React.useCallback(() => {
-    const container = containerRef.current;
-    const activeEl = itemRefs.current[activeHref];
-    if (!container || !activeEl) {
-      setSlider({ left: 0, width: 0 });
-      return;
-    }
-    const containerRect = container.getBoundingClientRect();
-    const itemRect = activeEl.getBoundingClientRect();
-    const left = itemRect.left - containerRect.left;
-    const width = itemRect.width;
-    setSlider({ left, width });
-  }, [activeHref]);
-
-  React.useEffect(() => {
-    updateSlider();
-    const onResize = () => updateSlider();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [updateSlider]);
 
   React.useEffect(() => {
     const onPop = () => {
@@ -57,8 +33,6 @@ function ResponsiveAppBar() {
 
   const onNavClick = (href) => {
     setActiveHref(href);
-    // allow slider to animate
-    setTimeout(updateSlider, 40);
   };
 
   // handler for scroll-type links (if you have any)
@@ -67,10 +41,8 @@ function ResponsiveAppBar() {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
       setActiveHref(id);
-      setTimeout(updateSlider, 300);
     } else {
       setActiveHref(id);
-      setTimeout(updateSlider, 200);
     }
   };
 
@@ -78,31 +50,25 @@ function ResponsiveAppBar() {
     <AppBar
       id="appbar"
       position="sticky"
-      sx={{ boxShadow: "none" }}
+      sx={{
+        boxShadow: "none",
+        backgroundColor: "transparent !important"
+      }}
     /* the look/background comes from your navbar.css (#appbar) */
     >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
-          className="relative h-16 px-4 md:px-6 flex items-center"
+          className="relative h-18 px-4 md:px-6 flex items-center"
         >
           {/* Left area removed VISCA badge as requested */}
 
           {/* Centered nav for md+ */}
           <nav
-            ref={containerRef}
             className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-8"
             aria-label="Primary navigation"
             style={{ transform: "translateX(-50%)" }}
           >
-            {/* sliding underline */}
-            <span
-              className="nav-slider pointer-events-none absolute -bottom-2 h-[2px] transition-all duration-300 ease-out"
-              style={{
-                left: slider.left,
-                width: slider.width,
-              }}
-            />
 
             {navLinks.map((l) => {
               const isActive = l.href === activeHref;
@@ -115,7 +81,6 @@ function ResponsiveAppBar() {
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span
-                      ref={(el) => (itemRefs.current[l.href] = el)}
                       className={[
                         "text-sm font-medium tracking-wide transition-colors cursor-pointer",
                         isActive
@@ -138,7 +103,6 @@ function ResponsiveAppBar() {
                   aria-current={isActive ? "page" : undefined}
                 >
                   <span
-                    ref={(el) => (itemRefs.current[l.href] = el)}
                     className={[
                       "text-sm font-medium tracking-wide transition-colors",
                       isActive ? "text-white font-bold" : "text-white/90 hover:text-white",
@@ -152,12 +116,12 @@ function ResponsiveAppBar() {
           </nav>
 
           {/* Logo + title area (kept) */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 1.5 }}>
             <Link to="/">
               <CardMedia
                 className="navbar-logo"
                 component="img"
-                sx={{ objectFit: "contain", display: { xs: "none", md: "flex" }, height: 50 }}
+                sx={{ objectFit: "contain", display: { xs: "none", md: "flex" }, height: 45 }}
                 image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
                 alt="Hearts2Hands logo"
               />
@@ -169,10 +133,13 @@ function ResponsiveAppBar() {
                 noWrap
                 component="span"
                 sx={{
-                  fontFamily: "monospace",
-                  fontWeight: 700,
+                  fontFamily: "'Inter', 'Segoe UI', 'system-ui', sans-serif",
+                  fontWeight: 500,
+                  fontSize: "1.2rem",
                   color: "inherit",
                   textDecoration: "none",
+                  letterSpacing: "0.015em",
+                  lineHeight: 1.2,
                 }}
               >
                 Hearts2Hands
@@ -184,26 +151,28 @@ function ResponsiveAppBar() {
           <CardMedia
             className="navbar-logo"
             component="img"
-            sx={{ objectFit: "contain", display: { xs: "flex", md: "none" }, height: 30, }}
+            sx={{ objectFit: "contain", display: { xs: "flex", md: "none" }, height: 32, }}
             image="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2h_logo_no_bg.png"
             alt="Hearts2Hands logo"
           />
 
           {/* Mobile title */}
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="span"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
+              fontFamily: "'Inter', 'Segoe UI', 'system-ui', sans-serif",
+              fontWeight: 500,
+              fontSize: "1rem",
+              letterSpacing: "0.015em",
               color: "inherit",
               textDecoration: "none",
               ml: 1,
+              lineHeight: 1.2,
             }}
           >
             Hearts2Hands

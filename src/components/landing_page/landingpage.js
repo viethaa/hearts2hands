@@ -16,40 +16,45 @@ import './landingpage.css';
 
 const LandingPage = () => {
   const buttonBase = {
-    height: 48,
-    px: 2.5,
+    height: 58,
+    px: 4,
     borderRadius: 999,
-    fontWeight: 700,
-    letterSpacing: 0.3,
-    transition: 'background-color .2s ease, border-color .2s ease, transform .2s ease',
-    border: '1.5px solid rgba(255,255,255,.16)',
-    color: '#EAF2FF',
-    backdropFilter: 'blur(4px)',
-    '& .MuiButton-endDecorator': { transition: 'transform .2s ease' },
+    fontWeight: 600,
+    fontSize: '1.1rem',
+    letterSpacing: 0.2,
+    minWidth: 190,
+    transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
+    border: '1.5px solid rgba(255,255,255,.2)',
+    color: '#ffffff',
+    backdropFilter: 'blur(8px)',
+    WebkitBackdropFilter: 'blur(8px)',
+    '& .MuiButton-endDecorator': { transition: 'transform .3s ease' },
     '&:hover .MuiButton-endDecorator': { transform: 'translateX(4px)' },
-    '&:active': { transform: 'translateY(1px)' },
-    '&:focus-visible': { outline: 'none', boxShadow: '0 0 0 3px rgba(114,211,255,.35)' },
+    '&:active': { transform: 'scale(0.98)' },
+    '&:focus-visible': { outline: 'none', boxShadow: '0 0 0 3px rgba(114,211,255,.4)' },
   };
 
   const btnPrimary = {
     ...buttonBase,
-    width: 160,
-    background: 'linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05))',
-    borderColor: 'rgba(255,255,255,.20)',
+    background: 'linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.12))',
+    borderColor: 'rgba(255,255,255,.3)',
+    boxShadow: '0 4px 16px rgba(0,0,0,.15)',
     '&:hover': {
-      background: 'linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.08))',
-      borderColor: 'rgba(255,255,255,.28)',
+      background: 'linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.18))',
+      borderColor: 'rgba(255,255,255,.4)',
+      boxShadow: '0 6px 20px rgba(0,0,0,.2)',
+      transform: 'translateY(-2px)',
     },
   };
 
   const btnGhost = {
     ...buttonBase,
-    backgroundColor: 'transparent',
-    color: 'rgba(234,242,255,.92)',
-    borderColor: 'rgba(255,255,255,.22)',
+    backgroundColor: 'rgba(255,255,255,.05)',
+    borderColor: 'rgba(255,255,255,.25)',
     '&:hover': {
-      backgroundColor: 'rgba(255,255,255,.07)',
-      borderColor: 'rgba(255,255,255,.30)',
+      backgroundColor: 'rgba(255,255,255,.12)',
+      borderColor: 'rgba(255,255,255,.35)',
+      transform: 'translateY(-2px)',
     },
   };
 
@@ -126,49 +131,45 @@ const LandingPage = () => {
       >
         <div className="banner-content">
           <Typography
-            className="banner-name"
+            className="banner-title"
             variant="h1"
-            sx={{ fontSize: { md: "6rem", xs: "4rem" } }}
+            sx={{
+              fontSize: { md: "9rem", xs: "4.5rem" },
+              textAlign: 'center',
+              mb: 6
+            }}
           >
-            EMPOWERING<br />VIETNAM'S YOUTH
+            <span className="typewriter-text">Hearts<span style={{ color: '#ff6b6b', margin: '0 0.1em' }}>♥</span>Hands</span>
           </Typography>
 
-          <Typography>
-            "We can change the world and make it a better place.
-            <Box sx={{ display: { md: "block", xs: "inline" } }}>
-              It is in our hands to make a difference" — Nelson Mandela
-            </Box>
-          </Typography>
-
-          <div>
-            <Box
-              sx={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: 1.5,
-                marginTop: { xs: "40px", md: "3.5rem" },
-              }}
-            >
-              <Link to="/timeline">
-                <Button
-                  endDecorator={<ArrowForwardIcon fontSize="md" />}
-                  sx={btnPrimary}
-                >
-                  Timeline
-                </Button>
-              </Link>
-
+          <Box
+            className="banner-buttons-fade-in"
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 2,
+              justifyContent: 'center',
+            }}
+          >
+            <Link to="/timeline">
               <Button
                 endDecorator={<ArrowForwardIcon fontSize="md" />}
-                sx={btnGhost}
-                onClick={() =>
-                  window.open('https://forms.gle/3smohGKzZZAU6tJb7', '_blank')
-                }
+                sx={btnPrimary}
               >
-                Join Us Now
+                Our Timeline
               </Button>
-            </Box>
-          </div>
+            </Link>
+
+            <Button
+              endDecorator={<ArrowForwardIcon fontSize="md" />}
+              sx={btnGhost}
+              onClick={() =>
+                window.open('https://forms.gle/3smohGKzZZAU6tJb7', '_blank')
+              }
+            >
+              Join the Mission
+            </Button>
+          </Box>
         </div>
       </div>
 

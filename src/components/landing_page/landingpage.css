@@ -54,15 +54,30 @@ body{
 .banner{
   position:relative;
   width:100%;
-  height:100vh;
+  height:95vh;
   display:flex;
   align-items:center;
-  justify-content:flex-start;
-  padding-left:clamp(6%,8vw,10%);
+  justify-content:center;
+  padding:0 clamp(2rem, 5vw, 4rem);
   color:#e7eef9;
-  text-align:left;
+  text-align:center;
   background:no-repeat center/cover;
   border-bottom:1px solid var(--border-strong);
+  overflow:hidden;
+}
+
+.banner::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0px, transparent 1px, transparent 2px, rgba(255,255,255,.02) 3px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0px, transparent 1px, transparent 2px, rgba(255,255,255,.02) 3px);
+  z-index:1;
+  pointer-events:none;
 }
 
 .banner::before{
@@ -70,14 +85,111 @@ body{
   content:"";
   position:absolute; inset:0;
   background:
-    radial-gradient(80% 60% at 10% 50%, rgba(0,0,0,.52), transparent 60%),
-    linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.65));
+    radial-gradient(circle at 50% 50%, rgba(0,0,0,.45), rgba(0,0,0,.75)),
+    linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.7));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index:0;
 }
 
-.banner-content{ position:relative; z-index:1; max-width:min(900px,92vw); }
+.banner-content{
+  position:relative;
+  z-index:2;
+  max-width:min(900px,92vw);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* Badge above title */
+.banner-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.8rem 2rem;
+  margin-bottom:2rem;
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.25);
+  border-radius:999px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.6px;
+  color:rgba(255,255,255,.95);
+  text-transform:uppercase;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
 
 /* Headline */
+.banner-title{
+  font-family:'Arial Black', 'Impact', 'Helvetica Neue', sans-serif !important;
+  font-weight:900;
+  color:#ffffff;
+  letter-spacing:-2px;
+  line-height:.95;
+  text-shadow:0 6px 28px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.3);
+  font-size:clamp(4rem, 10vw, 9rem) !important;
+  display:inline-block;
+}
+
+.typewriter-text{
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:4px solid rgba(255,255,255,.8);
+  padding-right:8px;
+  animation:
+    typing 3.5s steps(12) 0s 1 normal forwards,
+    blink 0.75s step-end infinite,
+    typing-reverse 2s steps(12) 8.5s 1 normal forwards,
+    typing-again 3.5s steps(12) 11.5s 1 normal forwards;
+  width:0;
+}
+
+.banner-subtitle{
+  font-family:'Inter', -apple-system, 'Segoe UI', sans-serif !important;
+}
+
+/* Animations */
+.banner-buttons-fade-in{
+  animation: fadeInUp 1s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes typing{
+  0%{ width:0; }
+  100%{ width:100%; }
+}
+
+@keyframes typing-reverse{
+  0%{ width:100%; }
+  100%{ width:0; }
+}
+
+@keyframes typing-again{
+  0%{ width:0; }
+  100%{ width:100%; }
+}
+
+@keyframes blink{
+  0%, 50%{ border-color:rgba(255,255,255,.8); }
+  51%, 100%{ border-color:transparent; }
+}
+
+@keyframes fadeInUp{
+  0%{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
 .banner-name{
   font-family:"Passion One", system-ui, sans-serif !important;
   font-weight:400;
