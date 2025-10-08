@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import './card.css'
 
-export default function NewsCard({ imageLink, title, description }) {
+export default function NewsCard({ imageLink, title, description, year, date }) {
   return (
     <div className="news-card-wrapper">
       <CardActionArea className="card-action">
@@ -16,9 +16,9 @@ export default function NewsCard({ imageLink, title, description }) {
         </div>
         <div className="card-content-wrapper">
           <div className="card-meta">
-            <span className="card-date">Recent</span>
+            <span className="card-date">{year}</span>
             <span className="card-dot">•</span>
-            <span className="card-read">3 min read</span>
+            <span className="card-read">{date}</span>
           </div>
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>

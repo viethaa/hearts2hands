@@ -58,42 +58,57 @@ const LandingPage = () => {
     },
   };
 
-  const myCardEventInfo = [
+  const myMissionsInfo = [
     {
       title: "Mission III",
-      description: "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm’s playground.  Read more...",
+      description: "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm's playground.  Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission3.jpg",
       path: "mission3",
+      year: "2025",
+      date: "Aug 15"
     },
     {
       title: "Mission II",
-      description: "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage focuses on the children’s essential needs and spreading joy through gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season. Read more...",
+      description: "Hearts2Hands' second mission at Mái Ấm Thánh Tâm orphanage focuses on the children's essential needs and spreading joy through gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
       path: "mission2",
+      year: "2024",
+      date: "Dec 15"
     },
     {
       title: "Mission I",
       description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
       path: "mission1",
-    },
+      year: "2024",
+      date: "Oct 11"
+    }
+  ];
+
+  const myEventsInfo = [
     {
       title: "BVIS Chrismas Fair",
-      description: "Hearts2Hands recently took part in the British Vietnamese International School Hanoi christmas fair. We presented our goals, and group’s mission as a way to raise awareness for Vietnamese youth equity. Read more...",
+      description: "Hearts2Hands recently took part in the British Vietnamese International School Hanoi christmas fair. We presented our goals, and group's mission as a way to raise awareness for Vietnamese youth equity. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
-      path: "bvis-xmas-fair"
+      path: "bvis-xmas-fair",
+      year: "2024",
+      date: "Dec 12"
     },
     {
       title: "Service Fair",
-      description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. We participated in the Service Fair with our own booth, where we shared our club’s mission, perspective, and goals. Read more...",
+      description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. We participated in the Service Fair with our own booth, where we shared our club's mission, perspective, and goals. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
-      path: "service-fair"
+      path: "service-fair",
+      year: "2024",
+      date: "Oct 16"
     },
     {
       title: "Bake Sale",
       description: "Ivan, a member of the Hearts2Hands committee, is hosting an online Bake Sale to showcase her homemade treats. This event aims to raise funds to support our missions in the future! Come support us! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
-      path: "bakesale"
+      path: "bakesale",
+      year: "2024",
+      date: "Dec 24"
     }
   ];
 
@@ -103,18 +118,24 @@ const LandingPage = () => {
       description: "On Vietnamese National Day, September 2nd, Hearts2Hands would like to extend our deepest gratitude to our beloved homeland Vietnam, the land that has nurtured and protected generations of Vietnamese people! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
       path: "sdg10",
+      year: "2024",
+      date: "Sep 2"
     },
     {
       title: "2024 Recap",
       description: "Hearts2Hands focuses on SDG 10. Reducing inequalities is the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities for underprivileged young Vietnamese children! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
       path: "sdg10",
+      year: "2024",
+      date: "Dec 31"
     },
     {
       title: "SDG 10",
       description: "Hearts2Hands focuses on SDG 10. Reducing inequalities is the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities for underprivileged young Vietnamese children! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
       path: "sdg10",
+      year: "2024",
+      date: "Aug 15"
     }
 
   ];
@@ -176,17 +197,44 @@ const LandingPage = () => {
       <Fade delay={1e1}>
         <UserReview />
 
-        <div className="events-container">
+        <div className="missions-container">
           <Container maxWidth="lg">
-            <h2 className="latest-news-p">Latest Events</h2>
+            <div style={{ textAlign: 'center' }}>
+              <h2 className="latest-news-p">Our Missions</h2>
+            </div>
             <Grid container spacing={4} justifyContent="center">
-              {myCardEventInfo.map((data, index) => (
+              {myMissionsInfo.map((data, index) => (
                 <Grid item xs={12} sm={6} md={4} key={index}>
                   <Link to={data.path} style={{ textDecoration: 'none' }}>
                     <NewsCard
                       imageLink={data.imageURL}
                       title={data.title}
                       description={data.description}
+                      year={data.year}
+                      date={data.date}
+                    />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
+        </div>
+
+        <div className="events-container">
+          <Container maxWidth="lg">
+            <div style={{ textAlign: 'center' }}>
+              <h2 className="latest-news-p">Events</h2>
+            </div>
+            <Grid container spacing={4} justifyContent="center">
+              {myEventsInfo.map((data, index) => (
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Link to={data.path} style={{ textDecoration: 'none' }}>
+                    <NewsCard
+                      imageLink={data.imageURL}
+                      title={data.title}
+                      description={data.description}
+                      year={data.year}
+                      date={data.date}
                     />
                   </Link>
                 </Grid>
@@ -197,7 +245,9 @@ const LandingPage = () => {
 
         <div className="news-section">
           <Container maxWidth="lg">
-            <h2 className="latest-news-p">Latest News</h2>
+            <div style={{ textAlign: 'center' }}>
+              <h2 className="latest-news-p">Blog Posts</h2>
+            </div>
             <Grid container spacing={4} justifyContent="center">
               {myCardInfo.map((data, index) => (
                 <Grid item xs={12} sm={6} md={4} key={index}>
@@ -206,6 +256,8 @@ const LandingPage = () => {
                       imageLink={data.imageURL}
                       title={data.title}
                       description={data.description}
+                      year={data.year}
+                      date={data.date}
                     />
                   </Link>
                 </Grid>

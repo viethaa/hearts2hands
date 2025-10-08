@@ -208,12 +208,45 @@ body{
 
 /* === SECTION HEADERS (Latest Events / News) === */
 .latest-news-p{
-  font-size:clamp(2rem, 3vw, 2.8rem);
+  display: inline-block;
+  font-size:clamp(2.2rem, 4vw, 3.5rem);
   font-weight:800;
-  letter-spacing:-0.5px;
+  letter-spacing:-1.5px;
   color:#ffffff;
-  margin: 0 0 50px 0;
+  margin: 0 auto 70px auto;
   text-align:center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  position: relative;
+  text-shadow:
+    0 0 40px rgba(255, 255, 255, 0.3),
+    0 0 80px rgba(255, 255, 255, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.latest-news-p::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
+  border-radius: 2px;
+}
+
+.latest-news-p::after {
+  content: '';
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6), transparent);
+  border-radius: 2px;
 }
 
 /* Remove icon styles */
@@ -309,16 +342,38 @@ body{
   border-radius:calc(var(--radius-lg) - 2px);
 }
 
-/* === EVENTS / NEWS CONTAINERS === */
+/* === EVENTS / NEWS / MISSIONS CONTAINERS === */
+.missions-container,
 .events-container,
 .news-section{
+  position: relative;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 120px 0;
+  overflow: hidden;
   scroll-margin-top:80px;
-  padding:100px 0;
 }
 
+.missions-container::before,
+.events-container::before,
+.news-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255,107,107,0.05), transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(114,211,255,0.05), transparent 50%);
+  pointer-events: none;
+}
+
+.missions-container .MuiGrid-container,
 .events-container .MuiGrid-container,
 .news-section .MuiGrid-container{
   padding-top:0;
+  position: relative;
+  z-index: 1;
 }
 
 /* === REDUCED MOTION === */

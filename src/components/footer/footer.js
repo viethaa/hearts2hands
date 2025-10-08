@@ -35,7 +35,7 @@ export default function ColorInversionAnyParent() {
           rowGap: 2,
           columnGap: 8,
           p: 4,
-          background: `linear-gradient(45deg, ${theme.vars.palette.neutral[800]}, ${theme.vars.palette.neutral[600]})`,
+          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
         }),
         applySolidInversion('neutral'),
       ]}
