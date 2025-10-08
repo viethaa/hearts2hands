@@ -60,7 +60,15 @@ const LandingPage = () => {
 
   const myMissionsInfo = [
     {
-      title: "Mission III",
+      title: "Mission IV: Spreading Love",
+      description: "Mission IV took place at Xóm Chạy Thận, where we spent time with the community, organized meaningful activities, and decorated a joyful festival environment for underprivileged patients.  Read more...",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg",
+      path: "mission3",
+      year: "2025",
+      date: "Oct 6"
+    },
+    {
+      title: "Mission III: Spreading Smiles",
       description: "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm's playground.  Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission3.jpg",
       path: "mission3",
@@ -68,7 +76,7 @@ const LandingPage = () => {
       date: "Aug 15"
     },
     {
-      title: "Mission II",
+      title: "Mission II: Joy for Young Hearts",
       description: "Hearts2Hands' second mission at Mái Ấm Thánh Tâm orphanage focuses on the children's essential needs and spreading joy through gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
       path: "mission2",
@@ -76,7 +84,7 @@ const LandingPage = () => {
       date: "Dec 15"
     },
     {
-      title: "Mission I",
+      title: "Mission I: Pathways to E-Education",
       description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities! Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
       path: "mission1",
@@ -86,6 +94,14 @@ const LandingPage = () => {
   ];
 
   const myEventsInfo = [
+    {
+      title: "Volleyball Fundraising",
+      description: "On February 8th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi’s charity volleyball tournament. Read more...",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/volleyball_fundraise.jpg",
+      path: "bvis-xmas-fair",
+      year: "2025",
+      date: "Feb 10"
+    },
     {
       title: "BVIS Chrismas Fair",
       description: "Hearts2Hands recently took part in the British Vietnamese International School Hanoi christmas fair. We presented our goals, and group's mission as a way to raise awareness for Vietnamese youth equity. Read more...",
@@ -102,41 +118,33 @@ const LandingPage = () => {
       year: "2024",
       date: "Oct 16"
     },
-    {
-      title: "Bake Sale",
-      description: "Ivan, a member of the Hearts2Hands committee, is hosting an online Bake Sale to showcase her homemade treats. This event aims to raise funds to support our missions in the future! Come support us! Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
-      path: "bakesale",
-      year: "2024",
-      date: "Dec 24"
-    }
+    // {
+    //   title: "Bake Sale",
+    //   description: "Ivan, a member of the Hearts2Hands committee, is hosting an online Bake Sale to showcase her homemade treats. This event aims to raise funds to support our missions in the future! Come support us! Read more...",
+    //   imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
+    //   path: "bakesale",
+    //   year: "2024",
+    //   date: "Dec 24"
+    // }
   ];
 
   const myCardInfo = [
     {
-      title: "Vietnamese National Day",
-      description: "On Vietnamese National Day, September 2nd, Hearts2Hands would like to extend our deepest gratitude to our beloved homeland Vietnam, the land that has nurtured and protected generations of Vietnamese people! Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
-      path: "sdg10",
-      year: "2024",
-      date: "Sep 2"
-    },
-    {
-      title: "2024 Recap",
-      description: "Hearts2Hands focuses on SDG 10. Reducing inequalities is the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities for underprivileged young Vietnamese children! Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
+      title: "The Story of Mái Ấm Thánh Tâm",
+      description: "Mái Ấm Thánh Tâm is a charitable home dedicated to caring for orphaned, abandoned, or underprivileged children. Operated by Catholic nuns and volunteers, the shelter provides a safe and nurturing environment",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/maiamthanhtam_story.png",
       path: "sdg10",
       year: "2024",
       date: "Dec 31"
     },
     {
-      title: "SDG 10",
-      description: "Hearts2Hands focuses on SDG 10. Reducing inequalities is the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities for underprivileged young Vietnamese children! Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
+      title: "2024 Recap",
+      description: "Lets look back at 2024, and all the missions and achievements we have accomplished!",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hfoundation.jpg",
       path: "sdg10",
       year: "2024",
-      date: "Aug 15"
-    }
+      date: "Dec 31"
+    },
 
   ];
 

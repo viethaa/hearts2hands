@@ -7,6 +7,28 @@ import CardActionArea from '@mui/material/CardActionArea';
 import './card.css'
 
 export default function NewsCard({ imageLink, title, description, year, date }) {
+  // Function to highlight mission numbers
+  const formatTitle = (title) => {
+    const missionPattern = /(Mission\s+(?:IV|I{1,3}):?)/i;
+    const match = title.match(missionPattern);
+
+    if (match) {
+      const parts = title.split(missionPattern);
+      return (
+        <>
+          {parts[0]}
+          <span className="mission-number">{match[1]}</span>
+          {parts[parts.length - 1]}
+        </>
+      );
+    }
+    return title;
+  };
+
+  // Check if title has mission pattern
+  const missionPattern = /(Mission\s+(?:IV|I{1,3}):?)/i;
+  const hasMission = missionPattern.test(title);
+
   return (
     <div className="news-card-wrapper">
       <CardActionArea className="card-action">
@@ -20,7 +42,7 @@ export default function NewsCard({ imageLink, title, description, year, date }) 
             <span className="card-dot">•</span>
             <span className="card-read">{date}</span>
           </div>
-          <h3 className="card-title">{title}</h3>
+          <h3 className={`card-title ${hasMission ? 'has-mission' : ''}`}>{formatTitle(title)}</h3>
           <p className="card-description">{description}</p>
           <div className="card-arrow">
             <span>Read More</span>

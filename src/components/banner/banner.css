@@ -1,41 +1,44 @@
 .search-container {
     position: relative;
-    /* For positioning the icon */
     display: flex;
     justify-content: center;
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px 60px 0px;
     width: 100%;
 }
 
 .search-bar {
     width: 85%;
-    padding: 10px 40px 10px 58px;
-    /* Add padding for the icon */
-    border: 2px solid #ccc;
-    /* Bolder border */
-    border-radius: 10px;
-    /* Rounded corners */
+    padding: 14px 40px 14px 58px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
     font-size: 16px;
     outline: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    /* Smooth interaction */
+}
+
+.search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .search-bar:focus {
-    border-color: #b3b3b3;
-    /* Slightly darker gray border color */
-    box-shadow: 0 4px 8px rgba(179, 179, 179, 0.5);
-    /* Slightly darker gray shadow */
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .search-icon {
-    position: absolute; /* Ensure it's positioned relative to the parent */
-    left: 111px; /* Move it to the left */
-    top: 29%;
-    width: 1.3rem;
-    height: 1.3rem;
-    right: 10px;
-    color: #aaa;
+    position: absolute;
+    left: 111px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    filter: invert(1);
+    opacity: 0.6;
+    pointer-events: none;
 }

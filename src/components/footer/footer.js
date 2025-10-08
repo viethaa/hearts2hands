@@ -106,10 +106,10 @@ export default function ColorInversionAnyParent() {
           gap: 3,
         }}
       >
-        <Stat value="24" description="Members recruited" />
-        <Stat value="24" description="Thành Viên" />
-        <Stat value="2" description="Missions accomplished" />
-        <Stat value="2" description="Chiến Dịch Thành Công" />
+        <Stat value="27" description="Members recruited" />
+        <Stat value="27" description="Thành Viên" />
+        <Stat value="4" description="Missions accomplished" />
+        <Stat value="4" description="Chiến Dịch Thành Công" />
       </Box>
       <div>
         <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">
