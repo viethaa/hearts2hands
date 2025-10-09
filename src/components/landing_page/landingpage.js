@@ -63,7 +63,7 @@ const LandingPage = () => {
       title: "Mission IV: Spreading Love",
       description: "Mission IV took place at Xóm Chạy Thận, where we spent time with the community, organized meaningful activities, and decorated a joyful festival environment for underprivileged patients.  Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg",
-      path: "mission3",
+      path: "mission4",
       year: "2025",
       date: "Oct 6"
     },
@@ -98,7 +98,7 @@ const LandingPage = () => {
       title: "Volleyball Fundraising",
       description: "On February 8th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi’s charity volleyball tournament. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/volleyball_fundraise.jpg",
-      path: "bvis-xmas-fair",
+      path: "volleyball-fundraising",
       year: "2025",
       date: "Feb 10"
     },
@@ -116,7 +116,7 @@ const LandingPage = () => {
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
       path: "service-fair",
       year: "2024",
-      date: "Oct 16"
+      date: "Oct 17"
     },
     // {
     //   title: "Bake Sale",
@@ -133,7 +133,7 @@ const LandingPage = () => {
       title: "The Story of Mái Ấm Thánh Tâm",
       description: "Mái Ấm Thánh Tâm is a charitable home dedicated to caring for orphaned, abandoned, or underprivileged children. Operated by Catholic nuns and volunteers, the shelter provides a safe and nurturing environment",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/maiamthanhtam_story.png",
-      path: "sdg10",
+      path: "storyofmaiamthanhtam",
       year: "2025",
       date: "Aug 4"
     },
@@ -141,7 +141,7 @@ const LandingPage = () => {
       title: "2024 Recap",
       description: "Lets look back at 2024, and all the missions and achievements we have accomplished!",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hfoundation.jpg",
-      path: "sdg10",
+      path: "2024-recap",
       year: "2024",
       date: "Dec 31"
     },

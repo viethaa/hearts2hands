@@ -34,7 +34,7 @@ export default function EventInfo() {
       "subtitle": "Mission III: Spreading Smiles",
       "description": "On August 5th, Hearts2Hands visited Mái Ấm Thánh Tâm to begin our third mission of improving the children’s playground. We cleaned and repainted the area, added new equipment, and created a safer, more joyful space for play. Volunteers also spent time interacting with the children through games and art activities, spreading love and connection.",
       "hashtag1": "#mission",
-      "hashtag2": "#love",
+      "hashtag2": "#smiles",
       "hashtag3": "#community",
     },
     {

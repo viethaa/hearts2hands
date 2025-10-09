@@ -1,114 +1,179 @@
 [
-    {
-        "title": "Sustainable Development Goal: 10",
-        "date": "20 AUG, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.jpg",
-        "content": [
-            "What is SDG 10? Sustainable Development Goal 10 aims to reduce inequality within and among countries. It focuses on addressing and ensuring equal opportunities and promoting social, economic, and political,… inclusion for all, regardless of gender, disability, race, ethnicity, origin, religion, or economic status. This goal emphasizes empowering disadvantaged and marginalized communities while fostering inclusive growth and access to resources.",
-            "Why? Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities,… for underprivileged young people from different communities, ensuring that every youth—regardless of their circumstances—has the chance to thrive in the future. By addressing these issues, we hope to create a more inclusive and equitable society.",
-            "───",
-            "SDG 10 là gì? Mục tiêu Phát triển Bền vững số 10 nhằm giảm bất bình đẳng trong và giữa các quốc gia. Mục tiêu này tập trung vào việc giải quyết chênh lệch và đảm bảo cơ hội bình đẳng, loại bỏ sự phân biệt đối xử và thúc đẩy sự hòa nhập xã hội, kinh tế, chính trị,… cho tất cả mọi người, bất kể giới tính, khiếm khuyết, chủng tộc, dân tộc, tôn giáo hoặc kinh tế. Mục tiêu này nhấn mạnh việc cân bằng quyền lợi cho các cộng đồng bị thiệt thòi và yếu thế, đồng thời thúc đẩy tăng trưởng toàn diện và khả năng tiếp cận các nguồn lực của họ",
-            "Vì sao? Hearts2Hands tập trung vào Mục tiêu Phát triển SDG số 10 vì bình đẳng là một điều quan trọng mà chúng mình muốn góp phần giúp thay đổi. Chúng mình mong muốn thu hẹp khoảng cách trong việc tiếp cận giáo dục, nguồn trợ, cơ hội,… cho những người trẻ ít may mắn từ các cộng đồng khác nhau, đảm bảo rằng bất kể người trẻ nào—bất kể hoàn cảnh của họ—đều có cơ hội phát triển trong tương lai. Bằng cách giải quyết những vấn đề này, chúng mình hy vọng sẽ góp phần tạo nên một xã hội hòa nhập và công bằng hơn."
-        ],
-        "hashtag": [
-            "#equity",
-            "#vn-youth",
-            "#sdg10"
-        ],
-        "path": "sdg10"
-    },
-    {
-        "title": "Mission I: Education For Young People",
-        "date": "12 OCT, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
-        "content": [
-            "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! This addresses SDG 10 by bridging the digital divide and ensuring that underprivileged students have equitable access to the tools and resources needed for quality education and future success. Join us in making a difference!",
-            "A few words from Phan Anh: “Our first mission focuses on creating a new pathway to education by helping students at Tạ Xã 1 school gain better access to digital education opportunities. This aligns with our goals and mission to create opportunities for underprivileged youth. I am proud to lead and to be part of this project and specifically this mission, where I see smiles from the faces of these students!”",
-            "───",
-            "Chiến dịch đầu tiên của Hearts2Hands tập trung vào việc cải thiện chất lượng giáo dục bằng cách cung cấp máy tính cho trường Tạ Xã 1 ở Phú Thọ, Cẩm Khê. Bằng cách cung cấp và cải thiện quyền truy cập công nghệ, Hearts2Hands hướng đến mục tiêu tạo ra các cơ hội giáo dục mới cho học sinh tại đây! Chuyến đi lần này liên quan đến mục tiêu của SDG 10 bằng cách thu hẹp khoảng cách số và đảm bảo rằng tất cả học sinh được tiếp cận với các công cụ và nguồn lực cần thiết cho giáo dục chất lượng và sự thành công trong tương lai. Hãy tham gia cùng chúng mình để tạo nên sự khác biệt!",
-            "Vài lời chia sẻ từ Phan Anh: “Chiến dịch đầu tiên này tập trung vào việc xây dựng và tạo những ‘con đường’ đến với dáo dục bằng cách giúp học sinh tại trường Tạ Xã 1 có thêm cơ hội tiếp cận với giáo dục số. Điều này liên quan đến mục tiêu của Hearts2Hands, là tạo ra thêm nhiều cơ hội cho các bạn trẻ ít may mắn. Mình tự hào được dẫn dắt và trở thành một phần của dự án, đặc biệt là chiến dịch và chuyến đi lần này, nơi mà mình đã nhìn thấy những nụ cười trên khuôn mặt của các em học sinh!”"
-        ],
-        "hashtag": [
-            "#mission",
-            "#education",
-            "#donation"
-        ],
-        "path": "mission1"
-    },
-    {
-        "title": "Mission II: Joy For Young Hearts",
-        "date": "16 DEC, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
-        "content": [
-            "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage highlights providing the children’s essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth, love, hope, and smile during the holiday season.",
-            "This aligns with SDG 10 by addressing disparities and ensuring that children in underprivileged communities receive the care and support they deserve, fostering inclusivity and equal opportunities during a time of celebration.  Join us in making a difference!",
-            "Mai Chi: “Choosing to visit Mái Ấm Thành Tâm was a meticulous decision that our team has come to be incredibly proud of. After a long car ride, the rewards of our actions came to fruition through sweet smiles , and meaningful conversations. The stories we heard from this first visit has touched our hearts, bringing us a great sense of determination to continue aiding them in anyway we can, which is exactly what we plan to do in future missions. That being said, going forwards, we will return to Mai Ấm Thành Tâm, and the adorable friends we have made!”",
-            "Mai Chi : “As some may already be aware, the goal Hearts2Hands aim to work towards is SDG 10, Reduced Inequalities. Through this mission, and futures one to come, we will continue working towards this goal by providing Mai Ấm Thành Tâm with the resources our little friends will need to have the same chances we have.”",
-            "───",
-            "Chiến dịch thứ hai của Hearts2Hands tại trại trẻ mồ côi Mái Ấm Thánh Tâm nhấn mạnh việc cung cấp các nhu cầu thiết yếu cho trẻ em và mang lại niềm vui thông qua những món quà đầy ý nghĩa. Chúng mình mong muốn hỗ trợ cuộc sống của các em bằng mọi cách có thể trước thềm Giáng Sinh, như một cách để mang đến sự ấm áp, yêu thương, hy vọng và những nụ cười trong mùa lễ hội.",
-            "Điều này hướng đến Mục tiêu SDG 10 bằng cách giải quyết những chênh lệch và đảm bảo rằng trẻ em trong những cộng đồng khó khăn đều được nhận sự chăm sóc và hỗ trợ mà các em xứng đáng có được. Hãy tham gia cùng chúng mình để tạo nên sự khác biệt!",
-            "Mai Chi: “Việc lựa chọn thăm Mái Ấm Thành Tâm là một quyết định tỉ mỉ mà đội ngũ Hearts2Hands vô cùng tự hào. Sau một chuyến đi dài trên xe, những nụ cười ngọt ngào và những cuộc trò chuyện ý nghĩa đã mang lại phần thưởng xứng đáng cho những nỗ lực của đoàn. Những câu chuyện mà chúng mình nghe được từ chuyến thăm đầu tiên này đã chạm đến trái tim, mang lại cho chúng mình một quyết tâm mạnh mẽ để tiếp tục hỗ trợ họ bằng mọi cách có thể, và đó chính là điều chúng mình dự định thực hiện trong các chiến dịch ở tương lai. Với tinh thần đó, trong thời gian tới, chúng mình sẽ quay lại với Mái Ấm Thành Tâm và những người bạn đáng yêu mà chúng tôi đã kết thân!”",
-            "Mai Chi: “Như một số người có thể đã biết, mục tiêu mà Hearts2Hands hướng tới là SDG 10, Giảm Bất Bình Đẳng. Thông qua sứ mệnh này và các sứ mệnh trong tương lai, chúng mình sẽ tiếp tục nỗ lực đạt được mục tiêu này bằng cách cung cấp cho Mái Ấm Thành Tâm những nguồn lực mà các bạn nhỏ của chúng ta cần để có được những cơ hội giống như chúng ta.”"
-        ],
-        "hashtag": [
-            "#mission",
-            "#joy",
-            "#gifts"
-        ],
-        "path": "mission2"
-    },
-    {
-        "title": "Christmas Fair @BVIS",
-        "date": "12 DEC, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
-        "content": [
-            "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
-            "Duy: “Participating in the Christmas Fair at BVIS Hanoi was such a rewarding experience. I felt incredibly proud to represent Hearts2Hands and share our club’s mission. The energy at the event was contagious, and I loved connecting with other people who are passionate about making a positive impact. It was also a great opportunity to learn from other organizations who also participated  and see the variety of ways people are serving the community. Overall, it was a fantastic experience, and I’m really excited about where Hearts2Hands is headed in the future”",
-            "───",
-            "Hearts2Hands gần đây đã tham gia buổi giới thiệu về hoạt động cộng đồng tại Trường Quốc tế Anh Việt Hà Nội (BVIS). Chúng mình đã trình bày các mục tiêu và nhiệm vụ của nhóm như một cách để nâng cao nhận thức về các vấn đề khác nhau mà chúng mình mong muốn được góp công góp phần giải quyết, đồng thời truyền cảm hứng để người xung quanh cùng chung tay tạo nên sự thay đổi ý nghĩa",
-            "Duy: “Tham gia Hội chợ Giáng sinh tại trường BVIS là một trải nghiệm vô cùng ý nghĩa. Mình cảm thấy rất tự hào khi được đại diện cho Hearts2Hands, thay mặt các thành viên khác để giới thiệu Hearts2Hands tới các bạn học sinh đồng chăng lứa ở đây. Bầu không khí tại sự kiện thật sôi động, và mình rất thích kết nối với những người khác có cùng đam mê tạo ra tác động tích cực. Đây cũng là cơ hội tuyệt vời để học hỏi từ các tổ chức khác tham gia sự kiện và thấy được sự đa dạng trong cách mọi người phục vụ cộng đồng. Về tổng thể, đây là một trải nghiệm tuyệt vời, và mình rất hào hứng với hướng phát triển của Hearts2Hands trong tương lai.”"
-        ],
-        "hashtag": [
-            "#xmas-fair",
-            "#bvis",
-            "#festive"
-        ],
-        "path": "bvis-xmas-fair"
-    },
-    {
-        "title": "Service Fair @CISH",
-        "date": "16 OCT, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/serv_fair.png",
-        "content": [
-            "Hearts2Hands participated in a service introductory event, where we had the opportunity to showcase the team’s mission and goals to fellow students at Concordia International School Hanoi. Our group’s founder, Phan Anh, presented Hearts2Hands’ goals and missions to Concordia’s high school. Following the presentation, Hearts2Hands members at Concordia Hanoi gathered to represent our club at our own booth, showcasing our perspective and ideas.",
-            "Phan Anh : “I think this experience really helped raise awareness about Hearts2Hands and our mission. It also highlighted the importance of SDG 10, reducing inequalities among young people in Vietnam, which is our core value. Seeing so many people engage with our booth made me hopeful about the impact we can create together.”",
-            "Bob: “I first learned about Hearts2Hands at the Service Fair at Concordia Hanoi, and their mission to reduce inequalities among young people around the country really inspired me. I wanted to contribute, so I joined as a web developer to help expand their reach and impact. It’s been rewarding to be part of a team that’s making a real difference.”",
-            "───",
-            "Hearts2Hands đã tham gia một sự kiện giới thiệu về các hoạt động phục vụ, nơi chúng mình có cơ hội trình bày mục tiêu của nhóm đến các bạn học sinh tại trường quốc tế Concordia Hanoi. Người sáng lập của nhóm, Phan Anh, đã đại diện trình bày mục tiêu của Hearts2Hands với khối cấp 3 của trường Concordia. Sau phần trình bày, các thành viên của Hearts2Hands tại Concordia Hanoi đã tập trung để giới thiệu câu lạc bộ tại gian hàng riêng của mình, nơi chúng mình chia sẻ những mục tiêu và góc nhìn của nhóm.",
-            "Phan Anh : “Mình nghĩ trải nghiệm này thực sự đã giúp nâng cao nhận thức về Hearts2Hands và những chiến dịch / mục tiêu của chúng H2H. Nó cũng nhấn mạnh tầm quan trọng của Mục tiêu Phát triển Bền vững số 10, giảm bất bình đẳng giữa người trẻ ở Việt Nam. Được thấy nhiều người quan tâm đến gian hàng của Hearts2Hands khiến mình có thêm hy vọng về tác động mà chúng ta có thể cùng nhau tạo ra.”",
-            "Bob: “ Mình biết đến Hearts2Hands lần đầu tiên tại Service Fair ở Concordia Hanoi, và mục tiêu giảm bất bình đẳng giữa người trẻ trên đất nước đã thực sự truyền cảm hứng cho mình. Mình muốn đóng góp một phần nào đó khả năng của bản thân, nên đã tham gia với vai trò là một nhà phát triển web để giúp mở rộng tầm ảnh hưởng và tác động của dự án. Thật tuyệt khi được trở thành một phần của đội ngũ đang tạo nên sự khác biệt thực sự.”"
-        ],
-        "hashtag": [
-            "#concordia",
-            "#service-fair",
-            "#introductory"
-        ],
-        "path": "service-fair"
-    },
-    {
-        "title": "Bake Sale",
-        "date": "DEC 24, 2024",
-        "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
-        "content": [
-            "Ivan: “The purpose of our upcoming bake sale is to raise funds for our future missions. Through this effort, we aim to contribute to creating a brighter future where unprivileged young people have access to basic necessities. By addressing their immediate needs, we also hope to lay the foundation for our future missions, which will focus on improving their overall quality of life. Bake sale is our first step in our ongoing commitment to making a meaningful differences”.",
-            "───",
-            "Ivan: “Mục đích của những buổi bake sale sắp tới là gây quỹ cho những chiến dịch tương lai của chúng mình. Thông qua hoạt động này, chúng mình mong muốn góp phần xây dựng một tương lai tươi sáng hơn, nơi những người trẻ có hoàn cảnh khó khăn được tiếp cận với các nhu cầu cơ bản. Bằng cách đáp ứng những nhu cầu cấp thiết của họ, chúng mình hy vọng có thể đặt nền móng cho các chiến dịch trong tương lai, tập trung vào việc nâng cao chất lượng cuộc sống của họ. Những buổi bake sale này sẽ là những bước đầu tiên trong cam kết lâu dài của chúng mình để tạo nên sự khác biệt ý nghĩa của Hearts2Hands”."
-        ],
-        "hashtag": [
-            "#bakesale",
-            "#selling",
-            "#fundraise"
-        ],
-        "path": "bakesale"
-    }
+  {
+    "title": "Mission I: Education For Young People",
+    "date": "October 11, 2024",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
+    "content": [
+      "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities for students here! This addresses SDG 10 by bridging the digital divide and ensuring that underprivileged students have equitable access to the tools and resources needed for quality education and future success. Join us in making a difference!",
+      "A few words from Phan Anh: “Our first mission focuses on creating a new pathway to education by helping students at Tạ Xã 1 school gain better access to digital education opportunities. This aligns with our goals and mission to create opportunities for underprivileged youth. I am proud to lead and to be part of this project and specifically this mission, where I see smiles from the faces of these students!”",
+      "───",
+      "Chiến dịch đầu tiên của Hearts2Hands tập trung vào việc cải thiện chất lượng giáo dục bằng cách cung cấp máy tính cho trường Tạ Xã 1 ở Phú Thọ, Cẩm Khê. Bằng cách cung cấp và cải thiện quyền truy cập công nghệ, Hearts2Hands hướng đến mục tiêu tạo ra các cơ hội giáo dục mới cho học sinh tại đây! Chuyến đi lần này liên quan đến mục tiêu của SDG 10 bằng cách thu hẹp khoảng cách số và đảm bảo rằng tất cả học sinh được tiếp cận với các công cụ và nguồn lực cần thiết cho giáo dục chất lượng và sự thành công trong tương lai. Hãy tham gia cùng chúng mình để tạo nên sự khác biệt!",
+      "Vài lời chia sẻ từ Phan Anh: “Chiến dịch đầu tiên này tập trung vào việc xây dựng và tạo những ‘con đường’ đến với dáo dục bằng cách giúp học sinh tại trường Tạ Xã 1 có thêm cơ hội tiếp cận với giáo dục số. Điều này liên quan đến mục tiêu của Hearts2Hands, là tạo ra thêm nhiều cơ hội cho các bạn trẻ ít may mắn. Mình tự hào được dẫn dắt và trở thành một phần của dự án, đặc biệt là chiến dịch và chuyến đi lần này, nơi mà mình đã nhìn thấy những nụ cười trên khuôn mặt của các em học sinh!”"
+    ],
+    "hashtag": [
+      "#mission",
+      "#education",
+      "#donation"
+    ],
+    "path": "mission1"
+  },
+  {
+    "title": "Mission II: Joy For Young Hearts",
+    "date": "DECEMBER 15, 2024",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
+    "content": [
+      "Hearts2Hands’ second mission at Mái Ấm Thánh Tâm orphanage highlights providing the children’s essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth, love, hope, and smile during the holiday season.",
+      "This aligns with SDG 10 by addressing disparities and ensuring that children in underprivileged communities receive the care and support they deserve, fostering inclusivity and equal opportunities during a time of celebration.  Join us in making a difference!",
+      "Mai Chi: “Choosing to visit Mái Ấm Thành Tâm was a meticulous decision that our team has come to be incredibly proud of. After a long car ride, the rewards of our actions came to fruition through sweet smiles , and meaningful conversations. The stories we heard from this first visit has touched our hearts, bringing us a great sense of determination to continue aiding them in anyway we can, which is exactly what we plan to do in future missions. That being said, going forwards, we will return to Mai Ấm Thành Tâm, and the adorable friends we have made!”",
+      "Mai Chi : “As some may already be aware, the goal Hearts2Hands aim to work towards is SDG 10, Reduced Inequalities. Through this mission, and futures one to come, we will continue working towards this goal by providing Mai Ấm Thành Tâm with the resources our little friends will need to have the same chances we have.”",
+      "───",
+      "Chiến dịch thứ hai của Hearts2Hands tại trại trẻ mồ côi Mái Ấm Thánh Tâm nhấn mạnh việc cung cấp các nhu cầu thiết yếu cho trẻ em và mang lại niềm vui thông qua những món quà đầy ý nghĩa. Chúng mình mong muốn hỗ trợ cuộc sống của các em bằng mọi cách có thể trước thềm Giáng Sinh, như một cách để mang đến sự ấm áp, yêu thương, hy vọng và những nụ cười trong mùa lễ hội.",
+      "Điều này hướng đến Mục tiêu SDG 10 bằng cách giải quyết những chênh lệch và đảm bảo rằng trẻ em trong những cộng đồng khó khăn đều được nhận sự chăm sóc và hỗ trợ mà các em xứng đáng có được. Hãy tham gia cùng chúng mình để tạo nên sự khác biệt!",
+      "Mai Chi: “Việc lựa chọn thăm Mái Ấm Thành Tâm là một quyết định tỉ mỉ mà đội ngũ Hearts2Hands vô cùng tự hào. Sau một chuyến đi dài trên xe, những nụ cười ngọt ngào và những cuộc trò chuyện ý nghĩa đã mang lại phần thưởng xứng đáng cho những nỗ lực của đoàn. Những câu chuyện mà chúng mình nghe được từ chuyến thăm đầu tiên này đã chạm đến trái tim, mang lại cho chúng mình một quyết tâm mạnh mẽ để tiếp tục hỗ trợ họ bằng mọi cách có thể, và đó chính là điều chúng mình dự định thực hiện trong các chiến dịch ở tương lai. Với tinh thần đó, trong thời gian tới, chúng mình sẽ quay lại với Mái Ấm Thành Tâm và những người bạn đáng yêu mà chúng tôi đã kết thân!”",
+      "Mai Chi: “Như một số người có thể đã biết, mục tiêu mà Hearts2Hands hướng tới là SDG 10, Giảm Bất Bình Đẳng. Thông qua sứ mệnh này và các sứ mệnh trong tương lai, chúng mình sẽ tiếp tục nỗ lực đạt được mục tiêu này bằng cách cung cấp cho Mái Ấm Thành Tâm những nguồn lực mà các bạn nhỏ của chúng ta cần để có được những cơ hội giống như chúng ta.”"
+    ],
+    "hashtag": [
+      "#mission",
+      "#joy",
+      "#gifts"
+    ],
+    "path": "mission2"
+  },
+  {
+    "title": "Mission III: Spreading Smiles",
+    "date": "August 15, 2025",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission3.jpg",
+    "content": [
+      "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm’s playground. This mission aims to create a safe, inclusive, and joyful environment where these children can freely play, explore, and connect with one another.",
+      "Beyond physical improvements, the project is grounded in the spirit of compassion, providing not just equipment, but also care, attention, and a sense of belonging.",
+      "Through this, Hearts2Hands hopes to make a different through SDG10 by spread love and nurture the emotional and social development of every child in the community.",
+      "───",
+      "Chiến dịch thứ 3 của Hearts2Hands tập trung vào việc nâng cao phúc lợi cho trẻ em bằng cách cải thiện cơ sở vật chất và điều kiện tại khu vui chơi của Mái Ấm Thánh Tâm. Mục tiêu của sứ mệnh này là tạo ra một môi trường an toàn, hòa nhập và tràn ngập niềm vui, nơi các em nhỏ có thể tự do vui chơi, khám phá và kết nối với nhau.",
+      "Bên cạnh việc nâng cấp cơ sở vật chất, dự án còn được xây dựng trên tinh thần yêu thương, mang đến không chỉ là thiết bị, mà còn là sự quan tâm, chăm sóc và cảm giác được thuộc về.",
+      "Thông qua sứ mệnh này, Hearts2Hands hy vọng sẽ tạo nên sự khác biệt theo hướng tiếp cận SDG10, lan tỏa yêu thương và nuôi dưỡng sự phát triển cảm xúc, xã hội của mỗi đứa trẻ trong cộng đồng."
+    ],
+    "hashtag": [
+      "#mission",
+      "#smiles",
+      "#community"
+    ],
+    "path": "mission3"
+  },
+  {
+    "title": "Mission IV: Spreading Love",
+    "date": "October 6, 2025",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg",
+    "content": [
+      "Hearts2Hands’ Mission IV took place at Xóm Chạy Thận, where we spent time with the community, organized meaningful activities, and decorated a joyful festival environment for underprivileged patients.",
+      "Recognizing the need to bring a sense of festivity and hope, Hearts2Hands partnered with SEF to create an event filled with warmth and connection. Together, we shared smiles, laughter, and encouragement.",
+      "Our team prepared 100 Mid-Autumn gifts like noodles, snacks and rice toppings. Hearts to Hands decided that we will give away Moon Cakes and Lanterns because it show the moon festival spirit the most, spreading love and joy to everyone and reminding them that celebration and care truly go hand in hand.",
+      "───",
+      "Sứ mệnh IV của Hearts2Hands được tổ chức tại Xóm Chạy Thận, nơi chúng mình đã dành thời gian gắn bó cùng cộng đồng, tổ chức nhiều hoạt động ý nghĩa và trang trí không gian lễ hội ấm áp cho các bệnh nhân có hoàn cảnh khó khăn.",
+      "Nhận thấy nhu cầu mang lại không khí lễ hội và niềm hy vọng cho mọi người, Hearts2Hands đã kết hợp cùng SEF để tạo nên một sự kiện tràn đầy tình yêu thương và sự gắn kết. Cùng nhau, chúng mình đã chia sẻ những nụ cười, tiếng cười và sự khích lệ đến từng người tham dự.",
+      "Đội ngũ của chúng mình đã chuẩn bị 100 phần quà Trung Thu bao gồm mì, bánh kẹo và các món ăn nhẹ. Hearts2Hands đã thêm tặng bánh Trung Thu và lồng đèn – hai biểu tượng đặc trưng nhất của ngày Tết Trăng Rằm – nhằm lan tỏa tinh thần của lễ hội, mang lại niềm vui và nhắc nhở rằng niềm hạnh phúc và sự quan tâm luôn đi cùng nhau."
+    ],
+    "hashtag": [
+      "#mission",
+      "#autmn-festival",
+      "#gifts"
+    ],
+    "path": "mission4"
+  },
+  {
+    "title": "Volleyball Fundraising @Concordia",
+    "date": "February 10, 2025",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/volleyball_fundraise.jpg",
+    "content": [
+      "On February 10th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi’s charity volleyball tournament, where we opened a booth to sell food and snacks raised money to fund our upcoming missions.",
+      "Phan Anh : “I think this experience really helped raise awareness about Hearts2Hands and our mission. Players from different schools came to play, and were all introduced to Heart2Hands motives and missions at the snack booth.”",
+      "───",
+      "Vào ngày 10 tháng 2, Hearts2Hands đã có cơ hội tham gia một hoạt động gây quỹ trong giải đấu bóng chuyền từ thiện của trường Concordia Hanoi, nơi chúng tôi mở một gian hàng bán đồ ăn và đồ ăn nhẹ để gây quỹ cho các sứ mệnh sắp tới.",
+      "Phan Anh: “Tôi nghĩ trải nghiệm này thực sự giúp nâng cao nhận thức về Hearts2Hands và sứ mệnh của chúng tôi. Các vận động viên từ nhiều trường khác nhau đến tham gia thi đấu, và tất cả đều được giới thiệu về mục tiêu cũng như các sứ mệnh của Hearts2Hands tại gian hàng đồ ăn nhẹ.”"
+    ],
+    "hashtag": [
+      "#volleyball",
+      "#fundraiser",
+      "#community"
+    ],
+    "path": "volleyball-fundraising"
+  },
+  {
+    "title": "Christmas Fair @BVIS",
+    "date": "DECEMBER 12, 2024",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
+    "content": [
+      "Hearts2Hands recently took part in a service introduction at the British Vietnamese International School Hanoi. We presented our goals, perspective, and group’s mission as a way to both raise awareness of the various problems we aim to address through our missions and to inspire others to join us in creating meaningful change.",
+      "Duy: “Participating in the Christmas Fair at BVIS Hanoi was such a rewarding experience. I felt incredibly proud to represent Hearts2Hands and share our club’s mission. The energy at the event was contagious, and I loved connecting with other people who are passionate about making a positive impact. It was also a great opportunity to learn from other organizations who also participated  and see the variety of ways people are serving the community. Overall, it was a fantastic experience, and I’m really excited about where Hearts2Hands is headed in the future”",
+      "───",
+      "Hearts2Hands gần đây đã tham gia buổi giới thiệu về hoạt động cộng đồng tại Trường Quốc tế Anh Việt Hà Nội (BVIS). Chúng mình đã trình bày các mục tiêu và nhiệm vụ của nhóm như một cách để nâng cao nhận thức về các vấn đề khác nhau mà chúng mình mong muốn được góp công góp phần giải quyết, đồng thời truyền cảm hứng để người xung quanh cùng chung tay tạo nên sự thay đổi ý nghĩa",
+      "Duy: “Tham gia Hội chợ Giáng sinh tại trường BVIS là một trải nghiệm vô cùng ý nghĩa. Mình cảm thấy rất tự hào khi được đại diện cho Hearts2Hands, thay mặt các thành viên khác để giới thiệu Hearts2Hands tới các bạn học sinh đồng chăng lứa ở đây. Bầu không khí tại sự kiện thật sôi động, và mình rất thích kết nối với những người khác có cùng đam mê tạo ra tác động tích cực. Đây cũng là cơ hội tuyệt vời để học hỏi từ các tổ chức khác tham gia sự kiện và thấy được sự đa dạng trong cách mọi người phục vụ cộng đồng. Về tổng thể, đây là một trải nghiệm tuyệt vời, và mình rất hào hứng với hướng phát triển của Hearts2Hands trong tương lai.”"
+    ],
+    "hashtag": [
+      "#xmas-fair",
+      "#bvis",
+      "#festive"
+    ],
+    "path": "bvis-xmas-fair"
+  },
+  {
+    "title": "Service Fair @Concordia",
+    "date": "OCTOBER 17, 2024",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/serv_fair.png",
+    "content": [
+      "Hearts2Hands participated in a service introductory event, where we had the opportunity to showcase the team’s mission and goals to fellow students at Concordia International School Hanoi. Our group’s founder, Phan Anh, presented Hearts2Hands’ goals and missions to Concordia’s high school. Following the presentation, Hearts2Hands members at Concordia Hanoi gathered to represent our club at our own booth, showcasing our perspective and ideas.",
+      "Phan Anh : “I think this experience really helped raise awareness about Hearts2Hands and our mission. It also highlighted the importance of SDG 10, reducing inequalities among young people in Vietnam, which is our core value. Seeing so many people engage with our booth made me hopeful about the impact we can create together.”",
+      "Bob: “I first learned about Hearts2Hands at the Service Fair at Concordia Hanoi, and their mission to reduce inequalities among young people around the country really inspired me. I wanted to contribute, so I joined as a web developer to help expand their reach and impact. It’s been rewarding to be part of a team that’s making a real difference.”",
+      "───",
+      "Hearts2Hands đã tham gia một sự kiện giới thiệu về các hoạt động phục vụ, nơi chúng mình có cơ hội trình bày mục tiêu của nhóm đến các bạn học sinh tại trường quốc tế Concordia Hanoi. Người sáng lập của nhóm, Phan Anh, đã đại diện trình bày mục tiêu của Hearts2Hands với khối cấp 3 của trường Concordia. Sau phần trình bày, các thành viên của Hearts2Hands tại Concordia Hanoi đã tập trung để giới thiệu câu lạc bộ tại gian hàng riêng của mình, nơi chúng mình chia sẻ những mục tiêu và góc nhìn của nhóm.",
+      "Phan Anh : “Mình nghĩ trải nghiệm này thực sự đã giúp nâng cao nhận thức về Hearts2Hands và những chiến dịch / mục tiêu của chúng H2H. Nó cũng nhấn mạnh tầm quan trọng của Mục tiêu Phát triển Bền vững số 10, giảm bất bình đẳng giữa người trẻ ở Việt Nam. Được thấy nhiều người quan tâm đến gian hàng của Hearts2Hands khiến mình có thêm hy vọng về tác động mà chúng ta có thể cùng nhau tạo ra.”",
+      "Bob: “ Mình biết đến Hearts2Hands lần đầu tiên tại Service Fair ở Concordia Hanoi, và mục tiêu giảm bất bình đẳng giữa người trẻ trên đất nước đã thực sự truyền cảm hứng cho mình. Mình muốn đóng góp một phần nào đó khả năng của bản thân, nên đã tham gia với vai trò là một nhà phát triển web để giúp mở rộng tầm ảnh hưởng và tác động của dự án. Thật tuyệt khi được trở thành một phần của đội ngũ đang tạo nên sự khác biệt thực sự.”"
+    ],
+    "hashtag": [
+      "#concordia",
+      "#service-fair",
+      "#introductory"
+    ],
+    "path": "service-fair"
+  },
+  {
+    "title": "The Story Of Mái Ấm Thánh Tâm",
+    "date": "August 4, 2025",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/maiamthanhtam_story.png",
+    "content": [
+      "Mái Ấm Thánh Tâm is a charitable home dedicated to caring for orphaned, abandoned, or underprivileged children. Operated by Catholic nuns and volunteers, the shelter provides a safe and nurturing environment where children receive not only basic necessities such as food, clothing, and education, but also emotional and spiritual support.",
+      "Its core mission is to offer love, stability, and opportunities for growth to children who face difficult life circumstances, ensuring they are not left behind. Mái Ấm Thánh Tâm reflects a deep commitment to SDG10 : reduces inequalities.",
+      "───",
+      "Mái Ấm Thánh Tâm là một mái ấm từ thiện dành cho các em nhỏ mồ côi, bỏ rơi hoặc có hoàn cảnh khó khăn. Được thành lập bởi các nữ tu Công giáo và các tình nguyện viên, mái ấm mang đến một môi trường an toàn và yêu thương, nơi trẻ em không chỉ được đáp ứng các nhu cầu thiết yếu như thực phẩm, quần áo và giáo dục, mà còn nhận được sự hỗ trợ về mặt tinh thần và cảm xúc.",
+      "Sứ mệnh cốt lõi của Mái Ấm Thánh Tâm là trao gửi tình thương, sự ổn định và cơ hội phát triển cho những trẻ em đang gặp hoàn cảnh khó khăn, đảm bảo các em không bị bỏ lại phía sau. Mái Ấm Thánh Tâm thể hiện cam kết sâu sắc đối với Mục tiêu Phát triển Bền vững số 10 (SDG10): Giảm bất bình đẳng."
+    ],
+    "hashtag": [
+      "#story",
+      "#mai-am-thanh-tam"
+    ],
+    "path": "storyofmaiamthanhtam"
+  },
+  {
+    "title": "Hearts2Hands 2024 Recap",
+    "date": "DECEMBER 31, 2024",
+    "imgURL": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hfoundation.jpg",
+    "content": [
+      "On August 20th, Hearts2Hands was founded with the goal of supporting Vietnamese young people, aligning with the objectives of SDG 10.",
+      "On October 11th, Hearts2Hands carried out our first mission, called Mission I. Education for young people: Pathways to E-Education. Hearts2Hands first mission focusses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ Cấm Khê. By providing access to technology, we aim to create new education opportunities for students here.",
+      "On October 16th, Hearts2Hands took part in an introductory event at Concordia Hanoi. We participated in the Service Fair with our own booth, where we shared our club's mission, perspective, and goals.",
+      "On December 12th, Hearts2Hands took part in a service introduction at the British Vietnamese International School Christmas fair. We presented our goals, perspective, and group's mission as a way to both raise awareness of the various problems we aim to address through our mission and to inspire others to join us in creating meaningful change.",
+      "On December 14th, We visited orphanage Mái Ấm Thánh Tâm to visit the childrens and people here, as a part of Mission II where we aim to accomplish afterwards.",
+      "On December 15th, Hearts2Hand's Mission II: Joy for Young Hearts at Mái Ấm Thánh Tâm orphanage highlights providing the children's essential needs and spreading joy through thoughtful gifts. We aim to support their lives in any way possible before Christmas, as a way to bring warmth, love, and hope, and smile during the holiday season.",
+      "───",
+      "Vào ngày 20 tháng 8, Hearts2Hands được thành lập với mục tiêu hỗ trợ thanh thiếu niên Việt Nam, phù hợp với mục tiêu của SDG 10.",
+      "Vào ngày 11 tháng 10, Hearts2Hands thực hiện sứ mệnh đầu tiên mang tên Mission I. Giáo dục cho thanh thiếu niên: Con đường đến với E-Education. Sứ mệnh đầu tiên của Hearts2Hands tập trung vào việc nâng cao chất lượng giáo dục bằng cách cung cấp máy tính cho trường Tạ Xã 1 tại Phú Thọ, Cẩm Khê. Thông qua việc mang đến cơ hội tiếp cận công nghệ, chúng tôi hy vọng sẽ tạo ra nhiều cơ hội học tập mới cho học sinh nơi đây.",
+      "Vào ngày 16 tháng 10, Hearts2Hands tham gia sự kiện giới thiệu tại trường Concordia Hà Nội. Chúng tôi tham dự Service Fair với gian hàng riêng, nơi chia sẻ sứ mệnh, tầm nhìn và mục tiêu của câu lạc bộ",
+      "Vào ngày 12 tháng 12, Hearts2Hands tham gia buổi giới thiệu tại hội chợ Giáng Sinh của Trường Quốc tế Anh - Việt (BVIS). Chúng tôi trình bày mục tiêu, tầm nhìn và sứ mệnh của nhóm như một cách để nâng cao nhận thức về những vấn đề mà chúng tôi hướng đến giải quyết, đồng thời truyền cảm hứng cho mọi người cùng chung tay tạo ra sự thay đổi tích cực.",
+      "Vào ngày 14 tháng 12, chúng tôi đến thăm mái ấm Thánh Tâm để gặp gỡ và trò chuyện với các em nhỏ cùng mọi người ở đây, như một phần trong Sứ mệnh II mà chúng tôi sẽ tiếp tục thực hiện sau đó.",
+      "Vào ngày 15 tháng 12, Sứ mệnh II của Hearts2Hands: Niềm vui cho những trái tim nhỏ tại Mái Ấm Thánh Tâm tập trung vào việc hỗ trợ các nhu cầu thiết yếu cho các em nhỏ và lan tỏa niềm vui thông qua những món quà ý nghĩa. Chúng tôi mong muốn giúp đỡ cuộc sống của các em bằng mọi cách có thể trước Giáng Sinh, mang đến sự ấm áp, yêu thương, hy vọng và nụ cười trong mùa lễ hội."
+    ],
+    "hashtag": [
+      "#2024-recap"
+    ],
+    "path": "2024-recap"
+  }
 ]
