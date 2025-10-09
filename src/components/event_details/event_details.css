@@ -1,102 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lilita+One&family=Passion+One:wght@400;700;900&display=swap');
 
+/* Page Background */
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    min-height: 100vh;
+}
+
 /* Div Container */
 .title-date-container {
-    margin-top: 10rem;
+    margin-top: 8rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 /* News Title */
 .news-title {
     font-family: "Fira Sans", sans-serif !important;
-    font-weight: bold !important;
+    font-weight: 800 !important;
     font-style: normal !important;
-    color: #2e3b55;
-    margin-bottom: 12px !important;
+    color: #ffffff !important;
+    margin-bottom: 16px !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    letter-spacing: -1px !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* News Date */
 .news-date {
     font-family: "Fira Sans", sans-serif !important;
-    margin-bottom: 64px !important;
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
 }
 
 /* Image Styling */
 .news-img {
-    border-radius: 12px !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-    margin-bottom: 12px !important;
-    object-fit: fill !important;
-    margin-bottom: 4rem !important;
-    border: 3px solid rgba(0, 0, 0, 1);
+    border-radius: 24px !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6) !important;
+    margin-bottom: 5rem !important;
+    object-fit: cover !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    transition: transform 0.4s ease !important;
+}
+
+.news-img:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 20px 56px rgba(0, 0, 0, 0.7) !important;
+}
+
+.paragraph-wrapper {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.language-flag {
+    position: absolute;
+    left: -70px;
+    top: 8px;
+    width: 36px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .news-paragraph {
     font-family: "Fira Sans", sans-serif !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 0 !important;
     line-height: 2 !important;
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 400 !important;
+}
+
+@media (max-width: 900px) {
+    .language-flag {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 12px;
+        display: block;
+    }
+}
+
+.content-divider {
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    margin: 4rem 0;
 }
 
 .news-hashtags {
-    margin-top: 3.5rem !important;
-    font-size: 15px !important;
-    color: rgb(215, 153, 34) !important;
+    margin-top: 4rem !important;
+    font-size: 0.9rem !important;
     display: flex;
-    gap: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.news-hashtags p {
+    color: #72d3ff !important;
+    background: rgba(114, 211, 255, 0.12) !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    border: 1.5px solid rgba(114, 211, 255, 0.25) !important;
+    transition: all 0.3s ease !important;
+    margin: 0 !important;
+}
+
+.news-hashtags p:hover {
+    background: rgba(114, 211, 255, 0.2) !important;
+    border-color: rgba(114, 211, 255, 0.4) !important;
+    transform: translateY(-2px) !important;
 }
 
 /* Wrapper for the arrow and text */
 .link-arrows {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures the components are vertically aligned */
-    flex-wrap: nowrap; /* Prevents wrapping of the components */
+    align-items: center;
+    flex-wrap: nowrap;
     margin: 8rem 0rem 10rem 0rem;
-    width: 100%; /* Ensures the container spans the full width */
+    width: 100%;
 }
 
 /* Back to Homepage and To Timeline */
 .b2h, .to-timeline {
     display: flex !important;
-    align-items: center !important; /* Aligns text and arrow vertically */
+    align-items: center !important;
     margin: 0 !important;
-    white-space: nowrap; /* Prevents the text from wrapping */
+    white-space: nowrap;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.b2h:hover, .to-timeline:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
 }
 
 /* Back to Homepage - Normal order */
 .b2h {
-    justify-content: flex-start; /* Aligns the "Back to Homepage" text and arrow to the left */
+    justify-content: flex-start;
 }
 
 .b2h img {
-    margin-right: 10px; /* Space between arrow and text */
+    margin-right: 12px;
 }
 
 /* To Timeline - Reverse order to move the arrow to the right */
 .to-timeline {
-    flex-direction: row-reverse; /* Reverses the order of text and arrow */
-    justify-content: flex-start; /* Ensures the "To Timeline" section is left-aligned with the arrow to the right */
-    width: 100%; /* Ensures it spans the remaining space */
+    flex-direction: row-reverse;
+    justify-content: flex-start;
 }
 
 .to-timeline img {
-    margin-left: 10px; /* Space between text and arrow */
+    margin-left: 12px;
 }
 
 /* Arrow image styling */
 .back-home, .to-timeline-arrow {
-    width: 24px !important;
-    height: 24px !important;
+    width: 18px !important;
+    height: 18px !important;
     transition: transform 0.3s ease !important;
+    filter: invert(1);
+}
+
+.b2h:hover .back-home {
+    transform: translateX(-4px);
+}
+
+.to-timeline:hover .to-timeline-arrow {
+    transform: translateX(4px);
 }
 
 /* Text styling for both Back to Homepage and To Timeline */
 .back-home-p, .to-timeline-p {
     line-height: 1.6 !important;
-    text-align: center !important; /* Center the text horizontally */
+    text-align: center !important;
     letter-spacing: 0.5px !important;
-    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.1) !important;
-    white-space: nowrap; /* Ensures the text stays on one line */
-    margin: 0; /* Removes any default margin */
+    white-space: nowrap;
+    margin: 0;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
 }

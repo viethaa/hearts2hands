@@ -12,7 +12,6 @@ import { Link } from "react-router"; // change to "react-router-dom" if needed
 const navLinks = [
   { label: "Home", href: "/", isScroll: false },
   { label: "Timeline", href: "/timeline", isScroll: false },
-  { label: "News Page", href: "/newspage", isScroll: false },
   { label: "Photo Gallery", href: "/photogallery", isScroll: false },
   // remove or add items here
 ];

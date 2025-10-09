@@ -12,6 +12,24 @@
     transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+.latest-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .news-card-wrapper:hover {
     transform: translateY(-16px) rotate(-1deg);
     border-color: rgba(255, 255, 255, 0.15);

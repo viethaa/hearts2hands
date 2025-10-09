@@ -17,3 +17,40 @@
     pointer-events: none;
     z-index: 0;
 }
+
+.timeline-page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+    text-shadow:
+        0 0 40px rgba(255, 255, 255, 0.3),
+        0 0 80px rgba(255, 255, 255, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-page-title::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
+    border-radius: 2px;
+}
+
+.timeline-page-title::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.6), transparent);
+    border-radius: 2px;
+}

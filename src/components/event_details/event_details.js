@@ -27,7 +27,7 @@ export default function EventDetails({
                         component="img"
                         src={imgURL}
                         sx={{
-                            height: { xs: "25rem", md: "55rem" },
+                            height: { xs: "20rem", md: "35rem" },
                             width: "100%",
                         }}
                     />
@@ -35,11 +35,28 @@ export default function EventDetails({
             </Container>
             <Container maxWidth="md">
                 <div>
-                    {content.map((data) => (
-                        <Typography variant="body1" display="block" className="news-paragraph">
-                            {data}
-                        </Typography>
-                    ))}
+                    {content.map((data, index) => {
+                        if (data === "───") {
+                            return <hr className="content-divider" key={index} />;
+                        }
+
+                        const dividerIndex = content.indexOf("───");
+                        const isFirstEnglish = index === 0;
+                        const isFirstVietnamese = dividerIndex !== -1 && index === dividerIndex + 1;
+                        const showFlag = isFirstEnglish || isFirstVietnamese;
+                        const flagSrc = isFirstEnglish
+                            ? "https://flagcdn.com/w80/gb.png"
+                            : "https://flagcdn.com/w80/vn.png";
+
+                        return (
+                            <div className="paragraph-wrapper" key={index}>
+                                {showFlag && <img src={flagSrc} alt="flag" className="language-flag" />}
+                                <Typography variant="body1" display="block" className="news-paragraph">
+                                    {data}
+                                </Typography>
+                            </div>
+                        );
+                    })}
                 </div>
                 <div class="news-hashtags">
                     {hashtag.map((data) => (

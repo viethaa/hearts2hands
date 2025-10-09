@@ -21,7 +21,7 @@ export default function UserReview() {
                                 <span className="quote-label">Our Vision</span>
                             </div>
                             <Typography className="quote-text">
-                                The primary purpose of the foundation for Heart2Hands is to support and address the needs of Vietnamese youth. This project holds significant meaning for me, as it creates a positive impact on the community.
+                                "The primary purpose of the foundation for Heart2Hands is to support and address the needs of Vietnamese youth. This project holds significant meaning for me, as it creates a positive impact on the community"
                             </Typography>
                             <div className="quote-author">
                                 <Avatar

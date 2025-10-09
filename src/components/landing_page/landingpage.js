@@ -111,7 +111,7 @@ const LandingPage = () => {
       date: "Dec 12"
     },
     {
-      title: "Service Fair",
+      title: "2024 Concordia Service Fair",
       description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. We participated in the Service Fair with our own booth, where we shared our club's mission, perspective, and goals. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
       path: "service-fair",
@@ -134,8 +134,8 @@ const LandingPage = () => {
       description: "Mái Ấm Thánh Tâm is a charitable home dedicated to caring for orphaned, abandoned, or underprivileged children. Operated by Catholic nuns and volunteers, the shelter provides a safe and nurturing environment",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/maiamthanhtam_story.png",
       path: "sdg10",
-      year: "2024",
-      date: "Dec 31"
+      year: "2025",
+      date: "Aug 4"
     },
     {
       title: "2024 Recap",
@@ -220,6 +220,7 @@ const LandingPage = () => {
                       description={data.description}
                       year={data.year}
                       date={data.date}
+                      isLatest={index === 0}
                     />
                   </Link>
                 </Grid>
