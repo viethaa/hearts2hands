@@ -2,6 +2,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Change Log  
+
+### `v2.0.0`
+
+###  🎨 UI Redesign
+- Website has been completely redesigned with updated UI and formatting.
+
+Visit now: https://hearts2hands.online
+
+#
+
 ### `v1.1.1`  
 
 #### 🔧 Deployment Fixed
