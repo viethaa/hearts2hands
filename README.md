@@ -3,6 +3,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Change Log  
 
+### `v2.0.1`  
+
+#### 🐛 Bug Fixed
+- Resolved corruption in ```footer.css``` by unintended file modification
+
+Visit now: https://hearts2hands.online
+
+#
+
 ### `v2.0.0`
 
 ###  🎨 UI Redesign
