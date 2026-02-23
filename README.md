@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `v2.0.1`  
 
 #### 🐛 Bug Fixed
-- Resolved corruption in ```footer.css``` by unintended file modification
+- Resolved file corruption in ```footer.css``` 
 
 Visit now: https://hearts2hands.online
 
