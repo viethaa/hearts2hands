@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `v2.1.1`  
 
-#### 📰 Updated Events and Blogposts
+### 📰 Updated Events and Blogposts
 - Added 2 Event Posts
 - Added 1 Blogpost
 - Updated Timeline
@@ -16,7 +16,7 @@ Visit now: https://hearts2hands.online
 
 ### `v2.0.1`  
 
-#### 🐛 Bug Fixed
+### 🐛 Bug Fixed
 - Resolved file corruption in ```footer.css``` 
 
 Visit now: https://hearts2hands.online
@@ -34,7 +34,7 @@ Visit now: https://hearts2hands.online
 
 ### `v1.1.1`  
 
-#### 🔧 Deployment Fixed
+### 🔧 Deployment Fixed
 - The website has been migrated to a new hosting enviroment and deployed under a new domain.
 
 Visit now: https://hearts2hands.online
@@ -56,14 +56,14 @@ Visit now: https://hearts2hands.online
     
 - #️⃣ **Changed Hashtags Text Color** – Improved readability and contrast.  
 
-#### ⚖️ Other Updates  
+### ⚖️ Other Updates  
 - **Added Copyright License to Footer** – Ensuring proper attribution and rights clarity.
 
 #
 
 ### `v1.0.0`  
 
-#### 🛠 Initial Commit  
+### 🛠 Initial Commit  
 The first official release of **Hearts2Hands**! This version lays the foundation for the website with essential pages and functionality.
 
 #### 🌍 Landing Page  
