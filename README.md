@@ -3,6 +3,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Change Log  
 
+### `v2.1.1`  
+
+#### 📰 Updated Events and Blogposts
+- Added 2 Event Posts
+- Added 1 Blogpost
+- Updated Timeline
+
+Visit now: https://hearts2hands.online
+
+#
+
 ### `v2.0.1`  
 
 #### 🐛 Bug Fixed
