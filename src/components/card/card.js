@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import './card.css'
 
-export default function NewsCard({ imageLink, title, description, year, date, isLatest }) {
+export default function NewsCard({ imageLink, title, description, year, date, isLatest, objectFit, imageBackground }) {
   // Function to highlight mission numbers
   const formatTitle = (title) => {
     const missionPattern = /(Mission\s+(?:IV|I{1,3}):?)/i;
@@ -33,8 +33,8 @@ export default function NewsCard({ imageLink, title, description, year, date, is
     <div className="news-card-wrapper">
       {isLatest && <div className="latest-badge">Latest</div>}
       <CardActionArea className="card-action">
-        <div className="card-image-container">
-          <img className="card-media" src={imageLink} alt={title} />
+        <div className="card-image-container" style={{ backgroundColor: imageBackground || 'transparent' }}>
+          <img className="card-media" src={imageLink} alt={title} style={{ objectFit: objectFit || 'cover' }} />
           <div className="card-overlay"></div>
         </div>
         <div className="card-content-wrapper">

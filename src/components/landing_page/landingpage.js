@@ -95,8 +95,24 @@ const LandingPage = () => {
 
   const myEventsInfo = [
     {
+      title: "MONCI x H2H Bakesale",
+      description: "Last week, Hearts2Hands and Monci Bakehouse collaborated and fundraised together at BIS International School during their Christmas Fair. Read more...",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/moncih2h.jpg",
+      path: "monci-bakesale",
+      year: "2025",
+      date: "Dec 21"
+    },
+    {
+      title: "SEF Collaboration",
+      description: "Hearts2Hands members volunteered with our partner organization SEF at Bệnh viện E, where we provided young patients with essential items and emotional encouragement. Read more...",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sefh2h.jpg",
+      path: "sef-collaboration",
+      year: "2025",
+      date: "Dec 1"
+    },
+    {
       title: "Volleyball Fundraising",
-      description: "On February 8th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi’s charity volleyball tournament. Read more...",
+      description: "On February 8th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi's charity volleyball tournament. Read more...",
       imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/volleyball_fundraise.jpg",
       path: "volleyball-fundraising",
       year: "2025",
@@ -144,6 +160,14 @@ const LandingPage = () => {
       path: "2024-recap",
       year: "2024",
       date: "Dec 31"
+    },
+    {
+      title: "Our Goal: SDG 10",
+      description: "Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities",
+      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.png",
+      path: "our-goal-sdg10",
+      year: "2024",
+      date: "Dec 15"
     },
 
   ];
@@ -267,6 +291,8 @@ const LandingPage = () => {
                       description={data.description}
                       year={data.year}
                       date={data.date}
+                      objectFit={data.objectFit}
+                      imageBackground={data.imageBackground}
                     />
                   </Link>
                 </Grid>

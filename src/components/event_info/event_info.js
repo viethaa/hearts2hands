@@ -10,6 +10,34 @@ import './event_info.css'
 export default function EventInfo() {
   const eventInfo = [
     {
+      "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/moncih2h.jpg",
+      "objectFit": "fill",
+      "date": {
+        "day": "21",
+        "month": "Dec 2025",
+      },
+
+      "subtitle": "MONCI x H2H Bakesale",
+      "description": "Last week, Hearts2Hands and Monci Bakehouse collaborated and fundraised together at BIS International School during their Christmas Fair. This was a wonderful experience for our members and a great way to showcase our goals and values to a new audience.",
+      "hashtag1": "#bakesale",
+      "hashtag2": "#monci",
+      "hashtag3": "#christmas-fair",
+    },
+    {
+      "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sefh2h.jpg",
+      "objectFit": "fill",
+      "date": {
+        "day": "01",
+        "month": "Dec 2025",
+      },
+
+      "subtitle": "SEF Collaboration",
+      "description": "Hearts2Hands members volunteered with our partner organization SEF at Bệnh viện E, where we provided young patients with essential items and emotional encouragement. This collaboration demonstrates our commitment to working alongside other organizations to maximize our impact.",
+      "hashtag1": "#collaboration",
+      "hashtag2": "#sef",
+      "hashtag3": "#hospital-visit",
+    },
+    {
       "imglink": "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg",
       "objectFit": "fill",
       "date": {
