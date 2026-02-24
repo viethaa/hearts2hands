@@ -56,8 +56,10 @@ Visit now: https://hearts2hands.online
     
 - #️⃣ **Changed Hashtags Text Color** – Improved readability and contrast.  
 
-### ⚖️ Other Updates  
-- **Added Copyright License to Footer** – Ensuring proper attribution and rights clarity.
+#### ⚖️ Other Updates  
+- **Added Copyright License to Footer** 
+
+Visit now: https://hearts2hands.online
 
 #
 
@@ -77,3 +79,5 @@ The first official release of **Hearts2Hands**! This version lays the foundation
 
 #### 🕰 Timeline Page  
 - A dedicated **Timeline Page** displaying all of **Hearts2Hands'** activities from its **foundation until now**.
+
+Visit now: https://hearts2hands.online
