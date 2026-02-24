@@ -5,9 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `v2.0.2`  
 
-#### 📰 Updated Events and Blogposts
+#### 📰 Updated Posts
 - Added 2 Event Posts
-- Added 1 Blogpost
+- Added 1 Blog Post
 - Updated Timeline
 
 Visit now: https://hearts2hands.online
@@ -50,9 +50,9 @@ Visit now: https://hearts2hands.online
 - **Changed Background Image** – Fresh new look for better aesthetics.  
 
 - **Buffed Opacity:**  
-  - Quote block opacity increased to **95%**.  
-  - Event boxes opacity increased to **90%**.  
-  - News boxes opacity increased to **90%**.
+  - Quote block opacity increased to `95%`.  
+  - Event boxes opacity increased to `90%`.  
+  - News boxes opacity increased to `90%`.
     
 - #️⃣ **Changed Hashtags Text Color** – Improved readability and contrast.  
 
