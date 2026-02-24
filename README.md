@@ -59,7 +59,7 @@ Visit now: https://hearts2hands.online
 #### ⚖️ Other Updates  
 - **Added Copyright License to Footer** 
 
-Visit now: https://hearts2hands.online
+Visit now: https://hearts2hands.site
 
 #
 
@@ -80,4 +80,4 @@ The first official release of **Hearts2Hands**! This version lays the foundation
 #### 🕰 Timeline Page  
 - A dedicated **Timeline Page** displaying all of **Hearts2Hands'** activities from its **foundation until now**.
 
-Visit now: https://hearts2hands.online
+Visit now: https://hearts2hands.site
