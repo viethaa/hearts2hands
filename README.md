@@ -3,9 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Change Log  
 
-### `v2.1.1`  
+### `v2.0.2`  
 
-### 📰 Updated Events and Blogposts
+#### 📰 Updated Events and Blogposts
 - Added 2 Event Posts
 - Added 1 Blogpost
 - Updated Timeline
@@ -16,7 +16,7 @@ Visit now: https://hearts2hands.online
 
 ### `v2.0.1`  
 
-### 🐛 Bug Fixed
+#### 🐛 Bug Fixed
 - Resolved file corruption in ```footer.css``` 
 
 Visit now: https://hearts2hands.online
@@ -25,7 +25,7 @@ Visit now: https://hearts2hands.online
 
 ### `v2.0.0`
 
-###  🎨 UI Redesign
+####  🎨 UI Redesign
 - Website has been completely redesigned with updated UI and formatting.
 
 Visit now: https://hearts2hands.online
@@ -34,8 +34,8 @@ Visit now: https://hearts2hands.online
 
 ### `v1.1.1`  
 
-### 🔧 Deployment Fixed
-- The website has been migrated to a new hosting enviroment and deployed under a new domain.
+#### 🔧 Deployment Fixed
+- The website has been migrated to a new hosting environment and deployed under a new domain.
 
 Visit now: https://hearts2hands.online
 
