@@ -1,0 +1,275 @@
+/* ==========================================================================
+   Hearts2Hands — design tokens
+   --------------------------------------------------------------------------
+   Palette drawn from Vietnamese lacquer (sơn mài): deep red, ink black,
+   gold leaf, eggshell. Warm ground so the mission photography reads as
+   photography rather than as something recovered from behind a dark scrim.
+
+   This is the only file that defines colour, type scale and spacing.
+   ========================================================================== */
+
+:root {
+  /* --- Ground & ink --- */
+  --paper: #fbf7f0;        /* warm off-white, the page ground */
+  --paper-2: #f4eee3;      /* recessed band */
+  --paper-3: #ece3d4;      /* hairline fills, image placeholders */
+  --ink: #14100d;          /* near-black with a brown cast */
+  --ink-soft: #3c3530;
+  --mute: #6b625a;         /* secondary text */
+  --rule: #ddd2c0;         /* hairlines */
+
+  /* --- Accents --- */
+  --lacquer: #a4232a;      /* the one structural accent */
+  --lacquer-deep: #7d1a1f;
+  --lacquer-wash: #f6e7e5;
+  --gold: #b08b4f;         /* numerals, eyebrows, rules only */
+  --gold-wash: #f3ead8;
+  --sage: #5b6e5a;         /* impact / SDG signal */
+
+  /* --- Type --- */
+  --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Fluid scale. Display sizes are deliberately far apart so hierarchy
+     survives without relying on weight alone. */
+  --t-hero: clamp(3rem, 9vw, 7.5rem);
+  --t-h1: clamp(2.25rem, 5.5vw, 4rem);
+  --t-h2: clamp(1.75rem, 3.4vw, 2.75rem);
+  --t-h3: clamp(1.25rem, 2vw, 1.6rem);
+  --t-body: clamp(1rem, 1.05vw, 1.125rem);
+  --t-small: 0.9375rem;
+  --t-micro: 0.75rem;
+
+  /* --- Space --- */
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --section-y: clamp(4.5rem, 10vw, 9rem);
+  --measure: 68ch;
+
+  --radius: 2px;           /* near-square: this is a record, not an app */
+  --shadow: 0 1px 2px rgba(20, 16, 13, 0.06), 0 8px 28px rgba(20, 16, 13, 0.07);
+
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--t-body);
+  line-height: 1.65;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* Visible keyboard focus everywhere, without showing a ring on mouse clicks. */
+:focus-visible {
+  outline: 2px solid var(--lacquer);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+::selection {
+  background: var(--lacquer);
+  color: var(--paper);
+}
+
+/* ==========================================================================
+   Shared primitives
+   ========================================================================== */
+
+.h2h-shell {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.h2h-narrow {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Eyebrow — mono, letterspaced, with a short lacquer rule.
+   Used to label a section without a decorative heading treatment. */
+.h2h-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin: 0 0 1.25rem;
+}
+
+.h2h-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--lacquer);
+  flex: none;
+}
+
+/* Dateline — place · date, set in mono. The field-record texture. */
+.h2h-dateline {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--mute);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.h2h-dateline .sep {
+  color: var(--gold);
+}
+
+/* Link with a rule that draws in from the left on hover. */
+.h2h-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lacquer);
+  text-decoration: none;
+  padding-bottom: 2px;
+  background-image: linear-gradient(var(--lacquer), var(--lacquer));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.4s var(--ease);
+}
+
+.h2h-link:hover {
+  background-size: 100% 1px;
+}
+
+.h2h-link svg {
+  transition: transform 0.4s var(--ease);
+}
+
+.h2h-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Primary action. One filled button on the site; everything else is a link. */
+.h2h-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.75rem;
+  background: var(--lacquer);
+  color: var(--paper);
+  border: 1px solid var(--lacquer);
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.h2h-button:hover {
+  background: var(--lacquer-deep);
+  border-color: var(--lacquer-deep);
+}
+
+.h2h-button svg {
+  transition: transform 0.4s var(--ease);
+}
+
+.h2h-button:hover svg {
+  transform: translateX(3px);
+}
+
+.h2h-button--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.h2h-button--ghost:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* Screen-reader-only text. */
+.h2h-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

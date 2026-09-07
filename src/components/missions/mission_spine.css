@@ -1,0 +1,194 @@
+/* The mission spine — a continuous lacquer rule with gold numerals set on it.
+   This is the one loud element on the site; everything around it stays quiet. */
+
+.spine {
+  padding: var(--section-y) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 68px;
+}
+
+.spine__head {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Matches the rule above the Events and Blog Posts headings. */
+.spine__title {
+  display: inline-block;
+  font-size: var(--t-h1);
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--lacquer);
+}
+
+/* --- The rule --- */
+
+.spine__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* The rule itself. Drawn on the list rather than per item so it reads as one
+   continuous line rather than four stacked segments. */
+.spine__list::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--lacquer) 3%,
+    var(--lacquer) 97%,
+    transparent
+  );
+}
+
+.mission {
+  position: relative;
+  padding-left: 3.25rem;
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.mission:last-child {
+  padding-bottom: 0;
+}
+
+/* --- Numeral marker --- */
+
+.mission__marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 23px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Set in the display face rather than the mono utility face: these numerals are
+   the signature of the page, and at mono's weight they read as a caption. */
+.mission__numeral {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--lacquer);
+  background: var(--paper-2);
+  padding: 0.4rem 0;
+  line-height: 1;
+  min-width: 23px;
+  text-align: center;
+}
+
+/* --- Entry --- */
+
+.mission__body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mission__media {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper-3);
+  aspect-ratio: 4 / 3;
+}
+
+.mission__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.mission__media:hover img {
+  transform: scale(1.03);
+}
+
+.mission__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+/* Numeral repeated in the text column — the marker on the rule is small by
+   design, and this is what actually labels the entry for screen readers. */
+.mission__index {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.16em;
+  color: var(--lacquer);
+  text-transform: uppercase;
+}
+
+.mission__title {
+  font-size: var(--t-h2);
+}
+
+.mission__title a {
+  text-decoration: none;
+  background-image: linear-gradient(var(--ink), var(--ink));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  transition: background-size 0.4s var(--ease);
+}
+
+.mission__title a:hover {
+  background-size: 100% 1.5px;
+}
+
+.mission__dateline {
+  margin-top: -0.25rem;
+}
+
+.mission__blurb {
+  max-width: 54ch;
+  color: var(--ink-soft);
+}
+
+/* --- Breakpoints --- */
+
+@media (min-width: 800px) {
+  /* Content sits closer to the rule than it did at 5rem — the wider gap left
+     the numerals reading as a stray column rather than as marks on a spine. */
+  .mission {
+    padding-left: 4.25rem;
+  }
+
+  .spine__list::before {
+    left: 17px;
+  }
+
+  .mission__marker {
+    width: 35px;
+  }
+
+  .mission__numeral {
+    font-size: 1.375rem;
+    min-width: 35px;
+  }
+
+  .mission__body {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .mission__media {
+    aspect-ratio: 5 / 4;
+  }
+}
+
+@media (min-width: 1100px) {
+  .mission__body {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3.5rem;
+  }
+}

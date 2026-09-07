@@ -1,0 +1,61 @@
+/* Photo wall. CSS columns so each photograph keeps its own aspect ratio —
+   the previous grid forced every image into a fixed 480px row with
+   object-fit: cover, cropping portraits to letterbox strips. */
+
+/* Same max-width as .h2h-shell so the grid's left edge lines up with the page
+   heading above it. */
+.wall {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.wall__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 1;
+  column-gap: 12px;
+}
+
+.wall__item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  background: var(--paper-3);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.wall__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.4s var(--ease);
+}
+
+.wall__item img:hover {
+  opacity: 0.92;
+}
+
+@media (min-width: 600px) {
+  .wall__grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .wall__grid {
+    columns: 3;
+    column-gap: 16px;
+  }
+
+  .wall__item {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .wall__grid {
+    columns: 4;
+  }
+}

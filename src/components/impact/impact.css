@@ -1,0 +1,100 @@
+/* Impact band — the four figures, directly under the hero.
+
+   On paper rather than a black slab: the numerals are large enough to carry on
+   their own, and an ink block wedged between the hero and the vision section
+   read as a foreign object rather than part of the page. Hairline rules top and
+   bottom mark it instead. */
+
+.impact {
+  padding: clamp(2.25rem, 4vw, 3.25rem) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.impact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.5rem;
+}
+
+.impact__stat {
+  position: relative;
+}
+
+/* Hairline between figures rather than boxes around them. */
+.impact__stat + .impact__stat::before {
+  content: '';
+  position: absolute;
+  left: -0.75rem;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  width: 1px;
+  background: var(--rule);
+}
+
+/* On the 2-up mobile layout the third item starts a new row, so it must not
+   draw a divider on its left edge. */
+.impact__stat:nth-child(odd)::before {
+  display: none;
+}
+
+.impact__value {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.impact__unit {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--lacquer);
+}
+
+.impact__label {
+  margin-top: 0.7rem;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.impact__vi {
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--mute);
+  font-style: italic;
+}
+
+@media (min-width: 760px) {
+  .impact__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Four across: every item except the first takes a divider again. */
+  .impact__stat:nth-child(odd)::before {
+    display: block;
+  }
+
+  .impact__stat:first-child::before {
+    display: none;
+  }
+
+  .impact__stat + .impact__stat::before {
+    left: -1.25rem;
+  }
+}

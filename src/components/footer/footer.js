@@ -1,140 +1,85 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import { applySolidInversion } from '@mui/joy/colorInversion';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import Typography from '@mui/joy/Typography';
+import { Link } from 'react-router';
 import './footer.css';
 
-function Stat({ description, value }) {
-  return (
-    <Box sx={{ borderLeft: 3, borderColor: 'divider', px: 2, py: 0.5 }}>
-      <Typography level="h3" component="div">
-        {value}
-      </Typography>
-      <Typography level="title-sm" textColor="text.secondary">
-        {description}
-      </Typography>
-    </Box>
-  );
-}
+const S3 = 'https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images';
+const JOIN_FORM = 'https://forms.gle/3smohGKzZZAU6tJb7';
 
-Stat.propTypes = {
-  description: PropTypes.node,
-  value: PropTypes.node,
-};
+// The impact figures used to live here. They now sit directly under the hero
+// (src/components/impact) where they are actually seen.
+const SOCIALS = [
+  { name: 'Instagram', href: 'https://www.instagram.com/hearts_2_hands/', icon: `${S3}/ig_logo.png` },
+  { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61567384587346', icon: `${S3}/fb_logo.png` },
+  { name: 'TikTok', href: 'https://www.instagram.com/hearts_2_hands/', icon: `${S3}/tiktok.png` },
+];
 
-export default function ColorInversionAnyParent() {
+export default function SiteFooter() {
   return (
-    <Box className="footer-container"
-      sx={[
-        (theme) => ({
-          display: 'grid',
-          gridTemplateColumns: { sm: '1fr 1fr' },
-          alignItems: 'center',
-          rowGap: 2,
-          columnGap: 8,
-          p: 4,
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
-        }),
-        applySolidInversion('neutral'),
-      ]}
-    >
-      <div>
-        <Typography
-          level="h2"
-          component="h2"
-          sx={{
-            fontWeight: 'bold',
-            color: 'text.primary',
-            mb: 2,
-            textShadow: '0px 2px 4px rgba(0,0,0,0.4)'
-          }}
-        >
-          About Us
-        </Typography>
-        <Typography
-          level="body1"
-          textColor="text.secondary"
-          sx={{
-            lineHeight: 1.6,
-            maxWidth: '80ch',
-          }}
-        >
-          Heart2Hands is a student-led organization for youth equality in Vietnam.
-          Our mission is to empower young individuals by nurturing their talents
-          and fostering a sense of community and resilience.
-        </Typography>
+    <footer className="site-footer">
+      <div className="site-footer__inner">
+        <div className="site-footer__body">
+          <div className="site-footer__about">
+            <h2 className="site-footer__heading">
+              Hearts<span className="site-footer__two">2</span>Hands
+            </h2>
+            <p className="site-footer__text">
+              Hearts2Hands is a student-led organisation for youth equality in Vietnam. Our
+              mission is to empower young individuals by nurturing their talents and fostering a
+              sense of community and resilience.
+            </p>
+            <p className="site-footer__text site-footer__text--vi" lang="vi">
+              Hearts2Hands là một tổ chức do học sinh tạo lập, hướng đến sự bình đẳng của người
+              trẻ tại Việt Nam. Sứ mệnh của Hearts2Hands là giúp đỡ các bạn trẻ bằng cách nuôi
+              dưỡng tài năng qua những hoạt động và chiến dịch đầy ý nghĩa.
+            </p>
+          </div>
+
+          <div className="site-footer__cols">
+            <nav className="site-footer__col" aria-label="Footer">
+              <h3 className="site-footer__col-title">Pages</h3>
+              <Link to="/">Home</Link>
+              <Link to="/timeline">Timeline</Link>
+              <Link to="/photogallery">Photos</Link>
+            </nav>
+
+            <div className="site-footer__col">
+              <h3 className="site-footer__col-title">Follow</h3>
+              <ul className="site-footer__socials">
+                {SOCIALS.map((social) => (
+                  <li key={social.name}>
+                    <a href={social.href} target="_blank" rel="noreferrer">
+                      <img src={social.icon} alt="" width="18" height="18" />
+                      {social.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="site-footer__cta">
+          <p>
+            We recruit throughout the year, and there is a place for anyone who wants to help.
+          </p>
+          <a className="h2h-button" href={JOIN_FORM} target="_blank" rel="noreferrer">
+            Join the mission
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div className="site-footer__legal">
+          <span>© {new Date().getFullYear()} Ha Bach Viet. All rights reserved.</span>
+        </div>
       </div>
-      <Box
-        sx={{
-          display: { xs: 'none', md: 'grid' },
-          gridTemplateColumns: {
-            xs: 'repeat(auto-fill, minmax(min(100%, 180px), 1fr))',
-            sm: '1fr 1fr',
-          },
-          gap: 3,
-        }}
-      >
-        <Stat value="52.4M" description="VND raised" />
-        <Stat value="52.4M" description="VND Khuyên Góp" />
-        <Stat value="2.06K" description="Dollars raised" />
-        <Stat value="2.06K" description="USD Khuyên Góp" />
-      </Box>
-      <div>
-        <Typography
-          level="body1"
-          sx={{
-            mb: 2,
-            color: 'text.secondary',
-            maxWidth: '60ch',
-            lineHeight: 1.6,
-            marginTop: 2,
-          }}
-        >
-          Heart2Hands là một tổ chức do học sinh tạo lập, hướng đến sự bình đẳng của người trẻ tại Việt Nam. Sứ mệnh của Hearts2Hands là giúp đỡ các bạn trẻ bằng cách nuôi dưỡng tài năng qua những hoạt động và chiến dịch đầy ý nghĩa.
-        </Typography>
-        <Button variant="soft" color="primary">Follow Our Socials:</Button>
-      </div>
-      <Box
-        sx={{
-          display: { xs: 'none', md: 'grid' },
-          gridTemplateColumns: {
-            xs: 'repeat(auto-fill, minmax(min(100%, 180px), 1fr))',
-            sm: '1fr 1fr',
-          },
-          gap: 3,
-        }}
-      >
-        <Stat value="27" description="Members recruited" />
-        <Stat value="27" description="Thành Viên" />
-        <Stat value="4" description="Missions accomplished" />
-        <Stat value="4" description="Chiến Dịch Thành Công" />
-      </Box>
-      <div>
-        <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">
-          <img className="footer-ig-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/ig_logo.png" />
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61567384587346" target="_blank">
-          <img className="footer-fb-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/fb_logo.png" />
-        </a>
-        <a href="https://www.instagram.com/hearts_2_hands/" target="_blank">
-          <img className="footer-tt-logo" src="https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/tiktok.png" />
-        </a>
-      </div>
-      {/* Divider between content and watermark */}
-      <Box
-        sx={{
-          width: '100%',
-          height: '2px',
-          backgroundColor: 'rgba(255, 255, 255, 0.2)',
-          gridColumn: '1 / -1', // Ensures it spans all columns
-          my: 2
-        }}
-      />
-      <div class="watermark">
-        <Typography>© 2024 Ha Bach Viet. All rights reserved.</Typography>
-      </div>
-    </Box>
+    </footer>
   );
 }
