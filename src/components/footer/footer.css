@@ -1,43 +1,160 @@
-.footer-container {
-    border-top: 6px solid rgba(0, 0, 0, 1);  /* Only top border */
-    border-left: none;  /* No left border */
-    border-right: none; /* No right border */
-    border-bottom: none; /* No bottom border */
+/* Site footer. Laid out on grid — the previous version positioned its three
+   social icons with hardcoded negative margins (-48px 0 0 175px and friends),
+   so they only landed correctly at one window width. */
+
+.site-footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(3.5rem, 7vw, 6rem) 0 2rem;
 }
 
-.footer-ig-logo {
-    height: 30px !important; 
-    width: auto;
-    margin: -48px 0px 0px 175px;
-    transition: transform 0.3s ease; 
+.site-footer__inner {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-.footer-ig-logo:hover {
-    transform: scale(1.2);
+/* --- Body --- */
+
+.site-footer__body {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
-.footer-fb-logo {
-    height: 30px !important; 
-    width: auto;
-    margin: -31px 0px 0px 217px;
-    transition: transform 0.3s ease; 
+.site-footer__heading {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: 1.25rem;
 }
 
-.footer-fb-logo:hover {
-    transform: scale(1.2);
+.site-footer__two {
+  color: var(--lacquer);
 }
 
-.footer-tt-logo {
-    height: 38px !important; 
-    width: auto;
-    margin: -33px 0px 0px 257px;
-    transition: transform 0.3s ease; 
+.site-footer__text {
+  max-width: 56ch;
+  color: rgba(251, 247, 240, 0.75);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-.footer-tt-logo:hover {
-    transform: scale(1.2);
+.site-footer__text--vi {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(251, 247, 240, 0.14);
+  color: rgba(251, 247, 240, 0.6);
+  font-style: italic;
 }
 
-.watermark {
-    display: flex;
+.site-footer__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2.5rem;
+}
+
+.site-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.site-footer__col-title {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+
+.site-footer__col a {
+  color: rgba(251, 247, 240, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.25s var(--ease);
+}
+
+.site-footer__col a:hover {
+  color: var(--paper);
+}
+
+.site-footer__socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.site-footer__socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.site-footer__socials img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.25s var(--ease);
+}
+
+.site-footer__socials a:hover img {
+  opacity: 1;
+}
+
+/* --- CTA --- */
+
+.site-footer__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.75rem, 3vw, 2.25rem) 0;
+  border-top: 1px solid rgba(251, 247, 240, 0.16);
+  border-bottom: 1px solid rgba(251, 247, 240, 0.16);
+}
+
+.site-footer__cta p {
+  max-width: 42ch;
+  color: rgba(251, 247, 240, 0.75);
+}
+
+.site-footer__cta .h2h-button {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.site-footer__cta .h2h-button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+/* --- Legal --- */
+
+.site-footer__legal {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: rgba(251, 247, 240, 0.45);
+}
+
+/* --- Breakpoints --- */
+
+@media (min-width: 960px) {
+  .site-footer__body {
+    grid-template-columns: 1.4fr 1fr;
+  }
 }

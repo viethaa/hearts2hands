@@ -1,14 +1,25 @@
 import * as React from 'react';
-import StandardImageList from '../image_list/img_list'
-import ResponsiveAppBar from '../navbar/navbar';
-import ColorInversionAnyParent from '../footer/footer';
+import SiteHeader from '../navbar/navbar';
+import SiteFooter from '../footer/footer';
+import PhotoWall from '../image_list/img_list';
+import './photo_gallery.css';
 
 export default function PhotoGallery() {
-    return (
-        <React.Fragment>
-            <ResponsiveAppBar></ResponsiveAppBar>
-            <StandardImageList></StandardImageList>
-            <ColorInversionAnyParent></ColorInversionAnyParent>
-        </React.Fragment>
-    )
+  return (
+    <>
+      <SiteHeader />
+
+      <main id="main" className="gallery-page">
+        <header className="gallery-head">
+          <div className="h2h-shell">
+            <h1 className="gallery-head__title">Our Photo Gallery</h1>
+          </div>
+        </header>
+
+        <PhotoWall />
+      </main>
+
+      <SiteFooter />
+    </>
+  );
 }

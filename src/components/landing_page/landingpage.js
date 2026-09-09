@@ -1,310 +1,157 @@
 import React from 'react';
-import NewsCard from '../card/card';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import ColorInversionAnyParent from '../footer/footer';
-import ResponsiveAppBar from '../navbar/navbar';
-import { Typography } from '@mui/material';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-// import { useTheme } from '@mui/joy/styles'; // removed (no longer used)
-import UserReview from '../quote/quote';
-import { Fade } from "react-awesome-reveal";
-import { Link } from "react-router";
+import { Link } from 'react-router';
+import SiteHeader from '../navbar/navbar';
+import SiteFooter from '../footer/footer';
+import Vision from '../quote/quote';
+import Impact from '../impact/impact';
+import MissionSpine from '../missions/mission_spine';
+import { events, stories, formatDate } from '../../data/posts';
 import './landingpage.css';
 
-const LandingPage = () => {
-  const buttonBase = {
-    height: 58,
-    px: 4,
-    borderRadius: 999,
-    fontWeight: 600,
-    fontSize: '1.1rem',
-    letterSpacing: 0.2,
-    minWidth: 190,
-    transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
-    border: '1.5px solid rgba(255,255,255,.2)',
-    color: '#ffffff',
-    backdropFilter: 'blur(8px)',
-    WebkitBackdropFilter: 'blur(8px)',
-    '& .MuiButton-endDecorator': { transition: 'transform .3s ease' },
-    '&:hover .MuiButton-endDecorator': { transform: 'translateX(4px)' },
-    '&:active': { transform: 'scale(0.98)' },
-    '&:focus-visible': { outline: 'none', boxShadow: '0 0 0 3px rgba(114,211,255,.4)' },
-  };
+const JOIN_FORM = 'https://forms.gle/3smohGKzZZAU6tJb7';
+const HERO_IMAGE =
+  'https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg';
 
-  const btnPrimary = {
-    ...buttonBase,
-    background: 'linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.12))',
-    borderColor: 'rgba(255,255,255,.3)',
-    boxShadow: '0 4px 16px rgba(0,0,0,.15)',
-    '&:hover': {
-      background: 'linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.18))',
-      borderColor: 'rgba(255,255,255,.4)',
-      boxShadow: '0 6px 20px rgba(0,0,0,.2)',
-      transform: 'translateY(-2px)',
-    },
-  };
-
-  const btnGhost = {
-    ...buttonBase,
-    backgroundColor: 'rgba(255,255,255,.05)',
-    borderColor: 'rgba(255,255,255,.25)',
-    '&:hover': {
-      backgroundColor: 'rgba(255,255,255,.12)',
-      borderColor: 'rgba(255,255,255,.35)',
-      transform: 'translateY(-2px)',
-    },
-  };
-
-  const myMissionsInfo = [
-    {
-      title: "Mission IV: Spreading Love",
-      description: "Mission IV took place at Xóm Chạy Thận, where we spent time with the community, organized meaningful activities, and decorated a joyful festival environment for underprivileged patients.  Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mision4.jpg",
-      path: "mission4",
-      year: "2025",
-      date: "Oct 6"
-    },
-    {
-      title: "Mission III: Spreading Smiles",
-      description: "Our third mission focuses on enhancing the wellbeing of children by improving the facilities and accommodations available in Mái Ấm Thánh Tâm's playground.  Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission3.jpg",
-      path: "mission3",
-      year: "2025",
-      date: "Aug 15"
-    },
-    {
-      title: "Mission II: Joy for Young Hearts",
-      description: "Hearts2Hands' second mission at Mái Ấm Thánh Tâm orphanage focuses on the children's essential needs and spreading joy through gifts. Our goal is to bring warmth, love, hope, and smiles during the holiday season. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/mission2.jpg",
-      path: "mission2",
-      year: "2024",
-      date: "Dec 15"
-    },
-    {
-      title: "Mission I: Pathways to E-Education",
-      description: "Hearts2Hands first mission focuses on improving education quality by providing computers to Tạ Xã 1 school in Phú Thọ, Cẩm Khê. By providing access to technology, we aim to create new educational opportunities! Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hkidsbanner.JPG",
-      path: "mission1",
-      year: "2024",
-      date: "Oct 11"
-    }
-  ];
-
-  const myEventsInfo = [
-    {
-      title: "MONCI x H2H Bakesale",
-      description: "Last week, Hearts2Hands and Monci Bakehouse collaborated and fundraised together at BIS International School during their Christmas Fair. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/moncih2h.jpg",
-      path: "monci-bakesale",
-      year: "2025",
-      date: "Dec 21"
-    },
-    {
-      title: "SEF Collaboration",
-      description: "Hearts2Hands members volunteered with our partner organization SEF at Bệnh viện E, where we provided young patients with essential items and emotional encouragement. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sefh2h.jpg",
-      path: "sef-collaboration",
-      year: "2025",
-      date: "Dec 1"
-    },
-    {
-      title: "Volleyball Fundraising",
-      description: "On February 8th, Hearts2Hands had the opportunity to participate in a fundraising activity during Concordia Hanoi's charity volleyball tournament. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/volleyball_fundraise.jpg",
-      path: "volleyball-fundraising",
-      year: "2025",
-      date: "Feb 10"
-    },
-    {
-      title: "BVIS Chrismas Fair",
-      description: "Hearts2Hands recently took part in the British Vietnamese International School Hanoi christmas fair. We presented our goals, and group's mission as a way to raise awareness for Vietnamese youth equity. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/santa.png",
-      path: "bvis-xmas-fair",
-      year: "2024",
-      date: "Dec 12"
-    },
-    {
-      title: "2024 Concordia Service Fair",
-      description: "Hearts2Hands recently took part in an introductory event at Concordia Hanoi. We participated in the Service Fair with our own booth, where we shared our club's mission, perspective, and goals. Read more...",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/cishservfair.jpg",
-      path: "service-fair",
-      year: "2024",
-      date: "Oct 17"
-    },
-    // {
-    //   title: "Bake Sale",
-    //   description: "Ivan, a member of the Hearts2Hands committee, is hosting an online Bake Sale to showcase her homemade treats. This event aims to raise funds to support our missions in the future! Come support us! Read more...",
-    //   imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bakesale_cookies.png",
-    //   path: "bakesale",
-    //   year: "2024",
-    //   date: "Dec 24"
-    // }
-  ];
-
-  const myCardInfo = [
-    {
-      title: "The Story of Mái Ấm Thánh Tâm",
-      description: "Mái Ấm Thánh Tâm is a charitable home dedicated to caring for orphaned, abandoned, or underprivileged children. Operated by Catholic nuns and volunteers, the shelter provides a safe and nurturing environment",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/maiamthanhtam_story.png",
-      path: "storyofmaiamthanhtam",
-      year: "2025",
-      date: "Aug 4"
-    },
-    {
-      title: "2024 Recap",
-      description: "Lets look back at 2024, and all the missions and achievements we have accomplished!",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/h2hfoundation.jpg",
-      path: "2024-recap",
-      year: "2024",
-      date: "Dec 31"
-    },
-    {
-      title: "Our Goal: SDG 10",
-      description: "Hearts2Hands focuses on SDG 10 because reducing inequalities is at the heart of our mission. We aim to bridge gaps in access to education, resources, opportunities",
-      imageURL: "https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/sdg10.png",
-      path: "our-goal-sdg10",
-      year: "2024",
-      date: "Dec 15"
-    },
-
-  ];
-
+function Arrow() {
   return (
-    <React.Fragment>
-      <ResponsiveAppBar />
-      <div
-        className="banner"
-        style={{
-          backgroundImage:
-            "url('https://hearts2hands.s3.ap-southeast-2.amazonaws.com/assets/images/bannerCollege.png')"
-        }}
-      >
-        <div className="banner-content">
-          <Typography
-            className="banner-title"
-            variant="h1"
-            sx={{
-              fontSize: { md: "9rem", xs: "4.5rem" },
-              textAlign: 'center',
-              mb: 6
-            }}
-          >
-            <span className="typewriter-text">Hearts<span style={{ color: '#ff6b6b', margin: '0 0.1em', position: 'relative', display: 'inline-block' }}>♥<span style={{ position: 'absolute', top: '53%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '0.25em', color: '#ffffff', fontWeight: 900 }}>2</span></span>Hands</span>
-          </Typography>
-
-          <Box
-            className="banner-buttons-fade-in"
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 2,
-              justifyContent: 'center',
-            }}
-          >
-            <Link to="/timeline">
-              <Button
-                endDecorator={<ArrowForwardIcon fontSize="md" />}
-                sx={btnPrimary}
-              >
-                Our Timeline
-              </Button>
-            </Link>
-
-            <Button
-              endDecorator={<ArrowForwardIcon fontSize="md" />}
-              sx={btnGhost}
-              onClick={() =>
-                window.open('https://forms.gle/3smohGKzZZAU6tJb7', '_blank')
-              }
-            >
-              Join the Mission
-            </Button>
-          </Box>
-        </div>
-      </div>
-
-      <Fade delay={1e1}>
-        <UserReview />
-
-        <div className="missions-container">
-          <Container maxWidth="lg">
-            <div style={{ textAlign: 'center' }}>
-              <h2 className="latest-news-p">Our Missions</h2>
-            </div>
-            <Grid container spacing={4} justifyContent="center">
-              {myMissionsInfo.map((data, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                  <Link to={data.path} style={{ textDecoration: 'none' }}>
-                    <NewsCard
-                      imageLink={data.imageURL}
-                      title={data.title}
-                      description={data.description}
-                      year={data.year}
-                      date={data.date}
-                      isLatest={index === 0}
-                    />
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </div>
-
-        <div className="events-container">
-          <Container maxWidth="lg">
-            <div style={{ textAlign: 'center' }}>
-              <h2 className="latest-news-p">Events</h2>
-            </div>
-            <Grid container spacing={4} justifyContent="center">
-              {myEventsInfo.map((data, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                  <Link to={data.path} style={{ textDecoration: 'none' }}>
-                    <NewsCard
-                      imageLink={data.imageURL}
-                      title={data.title}
-                      description={data.description}
-                      year={data.year}
-                      date={data.date}
-                    />
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </div>
-
-        <div className="news-section">
-          <Container maxWidth="lg">
-            <div style={{ textAlign: 'center' }}>
-              <h2 className="latest-news-p">Blog Posts</h2>
-            </div>
-            <Grid container spacing={4} justifyContent="center">
-              {myCardInfo.map((data, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                  <Link to={data.path} style={{ textDecoration: 'none' }}>
-                    <NewsCard
-                      imageLink={data.imageURL}
-                      title={data.title}
-                      description={data.description}
-                      year={data.year}
-                      date={data.date}
-                      objectFit={data.objectFit}
-                      imageBackground={data.imageBackground}
-                    />
-                  </Link>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </div>
-
-        <ColorInversionAnyParent />
-      </Fade>
-    </React.Fragment>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
-};
+}
 
-export default LandingPage;
+export default function LandingPage() {
+  return (
+    <>
+      <SiteHeader />
+
+      <main id="main">
+        {/* Hero. Type sits on paper and the photograph runs beside it at full
+            brightness — the old hero put the headline over the image and needed
+            a 75% black radial plus a 10px blur to stay legible. */}
+        <section className="hero">
+          <div className="hero__inner h2h-shell">
+            <div className="hero__text">
+              <h1 className="hero__title">
+                Hearts<span className="hero__two">2</span>Hands
+              </h1>
+              <p className="hero__tagline">Youth equity in Vietnam</p>
+              <p className="hero__lede">
+                Hearts2Hands is a student-led organisation working for youth equity in Vietnam.
+                We go to orphanages, hospitals and rural schools, we bring what is needed, and we
+                write down what happened.
+              </p>
+              <p className="hero__lede hero__lede--vi" lang="vi">
+                Hearts2Hands là một tổ chức do học sinh tạo lập, hướng đến sự bình đẳng của
+                người trẻ tại Việt Nam.
+              </p>
+              <div className="hero__actions">
+                <a className="h2h-button" href={JOIN_FORM} target="_blank" rel="noreferrer">
+                  Join the mission
+                  <Arrow />
+                </a>
+                <a className="h2h-button h2h-button--ghost" href="#missions">
+                  Read the missions
+                </a>
+              </div>
+            </div>
+
+            <figure className="hero__figure">
+              <img src={HERO_IMAGE} alt="Hearts2Hands volunteers at Xóm Chạy Thận, Hà Nội" />
+              <figcaption className="h2h-dateline">
+                Mission IV<span className="sep">·</span>Xóm Chạy Thận, Hà Nội
+                <span className="sep">·</span>16 Oct 2025
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <Impact />
+
+        <Vision />
+
+        <MissionSpine />
+
+        {/* Events — a dense dated index rather than a third identical card grid.
+            Order carries meaning here, so the dates lead. */}
+        <section className="events" id="events">
+          <div className="h2h-shell">
+            <div className="events__head">
+              <h2 className="events__title">Our Events &amp; Fundraisers</h2>
+              <Link className="h2h-link" to="/timeline">
+                Full timeline
+                <Arrow />
+              </Link>
+            </div>
+
+            <ul className="events__list">
+              {events.map((event) => {
+                const Row = event.hasPage === false ? 'div' : Link;
+                const rowProps =
+                  event.hasPage === false ? {} : { to: `/${event.slug}` };
+
+                return (
+                  <li key={event.slug} className="event">
+                    <Row className="event__row" {...rowProps}>
+                      <time className="event__date" dateTime={event.date}>
+                        {formatDate(event.date)}
+                      </time>
+                      <div className="event__main">
+                        <h3 className="event__title">{event.title}</h3>
+                        <p className="event__place">{event.place}</p>
+                      </div>
+                      <p className="event__blurb">{event.blurb}</p>
+                      {event.hasPage === false ? (
+                        <span className="event__arrow" aria-hidden="true" />
+                      ) : (
+                        <span className="event__arrow">
+                          <Arrow />
+                        </span>
+                      )}
+                    </Row>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+
+        {/* Stories — written pieces, given an editorial set of three. */}
+        <section className="stories" id="stories">
+          <div className="h2h-shell">
+            <h2 className="stories__title">Our Blog Posts</h2>
+
+            <div className="stories__grid">
+              {stories.map((story) => (
+                <article key={story.slug} className="story">
+                  <Link to={`/${story.slug}`} className="story__link">
+                    <div className="story__media">
+                      <img src={story.image} alt="" loading="lazy" />
+                    </div>
+                    <time className="story__date" dateTime={story.date}>
+                      {formatDate(story.date)}
+                    </time>
+                    <h3 className="story__title">{story.title}</h3>
+                    <p className="story__blurb">{story.blurb}</p>
+                    <span className="h2h-link story__cta">
+                      Read
+                      <Arrow />
+                    </span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </>
+  );
+}

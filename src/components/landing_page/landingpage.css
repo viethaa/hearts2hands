@@ -1,395 +1,306 @@
-/* === TYPO + BASE === */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo+Black&family=Lilita+One&family=Passion+One:wght@400;700;900&display=swap');
+/* Landing page sections.
+   Replaces a file that loaded four unused webfonts and carried ~100 lines of
+   card styling (.box-card, .news-card-content) that no JSX ever referenced —
+   the cards actually render from card.css. */
 
-:root{
-  --page-bg-start:#f7fafc;
-  --page-bg-end:#ecf3fa;
-  --text:#0f172a;
-  --muted:#475569;
-  --surface:rgba(255,255,255,.55);
-  --surface-2:rgba(255,255,255,.38);
-  --border:rgba(15,23,42,.10);
-  --border-strong:rgba(15,23,42,.18);
-  --shadow:0 8px 28px rgba(2,6,23,.10);
-  --shadow-lg:0 18px 48px rgba(2,6,23,.14);
-  --glass-blur:16px;
+/* ==========================================================================
+   Hero
+   ========================================================================== */
 
-  --accent:#72d3ff;             /* subtle cyan for focus rings */
-  --accent-weak:rgba(114,211,255,.28);
-
-  --radius:18px;
-  --radius-lg:22px;
+.hero {
+  padding: clamp(3rem, 7vw, 6rem) 0 clamp(3.5rem, 8vw, 7rem);
 }
 
-@media (prefers-color-scheme: dark){
-  :root{
-    --page-bg-start:#0b0f1a;
-    --page-bg-end:#0f172a;
-    --text:#e5eefc;
-    --muted:#b5c0d1;
-    --surface:rgba(22,28,45,.72);
-    --surface-2:rgba(22,28,45,.55);
-    --border:rgba(255,255,255,.10);
-    --border-strong:rgba(255,255,255,.18);
-    --shadow:0 10px 28px rgba(0,0,0,.35);
-    --shadow-lg:0 22px 60px rgba(0,0,0,.45);
-    --glass-blur:18px;
-    --accent:#69a7ff;
-    --accent-weak:rgba(105,167,255,.30);
+.hero__inner {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+/* The organisation's name, set as the page's masthead. It is one word, so it
+   can take the full hero scale without wrapping. */
+.hero__title {
+  font-size: clamp(2.75rem, 7vw, 5.75rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  margin-bottom: 0.75rem;
+}
+
+.hero__two {
+  color: var(--lacquer);
+}
+
+/* Carries the "what we do" that the headline no longer states. */
+.hero__tagline {
+  font-family: var(--mono);
+  font-size: clamp(0.75rem, 1.1vw, 0.875rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mute);
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: 22rem;
+}
+
+.hero__lede {
+  max-width: 52ch;
+  color: var(--ink-soft);
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.hero__lede--vi {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--mute);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.hero__actions {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
+.hero__figure {
+  margin: 0;
+}
+
+.hero__figure img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--paper-3);
+}
+
+.hero__figure figcaption {
+  margin-top: 0.875rem;
+  padding-left: 0.875rem;
+  border-left: 2px solid var(--lacquer);
+}
+
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
   }
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+/* ==========================================================================
+   Events — a dated index, not a card grid
+   ========================================================================== */
 
-body{
-  font-family:'Fira Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  min-height:100vh;
-  color:var(--text);
-  background:#000000;
-  background-attachment: fixed;
+.events {
+  padding: var(--section-y) 0;
+  scroll-margin-top: 68px;
 }
 
-/* === BANNER === */
-.banner{
-  position:relative;
-  width:100%;
-  height:95vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:0 clamp(2rem, 5vw, 4rem);
-  color:#e7eef9;
-  text-align:center;
-  background:no-repeat center/cover;
-  border-bottom:1px solid var(--border-strong);
-  overflow:hidden;
+.events__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
-.banner::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0px, transparent 1px, transparent 2px, rgba(255,255,255,.02) 3px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0px, transparent 1px, transparent 2px, rgba(255,255,255,.02) 3px);
-  z-index:1;
-  pointer-events:none;
+/* Short lacquer rule above the heading. With the eyebrows removed, this is what
+   marks the start of a section — quieter than a label, and consistent across
+   all three. */
+.events__title,
+.stories__title {
+  font-size: var(--t-h1);
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--lacquer);
 }
 
-.banner::before{
-  /* layered overlay for readability without crushing the image */
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(0,0,0,.45), rgba(0,0,0,.75)),
-    linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.7));
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index:0;
-}
-
-.banner-content{
-  position:relative;
-  z-index:2;
-  max-width:min(900px,92vw);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-
-/* Badge above title */
-.banner-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:.5rem;
-  padding:.8rem 2rem;
-  margin-bottom:2rem;
-  background:rgba(255,255,255,.12);
-  border:1.5px solid rgba(255,255,255,.25);
-  border-radius:999px;
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  font-size:1rem;
-  font-weight:700;
-  letter-spacing:.6px;
-  color:rgba(255,255,255,.95);
-  text-transform:uppercase;
-  box-shadow:0 6px 20px rgba(0,0,0,.25);
-}
-
-/* Headline */
-.banner-title{
-  font-family:'Arial Black', 'Impact', 'Helvetica Neue', sans-serif !important;
-  font-weight:900;
-  color:#ffffff;
-  letter-spacing:-2px;
-  line-height:.95;
-  text-shadow:0 6px 28px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.3);
-  font-size:clamp(4rem, 10vw, 9rem) !important;
-  display:inline-block;
-}
-
-.typewriter-text{
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
-  border-right:4px solid rgba(255,255,255,.8);
-  padding-right:8px;
-  animation:
-    typing 3.5s steps(12) 0s 1 normal forwards,
-    blink 0.75s step-end infinite,
-    typing-reverse 2s steps(12) 8.5s 1 normal forwards,
-    typing-again 3.5s steps(12) 11.5s 1 normal forwards;
-  width:0;
-}
-
-.banner-subtitle{
-  font-family:'Inter', -apple-system, 'Segoe UI', sans-serif !important;
-}
-
-/* Animations */
-.banner-buttons-fade-in{
-  animation: fadeInUp 1s ease-out 0.5s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes typing{
-  0%{ width:0; }
-  100%{ width:100%; }
-}
-
-@keyframes typing-reverse{
-  0%{ width:100%; }
-  100%{ width:0; }
-}
-
-@keyframes typing-again{
-  0%{ width:0; }
-  100%{ width:100%; }
-}
-
-@keyframes blink{
-  0%, 50%{ border-color:rgba(255,255,255,.8); }
-  51%, 100%{ border-color:transparent; }
-}
-
-@keyframes fadeInUp{
-  0%{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  100%{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-
-.banner-name{
-  font-family:"Passion One", system-ui, sans-serif !important;
-  font-weight:400;
-  letter-spacing:.5px;
-  line-height:1.05;
-  margin-bottom:.4rem;
-  text-shadow:0 6px 24px rgba(0,0,0,.35);
-  font-size:clamp(2.8rem, 7vw, 6rem) !important;
-}
-
-.banner p{
-  font-size:clamp(1rem, 1.6vw, 1.25rem);
-  color:rgba(231,238,249,.92);
-  max-width:62ch;
-}
-
-/* === SECTION HEADERS (Latest Events / News) === */
-.latest-news-p{
-  display: inline-block;
-  font-size:clamp(2.2rem, 4vw, 3.5rem);
-  font-weight:800;
-  letter-spacing:-1.5px;
-  color:#ffffff;
-  margin: 0 auto 70px auto;
-  text-align:center;
+.events__list {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  background: transparent;
-  border: none;
-  position: relative;
-  text-shadow:
-    0 0 40px rgba(255, 255, 255, 0.3),
-    0 0 80px rgba(255, 255, 255, 0.15),
-    0 4px 12px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid var(--rule);
 }
 
-.latest-news-p::before {
-  content: '';
-  position: absolute;
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
-  border-radius: 2px;
+.event {
+  border-bottom: 1px solid var(--rule);
 }
 
-.latest-news-p::after {
-  content: '';
-  position: absolute;
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.6), transparent);
-  border-radius: 2px;
+/* The horizontal inset is padding + matching negative margin, so the hover
+   background can bleed past the text without changing where the row sits. */
+.event__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1.5rem;
+  padding: 1.5rem 0.625rem;
+  margin-inline: -0.625rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s var(--ease);
 }
 
-/* Remove icon styles */
-.latest-news-icon,
-.events-icon{
-  display:none;
+/* Only rows that link get the affordance. Two timeline entries are milestones
+   with no detail page, and render as plain divs. */
+/* Was a box-shadow with a spread of var(--gutter) — up to 72px in every
+   direction, so the highlight stood well clear of the row above and below. */
+a.event__row:hover {
+  background: var(--lacquer-wash);
 }
 
-/* === CARD SHELL === */
-.box-card{
-  position:relative;
-  border-radius:var(--radius-lg);
-  background:var(--surface);
-  border:1px solid var(--border);
-  backdrop-filter:blur(var(--glass-blur)) saturate(160%);
-  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(160%);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease,
-    background-color .25s ease;
+.event__date {
+  grid-column: 1;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--mute);
+  align-self: center;
 }
 
-.box-card:hover{
-  transform:translateY(-4px);
-  border-color:var(--border-strong);
-  box-shadow:var(--shadow-lg);
-  background:var(--surface-2);
+.event__main {
+  grid-column: 1;
 }
 
-/* Inner content wrapper (NewsCard root) */
-.news-card-content{
-  display:flex;
-  flex-direction:column;
-  height:100%;
-  background:transparent;
-  border-radius:calc(var(--radius-lg) - 2px);
+.event__title {
+  font-size: var(--t-h3);
+  margin-bottom: 0.25rem;
 }
 
-/* Card image */
-.news-card-content img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-bottom:1px solid var(--border);
-  filter:saturate(1.02) contrast(1.02);
-  transition:filter .3s ease, transform .3s ease;
-}
-.box-card:hover .news-card-content img{
-  transform:scale(1.015);
-  filter:saturate(1.05) contrast(1.06);
+.event__place {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  color: var(--gold);
+  letter-spacing: 0.04em;
 }
 
-/* Card text */
-.news-card-content .card-text{
-  padding:18px 18px 20px;
-  display:flex;
-  flex-direction:column;
-  gap:.5rem;
-  flex:1;
+.event__blurb {
+  grid-column: 1;
+  max-width: 60ch;
+  color: var(--mute);
+  font-size: var(--t-small);
 }
 
-.news-card-content .card-title{
-  font-size:clamp(1.05rem, 1.4vw, 1.25rem);
-  font-weight:700;
-  color:var(--text);
-  line-height:1.35;
+.event__arrow {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: center;
+  color: var(--lacquer);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
-.news-card-content .card-description{
-  font-size:.98rem;
-  line-height:1.6;
-  color:var(--muted);
-  overflow:hidden;
-  display:-webkit-box;
-  -webkit-line-clamp:4;
-  -webkit-box-orient:vertical;
+a.event__row:hover .event__arrow,
+a.event__row:focus-visible .event__arrow {
+  opacity: 1;
+  transform: none;
 }
 
-/* Push helper */
-#push{ margin-bottom:40px; }
+@media (min-width: 860px) {
+  .event__row {
+    grid-template-columns: 8.5rem minmax(0, 1fr) minmax(0, 1.1fr) 2rem;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.75rem 1rem;
+    margin-inline: -1rem;
+  }
 
-/* === LINKS INSIDE CARDS === */
-.box-card a{
-  color:inherit;
-  text-decoration:none;
-  outline:none;
-}
-.box-card a:focus-visible{
-  box-shadow:0 0 0 3px var(--accent-weak);
-  border-radius:calc(var(--radius-lg) - 2px);
+  .event__date,
+  .event__main,
+  .event__blurb {
+    grid-column: auto;
+  }
+
+  .event__arrow {
+    grid-column: 4;
+    grid-row: 1;
+  }
 }
 
-/* === EVENTS / NEWS / MISSIONS CONTAINERS === */
-.missions-container,
-.events-container,
-.news-section{
-  position: relative;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  padding: 120px 0;
+/* ==========================================================================
+   Stories
+   ========================================================================== */
+
+.stories {
+  padding: var(--section-y) 0;
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+}
+
+/* inline-block so the lacquer rule above is exactly as wide as the words. */
+.stories__title {
+  display: inline-block;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.stories__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.story__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.story__media {
+  width: 100%;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  scroll-margin-top:80px;
+  border-radius: var(--radius);
+  background: var(--paper-3);
+  margin-bottom: 0.5rem;
 }
 
-.missions-container::before,
-.events-container::before,
-.news-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(255,107,107,0.05), transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(114,211,255,0.05), transparent 50%);
-  pointer-events: none;
+.story__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
 }
 
-.missions-container .MuiGrid-container,
-.events-container .MuiGrid-container,
-.news-section .MuiGrid-container{
-  padding-top:0;
-  position: relative;
-  z-index: 1;
+.story__link:hover .story__media img {
+  transform: scale(1.03);
 }
 
-/* === REDUCED MOTION === */
-@media (prefers-reduced-motion: reduce){
-  .box-card,
-  .news-card-content img,
-  .latest-news-icon,
-  .events-icon{ transition:none !important; }
-  .box-card:hover{ transform:none; }
+.story__date {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--mute);
 }
 
-/* === SMALL BREAKPOINT POLISH === */
-@media (max-width: 900px){
-  .banner{ height:88vh; padding-left:6%; }
-  .latest-news-icon,
-  .events-icon{
-    margin:-36px 0 18px calc(4px + 9ch);
+.story__title {
+  font-size: var(--t-h3);
+}
+
+.story__blurb {
+  color: var(--mute);
+  font-size: var(--t-small);
+  flex: 1;
+}
+
+.story__cta {
+  margin-top: 0.5rem;
+}
+
+.story__link:hover .story__cta {
+  background-size: 100% 1px;
+}
+
+@media (min-width: 720px) {
+  .stories__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }

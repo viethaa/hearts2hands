@@ -1,139 +1,98 @@
-/* Wrapper */
-.quote-wrapper {
-    position: relative;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    padding: 120px 0;
-    overflow: hidden;
+/* Vision — the founder's statement, set as a pull quote in the body serif.
+   No glass panel, no 95% opacity overlay; the type carries it. */
+
+.vision {
+  padding: var(--section-y) 0;
 }
 
-.quote-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 20% 50%, rgba(255,107,107,0.05), transparent 50%),
-        radial-gradient(circle at 80% 50%, rgba(114,211,255,0.05), transparent 50%);
-    pointer-events: none;
+.vision__inner {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
 }
 
-.quote-container {
-    position: relative;
-    z-index: 1;
-    padding: 0 60px;
+.vision__figure {
+  margin: 0;
 }
 
-/* Image Section */
-.quote-image-section {
-    position: relative;
+.vision__figure img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--paper-3);
 }
 
-.image-frame {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 500px;
+.vision__figure figcaption {
+  margin-top: 0.875rem;
 }
 
-.display-img1 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+.vision__quote {
+  margin: 0;
+  position: relative;
 }
 
-.image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255,107,107,0.2), rgba(114,211,255,0.2));
-    mix-blend-mode: overlay;
-    pointer-events: none;
+/* The quote mark is set in the display face and hung outside the measure, so
+   the first line of the quote still starts on the text edge. */
+.vision__quote::before {
+  content: '\201C';
+  position: absolute;
+  left: -0.62em;
+  top: -0.18em;
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 1;
+  color: var(--lacquer);
+  opacity: 0.22;
+  pointer-events: none;
 }
 
-.image-frame:hover .display-img1 {
-    transform: scale(1.05);
+.vision__quote p {
+  font-size: clamp(1.25rem, 2.4vw, 1.875rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  max-width: 32ch;
 }
 
-/* Quote Content */
-.quote-content {
-    padding: 0 40px;
-    color: #ffffff;
+.vision__author {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
 }
 
-.quote-header {
-    margin-bottom: 30px;
+.vision__author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper-3);
 }
 
-.quote-label {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-    color: #72d3ff;
+.vision__author span {
+  display: block;
 }
 
-.quote-text {
-    font-size: 1.5rem !important;
-    line-height: 1.8 !important;
-    color: rgba(255,255,255,0.9) !important;
-    font-weight: 300 !important;
-    margin-bottom: 50px !important;
-    font-style: italic;
+.vision__name {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-/* Author Section */
-.quote-author {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+.vision__role {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
 }
 
-.quote-avatar {
-    width: 64px !important;
-    height: 64px !important;
-    border: 3px solid rgba(255,255,255,0.2) !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
-}
-
-.author-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.author-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-}
-
-.author-title {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.6);
-    font-weight: 400;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .quote-wrapper {
-        padding: 80px 0;
-    }
-
-    .image-frame {
-        height: 300px;
-        margin-bottom: 40px;
-    }
-
-    .quote-content {
-        padding: 0 20px;
-    }
-
-    .quote-text {
-        font-size: 1.2rem !important;
-    }
+@media (min-width: 860px) {
+  .vision__inner {
+    grid-template-columns: 0.85fr 1fr;
+    gap: clamp(3rem, 6vw, 5rem);
+  }
 }

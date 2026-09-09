@@ -1,0 +1,15 @@
+.gallery-page {
+  padding-bottom: var(--section-y);
+}
+
+.gallery-head {
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+}
+
+/* Matches the rule above every other section and page heading. */
+.gallery-head__title {
+  display: inline-block;
+  font-size: var(--t-h1);
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--lacquer);
+}
